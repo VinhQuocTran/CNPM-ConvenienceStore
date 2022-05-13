@@ -17,6 +17,7 @@
             {
                 components.Dispose();
                 int a;
+                int b;
             }
             base.Dispose(disposing);
         }
