@@ -62,7 +62,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vinh.resx">
+      <DependentUpon>Vinh.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +79,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\box.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\options-lines.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\user.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\padlock.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\logout.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\manager.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
