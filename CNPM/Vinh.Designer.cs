@@ -49,7 +49,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.manager;
             this.pictureBox1.Location = new System.Drawing.Point(64, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(51, 50);
@@ -59,7 +58,6 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = global::WindowsFormsApp1.Properties.Resources.logout;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.Location = new System.Drawing.Point(12, 649);
             this.button5.Name = "button5";
@@ -72,22 +70,21 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = global::WindowsFormsApp1.Properties.Resources.padlock;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(12, 447);
+            this.button4.Location = new System.Drawing.Point(12, 431);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(160, 60);
             this.button4.TabIndex = 4;
             this.button4.Text = "Đổi mật khẩu";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::WindowsFormsApp1.Properties.Resources.user;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(12, 345);
+            this.button3.Location = new System.Drawing.Point(12, 331);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(160, 60);
             this.button3.TabIndex = 3;
@@ -98,7 +95,6 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::WindowsFormsApp1.Properties.Resources.options_lines;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(12, 238);
             this.button2.Name = "button2";
@@ -111,7 +107,6 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::WindowsFormsApp1.Properties.Resources.box;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(12, 140);
             this.button1.Name = "button1";
