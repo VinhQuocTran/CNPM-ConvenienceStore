@@ -66,7 +66,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(180, 75);
             this.button5.TabIndex = 5;
-            this.button5.Text = "Đăng suất";
+            this.button5.Text = "Đăng xuất";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
