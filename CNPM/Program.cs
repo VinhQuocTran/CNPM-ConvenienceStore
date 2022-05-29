@@ -18,6 +18,7 @@ namespace WindowsFormsApp1
             Application.SetCompatibleTextRenderingDefault(false);
             // Application.Run(new Vinh());
             Application.Run(new ManageCashier());
+            //Application.Run(new ManageProduct());
         }
     }
 }
