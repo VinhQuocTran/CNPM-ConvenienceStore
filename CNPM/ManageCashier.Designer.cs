@@ -302,7 +302,6 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.Green;
             this.Name = "ManageCashier";
-            this.Load += new System.EventHandler(this.ManageCashier_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

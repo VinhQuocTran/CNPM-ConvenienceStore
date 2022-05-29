@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void ManageCashier_Load(object sender, EventArgs e)
+        /*private void ManageCashier_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'quanLyCuaHangTienLoiDataSet.taikhoan' table. You can move, or remove it, as needed.
             //SqlConnection cnn;
@@ -26,14 +26,11 @@ namespace WindowsFormsApp1
             //cnn.Open();
             //MessageBox.Show("Connection Open !");
             //cnn.Close();
-        }
+        }*/
 
      
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+
 
         private void btnCashier_Click(object sender, EventArgs e)
         {
