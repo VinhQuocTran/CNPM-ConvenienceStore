@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -29,6 +30,38 @@ namespace WindowsFormsApp1
             ManageProduct manaProduct = new ManageProduct();
             manaProduct.Show();
             this.Hide();
+        }
+        SqlConnection cnn = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=QuanLyCuaHangTienLoi;Trusted_Connection=True");
+        private void btnADDCashier_Click(object sender, EventArgs e)
+        {
+            try{
+                cnn.Open();
+                string query = "insert into danhmuc values('" + txtID.Text +"','"+ txtName.Text +"','"+ txtDescription.Text + "')";
+                SqlCommand sqlCommand = new SqlCommand(query,cnn);
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("Add Category successful");
+                cnn.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void showDataGrid()
+        {
+            cnn.Open();
+            string query = "select * from danhmuc";
+            SqlDataAdapter sqlDataAdapter= new SqlDataAdapter(query, cnn);
+            SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(sqlDataAdapter);
+            var dataSet = new DataSet();
+            sqlDataAdapter.Fill(dataSet);
+            dataGridCategoy.DataSource = dataSet.Tables[0];
+            cnn.Close();
+        }
+        private void ManageCategory_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'quanLyCuaHangTienLoiDataSet.danhmuc' table. You can move, or remove it, as needed.
+            showDataGrid();
         }
     }
 }

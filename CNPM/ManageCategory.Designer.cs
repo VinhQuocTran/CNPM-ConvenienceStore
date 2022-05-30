@@ -35,14 +35,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
             this.btnADDCashier = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridCategoy = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCategoy)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,13 +119,13 @@
             this.txtName.Size = new System.Drawing.Size(235, 35);
             this.txtName.TabIndex = 37;
             // 
-            // txtPhone
+            // txtDescription
             // 
-            this.txtPhone.BackColor = System.Drawing.Color.Aquamarine;
-            this.txtPhone.Location = new System.Drawing.Point(185, 221);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(235, 35);
-            this.txtPhone.TabIndex = 38;
+            this.txtDescription.BackColor = System.Drawing.Color.Aquamarine;
+            this.txtDescription.Location = new System.Drawing.Point(185, 221);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(235, 35);
+            this.txtDescription.TabIndex = 38;
             // 
             // btnADDCashier
             // 
@@ -138,6 +138,7 @@
             this.btnADDCashier.TabIndex = 41;
             this.btnADDCashier.Text = "ADD";
             this.btnADDCashier.UseVisualStyleBackColor = false;
+            this.btnADDCashier.Click += new System.EventHandler(this.btnADDCashier_Click);
             // 
             // button1
             // 
@@ -171,33 +172,34 @@
             this.txtID.Size = new System.Drawing.Size(235, 35);
             this.txtID.TabIndex = 44;
             // 
-            // dataGridView1
+            // dataGridCategoy
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(444, 99);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(539, 531);
-            this.dataGridView1.TabIndex = 4;
+            this.dataGridCategoy.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridCategoy.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCategoy.GridColor = System.Drawing.Color.Black;
+            this.dataGridCategoy.Location = new System.Drawing.Point(444, 99);
+            this.dataGridCategoy.Name = "dataGridCategoy";
+            this.dataGridCategoy.RowHeadersWidth = 62;
+            this.dataGridCategoy.RowTemplate.Height = 28;
+            this.dataGridCategoy.Size = new System.Drawing.Size(483, 531);
+            this.dataGridCategoy.TabIndex = 4;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LawnGreen;
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dataGridCategoy);
             this.panel1.Controls.Add(this.txtID);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnADDCashier);
-            this.panel1.Controls.Add(this.txtPhone);
+            this.panel1.Controls.Add(this.txtDescription);
             this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.ForeColor = System.Drawing.Color.White;
+            this.panel1.ForeColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(193, 36);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1007, 668);
@@ -213,7 +215,8 @@
             this.Controls.Add(this.panel1);
             this.Name = "ManageCategory";
             this.Text = "ManageCategory";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.ManageCategory_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCategoy)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -229,12 +232,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Button btnADDCashier;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridCategoy;
         private System.Windows.Forms.Panel panel1;
     }
 }
