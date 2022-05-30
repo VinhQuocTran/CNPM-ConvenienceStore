@@ -63,5 +63,10 @@ namespace WindowsFormsApp1
             // TODO: This line of code loads data into the 'quanLyCuaHangTienLoiDataSet.danhmuc' table. You can move, or remove it, as needed.
             showDataGrid();
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            showDataGrid();
+        }
     }
 }
