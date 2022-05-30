@@ -55,7 +55,6 @@ namespace WindowsFormsApp1
                 string query = "insert into taikhoan values('" + txtUsername.Text +
                     "','" + txtPassword.Text + "','" + txtName.Text + "'," + txtAge.Text + ",'" +
                     cbbAccountType.Text + "')";
-                MessageBox.Show(query);
                 SqlCommand sqlCommand = new SqlCommand(query, cnn);
                 sqlCommand.ExecuteNonQuery();
                 MessageBox.Show("Add Category successful");
@@ -128,6 +127,11 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            showDataGrid();
         }
     }
 }
