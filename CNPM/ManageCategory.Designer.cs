@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnCategory = new System.Windows.Forms.Button();
             this.btnCashier = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,15 +40,16 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtDescription = new System.Windows.Forms.TextBox();
-            this.btnADDCashier = new System.Windows.Forms.Button();
+            this.btnAddCateGory = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.dataGridCategoy = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRefresh = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridCategoy)).BeginInit();
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.dataGridCategoy = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCategoy)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCategory
@@ -128,18 +133,18 @@
             this.txtDescription.Size = new System.Drawing.Size(235, 35);
             this.txtDescription.TabIndex = 38;
             // 
-            // btnADDCashier
+            // btnAddCateGory
             // 
-            this.btnADDCashier.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnADDCashier.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnADDCashier.ForeColor = System.Drawing.Color.SpringGreen;
-            this.btnADDCashier.Location = new System.Drawing.Point(8, 317);
-            this.btnADDCashier.Name = "btnADDCashier";
-            this.btnADDCashier.Size = new System.Drawing.Size(118, 69);
-            this.btnADDCashier.TabIndex = 41;
-            this.btnADDCashier.Text = "ADD";
-            this.btnADDCashier.UseVisualStyleBackColor = false;
-            this.btnADDCashier.Click += new System.EventHandler(this.btnADDCashier_Click);
+            this.btnAddCateGory.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAddCateGory.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCateGory.ForeColor = System.Drawing.Color.SpringGreen;
+            this.btnAddCateGory.Location = new System.Drawing.Point(8, 317);
+            this.btnAddCateGory.Name = "btnAddCateGory";
+            this.btnAddCateGory.Size = new System.Drawing.Size(118, 69);
+            this.btnAddCateGory.TabIndex = 41;
+            this.btnAddCateGory.Text = "ADD";
+            this.btnAddCateGory.UseVisualStyleBackColor = false;
+            this.btnAddCateGory.Click += new System.EventHandler(this.btnADDCashier_Click);
             // 
             // button1
             // 
@@ -164,6 +169,7 @@
             this.btnDelete.TabIndex = 43;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // txtID
             // 
@@ -173,27 +179,15 @@
             this.txtID.Size = new System.Drawing.Size(235, 35);
             this.txtID.TabIndex = 44;
             // 
-            // dataGridCategoy
-            // 
-            this.dataGridCategoy.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridCategoy.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridCategoy.GridColor = System.Drawing.Color.Black;
-            this.dataGridCategoy.Location = new System.Drawing.Point(444, 99);
-            this.dataGridCategoy.Name = "dataGridCategoy";
-            this.dataGridCategoy.RowHeadersWidth = 62;
-            this.dataGridCategoy.RowTemplate.Height = 28;
-            this.dataGridCategoy.Size = new System.Drawing.Size(483, 531);
-            this.dataGridCategoy.TabIndex = 4;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LawnGreen;
-            this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.dataGridCategoy);
+            this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.txtID);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.btnADDCashier);
+            this.panel1.Controls.Add(this.btnAddCateGory);
             this.panel1.Controls.Add(this.txtDescription);
             this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.label8);
@@ -220,6 +214,66 @@
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // dataGridCategoy
+            // 
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dataGridCategoy.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridCategoy.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridCategoy.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridCategoy.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridCategoy.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridCategoy.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LawnGreen;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridCategoy.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridCategoy.ColumnHeadersHeight = 25;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridCategoy.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridCategoy.EnableHeadersVisualStyles = false;
+            this.dataGridCategoy.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridCategoy.Location = new System.Drawing.Point(449, 102);
+            this.dataGridCategoy.Name = "dataGridCategoy";
+            this.dataGridCategoy.ReadOnly = true;
+            this.dataGridCategoy.RowHeadersVisible = false;
+            this.dataGridCategoy.RowHeadersWidth = 62;
+            this.dataGridCategoy.RowTemplate.Height = 28;
+            this.dataGridCategoy.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridCategoy.Size = new System.Drawing.Size(529, 499);
+            this.dataGridCategoy.TabIndex = 46;
+            this.dataGridCategoy.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridCategoy.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dataGridCategoy.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dataGridCategoy.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dataGridCategoy.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dataGridCategoy.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridCategoy.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridCategoy.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.LawnGreen;
+            this.dataGridCategoy.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridCategoy.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridCategoy.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dataGridCategoy.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataGridCategoy.ThemeStyle.HeaderStyle.Height = 25;
+            this.dataGridCategoy.ThemeStyle.ReadOnly = true;
+            this.dataGridCategoy.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridCategoy.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridCategoy.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridCategoy.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dataGridCategoy.ThemeStyle.RowsStyle.Height = 28;
+            this.dataGridCategoy.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridCategoy.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataGridCategoy.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCategoy_CellContentClick_1);
+            // 
             // ManageCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -231,9 +285,9 @@
             this.Name = "ManageCategory";
             this.Text = "ManageCategory";
             this.Load += new System.EventHandler(this.ManageCategory_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridCategoy)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCategoy)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -248,12 +302,13 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtDescription;
-        private System.Windows.Forms.Button btnADDCashier;
+        private System.Windows.Forms.Button btnAddCateGory;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.DataGridView dataGridCategoy;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnRefresh;
+        private Guna.UI2.WinForms.Guna2DataGridView dataGridCategoy;
+        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
     }
 }

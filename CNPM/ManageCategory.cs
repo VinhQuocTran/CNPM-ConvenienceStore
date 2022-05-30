@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
@@ -46,6 +40,10 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show(ex.Message);
             }
+            txtID.Text = "";
+            txtName.Text = "";
+            txtDescription.Text = "";
+
         }
         private void showDataGrid()
         {
@@ -67,6 +65,35 @@ namespace WindowsFormsApp1
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             showDataGrid();
+        }
+
+        private void dataGridCategoy_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            txtID.Text = dataGridCategoy.SelectedRows[0].Cells[0].Value.ToString();
+            txtName.Text = dataGridCategoy.SelectedRows[0].Cells[1].Value.ToString();
+            txtDescription.Text = dataGridCategoy.SelectedRows[0].Cells[2].Value.ToString();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                cnn.Open();
+                string query = "delete danhmuc where madanhmuc='" + txtID.Text + "' and tendanhmuc='" 
+                    + txtName.Text + "' and mieuta ='" + txtDescription.Text+"'";
+                SqlCommand sqlCommand = new SqlCommand(query, cnn);
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("Remove Category successful");
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            txtID.Text = "";
+            txtName.Text = "";
+            txtDescription.Text = "";
+
         }
     }
 }
