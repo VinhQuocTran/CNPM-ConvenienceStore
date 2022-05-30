@@ -17,21 +17,6 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-
-        /*private void ManageCashier_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'quanLyCuaHangTienLoiDataSet.taikhoan' table. You can move, or remove it, as needed.
-            //SqlConnection cnn;
-            //cnn = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=QuanLyCuaHangTienLoi;Trusted_Connection=True");
-            //cnn.Open();
-            //MessageBox.Show("Connection Open !");
-            //cnn.Close();
-        }*/
-
-     
-
-
-
         private void btnCashier_Click(object sender, EventArgs e)
         {
             ManageProduct manaProduct = new ManageProduct();
