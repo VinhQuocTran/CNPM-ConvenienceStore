@@ -79,8 +79,7 @@ namespace WindowsFormsApp1
             try
             {
                 cnn.Open();
-                string query = "delete danhmuc where madanhmuc='" + txtID.Text + "' and tendanhmuc='" 
-                    + txtName.Text + "' and mieuta ='" + txtDescription.Text+"'";
+                string query = "delete danhmuc where madanhmuc = '"+txtID.Text+"'";
                 SqlCommand sqlCommand = new SqlCommand(query, cnn);
                 sqlCommand.ExecuteNonQuery();
                 MessageBox.Show("Remove Category successful");
@@ -90,9 +89,6 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show(ex.Message);
             }
-            txtID.Text = "";
-            txtName.Text = "";
-            txtDescription.Text = "";
 
         }
     }
