@@ -33,12 +33,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.cbbCategory1 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cbbCategories = new System.Windows.Forms.ComboBox();
+            this.dataGridProduct = new System.Windows.Forms.DataGridView();
             this.txtID = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnADDCashier = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnADDProduct = new System.Windows.Forms.Button();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -51,7 +51,7 @@
             this.btnCashier = new System.Windows.Forms.Button();
             this.btnCategory = new System.Windows.Forms.Button();
             this.cbbCategory.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // cbbCategory
@@ -61,12 +61,12 @@
             this.cbbCategory.Controls.Add(this.label2);
             this.cbbCategory.Controls.Add(this.btnRefresh);
             this.cbbCategory.Controls.Add(this.cbbCategory1);
-            this.cbbCategory.Controls.Add(this.comboBox1);
-            this.cbbCategory.Controls.Add(this.dataGridView1);
+            this.cbbCategory.Controls.Add(this.cbbCategories);
+            this.cbbCategory.Controls.Add(this.dataGridProduct);
             this.cbbCategory.Controls.Add(this.txtID);
             this.cbbCategory.Controls.Add(this.btnDelete);
-            this.cbbCategory.Controls.Add(this.button1);
-            this.cbbCategory.Controls.Add(this.btnADDCashier);
+            this.cbbCategory.Controls.Add(this.btnExit);
+            this.cbbCategory.Controls.Add(this.btnADDProduct);
             this.cbbCategory.Controls.Add(this.txtQuantity);
             this.cbbCategory.Controls.Add(this.txtPrice);
             this.cbbCategory.Controls.Add(this.txtName);
@@ -89,6 +89,11 @@
             this.cbbUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbUnit.ForeColor = System.Drawing.Color.SpringGreen;
             this.cbbUnit.FormattingEnabled = true;
+            this.cbbUnit.Items.AddRange(new object[] {
+            "Kg",
+            "Bag",
+            "Bottle",
+            "Bin"});
             this.cbbUnit.Location = new System.Drawing.Point(165, 277);
             this.cbbUnit.Name = "cbbUnit";
             this.cbbUnit.Size = new System.Drawing.Size(235, 33);
@@ -129,28 +134,28 @@
             this.cbbCategory1.TabIndex = 46;
             this.cbbCategory1.Text = "Select category";
             // 
-            // comboBox1
+            // cbbCategories
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.White;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.SpringGreen;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(165, 330);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(235, 33);
-            this.comboBox1.TabIndex = 45;
-            this.comboBox1.Text = "Select category";
+            this.cbbCategories.BackColor = System.Drawing.Color.White;
+            this.cbbCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbCategories.ForeColor = System.Drawing.Color.SpringGreen;
+            this.cbbCategories.FormattingEnabled = true;
+            this.cbbCategories.Location = new System.Drawing.Point(165, 330);
+            this.cbbCategories.Name = "cbbCategories";
+            this.cbbCategories.Size = new System.Drawing.Size(235, 33);
+            this.cbbCategories.TabIndex = 45;
+            this.cbbCategories.Text = "Select category";
             // 
-            // dataGridView1
+            // dataGridProduct
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(444, 135);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(525, 495);
-            this.dataGridView1.TabIndex = 4;
+            this.dataGridProduct.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridProduct.Location = new System.Drawing.Point(444, 135);
+            this.dataGridProduct.Name = "dataGridProduct";
+            this.dataGridProduct.RowHeadersWidth = 62;
+            this.dataGridProduct.RowTemplate.Height = 28;
+            this.dataGridProduct.Size = new System.Drawing.Size(525, 495);
+            this.dataGridProduct.TabIndex = 4;
             // 
             // txtID
             // 
@@ -172,29 +177,30 @@
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnExit
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.SpringGreen;
-            this.button1.Location = new System.Drawing.Point(147, 485);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 68);
-            this.button1.TabIndex = 42;
-            this.button1.Text = "EXIT";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnExit.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnExit.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.SpringGreen;
+            this.btnExit.Location = new System.Drawing.Point(147, 485);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(118, 68);
+            this.btnExit.TabIndex = 42;
+            this.btnExit.Text = "EXIT";
+            this.btnExit.UseVisualStyleBackColor = false;
             // 
-            // btnADDCashier
+            // btnADDProduct
             // 
-            this.btnADDCashier.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnADDCashier.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnADDCashier.ForeColor = System.Drawing.Color.SpringGreen;
-            this.btnADDCashier.Location = new System.Drawing.Point(8, 484);
-            this.btnADDCashier.Name = "btnADDCashier";
-            this.btnADDCashier.Size = new System.Drawing.Size(118, 69);
-            this.btnADDCashier.TabIndex = 41;
-            this.btnADDCashier.Text = "ADD";
-            this.btnADDCashier.UseVisualStyleBackColor = false;
+            this.btnADDProduct.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnADDProduct.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnADDProduct.ForeColor = System.Drawing.Color.SpringGreen;
+            this.btnADDProduct.Location = new System.Drawing.Point(8, 484);
+            this.btnADDProduct.Name = "btnADDProduct";
+            this.btnADDProduct.Size = new System.Drawing.Size(118, 69);
+            this.btnADDProduct.TabIndex = 41;
+            this.btnADDProduct.Text = "ADD";
+            this.btnADDProduct.UseVisualStyleBackColor = false;
+            this.btnADDProduct.Click += new System.EventHandler(this.btnADDProduct_Click);
             // 
             // txtQuantity
             // 
@@ -317,7 +323,7 @@
             this.Text = "ManageProduct";
             this.cbbCategory.ResumeLayout(false);
             this.cbbCategory.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridProduct)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -328,11 +334,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCashier;
         private System.Windows.Forms.Button btnCategory;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridProduct;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnADDCashier;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnADDProduct;
         private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.TextBox txtName;
@@ -343,7 +349,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.ComboBox cbbCategory1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbCategories;
         private System.Windows.Forms.ComboBox cbbUnit;
         private System.Windows.Forms.Label label2;
     }
