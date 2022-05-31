@@ -19,37 +19,79 @@ namespace WindowsFormsApp1
         }
 
    
-
-      
         SqlConnection cnn = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=QuanLyCuaHangTienLoi;Trusted_Connection=True");
-
-        private void btnADDProduct_Click(object sender, EventArgs e)
+        private void addCbbCategory()
         {
+            SqlCommand cmd;
+            SqlDataReader dr;
             try
             {
                 cnn.Open();
-                string query = "select tendanhmuc from danhmuc";
-                SqlDataAdapter sqlDataAdapter= new SqlDataAdapter(query, cnn);
-                var dataSet = new DataSet();
-                sqlDataAdapter.Fill(dataSet);
-                cbbCategories.Items.Add(dataSet.Tables);
-                MessageBox.Show(dataSet.Tables.ToString());
+
+                cmd = new SqlCommand("Select madanhmuc From danhmuc", cnn);
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+
+                {
+                    cbbCategories.Items.Add(dr[0]).ToString();
+                    cbbCategory1.Items.Add(dr[0]).ToString();
+                }
+                dr.Close();
                 cnn.Close();
-                //"insert into taikhoan values('" + txtID.Text +
-                //   "','" + txtName.Text + "'," + txtPrice.Text + "," + txtAge.Text + ",'" +
-                //   cbbAccountType.Text + "')"
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
+      
 
+        private void btnADDProduct_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                cnn.Open();
+                string query = "insert into sanpham values('" + txtID.Text +
+                    "','" + txtName.Text + "','" + txtPrice.Text + "','" + cbbUnit.Text + "','" +
+                    cbbCategories.Text + "',"+txtQuantity.Text+")";
+                SqlCommand sqlCommand = new SqlCommand(query, cnn);
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("Thêm sản phẩm thành công");
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void showDataGrid()
+        {
+            cnn.Open();
+            string query = "select * from sanpham";
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, cnn);
+            SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(sqlDataAdapter);
+            var dataSet = new DataSet();
+            sqlDataAdapter.Fill(dataSet);
+            dataGridProduct.DataSource = dataSet.Tables[0];
+            cnn.Close();
+        }
         private void btnExit_Click(object sender, EventArgs e)
         {
             ControlManage controlManage = new ControlManage();
             controlManage.Show();
             this.Hide();
+        }
+
+        private void ManageProduct_Load(object sender, EventArgs e)
+        {
+            addCbbCategory();
+            showDataGrid();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            showDataGrid();
         }
     }
 }

@@ -29,7 +29,7 @@ namespace WindowsFormsApp1
                     cbbAccountType.Text + "')";
                 SqlCommand sqlCommand = new SqlCommand(query, cnn);
                 sqlCommand.ExecuteNonQuery();
-                MessageBox.Show("Add Category successful");
+                MessageBox.Show("Thêm nhân viên thành công");
                 cnn.Close();
             }
             catch (Exception ex)

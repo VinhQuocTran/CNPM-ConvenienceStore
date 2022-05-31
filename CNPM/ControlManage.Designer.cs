@@ -32,6 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCategory = new System.Windows.Forms.Button();
             this.btnCashier = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnProduct
@@ -80,12 +81,25 @@
             this.btnCashier.UseVisualStyleBackColor = false;
             this.btnCashier.Click += new System.EventHandler(this.btnCashier_Click);
             // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Location = new System.Drawing.Point(3, 393);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(158, 56);
+            this.btnLogout.TabIndex = 11;
+            this.btnLogout.Text = "Đăng xuất";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // ControlManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1314, 740);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnCashier);
             this.Controls.Add(this.btnProduct);
             this.Controls.Add(this.panel1);
@@ -101,5 +115,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCategory;
         private System.Windows.Forms.Button btnCashier;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

@@ -47,12 +47,12 @@ namespace WindowsFormsApp1
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.dataGridCashier = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCashier)).BeginInit();
             this.SuspendLayout();
@@ -70,7 +70,7 @@ namespace WindowsFormsApp1
             this.cbbAccountType.Name = "cbbAccountType";
             this.cbbAccountType.Size = new System.Drawing.Size(241, 33);
             this.cbbAccountType.TabIndex = 45;
-            this.cbbAccountType.Text = "Select type account";
+            this.cbbAccountType.Text = "Chọn chức vụ";
             this.cbbAccountType.UseWaitCursor = true;
             // 
             // btnDelete
@@ -215,6 +215,19 @@ namespace WindowsFormsApp1
             this.panel1.Size = new System.Drawing.Size(1138, 668);
             this.panel1.TabIndex = 4;
             // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSearch.Font = new System.Drawing.Font("Mongolian Baiti", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.SpringGreen;
+            this.btnSearch.Location = new System.Drawing.Point(9, 480);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(134, 68);
+            this.btnSearch.TabIndex = 53;
+            this.btnSearch.Text = "TÌM KIẾM";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -318,19 +331,6 @@ namespace WindowsFormsApp1
             this.label2.Size = new System.Drawing.Size(69, 25);
             this.label2.TabIndex = 48;
             this.label2.Text = "LOẠI";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSearch.Font = new System.Drawing.Font("Mongolian Baiti", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.SpringGreen;
-            this.btnSearch.Location = new System.Drawing.Point(9, 480);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(134, 68);
-            this.btnSearch.TabIndex = 53;
-            this.btnSearch.Text = "TÌM KIẾM";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // ManageCashier
             // 

@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cbbCategory = new System.Windows.Forms.Panel();
+            this.dataGridProduct = new Guna.UI2.WinForms.Guna2DataGridView();
             this.cbbUnit = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.cbbCategory1 = new System.Windows.Forms.ComboBox();
             this.cbbCategories = new System.Windows.Forms.ComboBox();
-            this.dataGridProduct = new System.Windows.Forms.DataGridView();
             this.txtID = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -55,12 +58,12 @@
             // cbbCategory
             // 
             this.cbbCategory.BackColor = System.Drawing.Color.LawnGreen;
+            this.cbbCategory.Controls.Add(this.dataGridProduct);
             this.cbbCategory.Controls.Add(this.cbbUnit);
             this.cbbCategory.Controls.Add(this.label2);
             this.cbbCategory.Controls.Add(this.btnRefresh);
             this.cbbCategory.Controls.Add(this.cbbCategory1);
             this.cbbCategory.Controls.Add(this.cbbCategories);
-            this.cbbCategory.Controls.Add(this.dataGridProduct);
             this.cbbCategory.Controls.Add(this.txtID);
             this.cbbCategory.Controls.Add(this.btnDelete);
             this.cbbCategory.Controls.Add(this.btnExit);
@@ -80,6 +83,64 @@
             this.cbbCategory.Name = "cbbCategory";
             this.cbbCategory.Size = new System.Drawing.Size(1033, 668);
             this.cbbCategory.TabIndex = 0;
+            // 
+            // dataGridProduct
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dataGridProduct.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridProduct.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridProduct.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridProduct.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridProduct.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridProduct.ColumnHeadersHeight = 4;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridProduct.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridProduct.EnableHeadersVisualStyles = false;
+            this.dataGridProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridProduct.Location = new System.Drawing.Point(443, 156);
+            this.dataGridProduct.Name = "dataGridProduct";
+            this.dataGridProduct.RowHeadersVisible = false;
+            this.dataGridProduct.RowHeadersWidth = 62;
+            this.dataGridProduct.RowTemplate.Height = 28;
+            this.dataGridProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridProduct.Size = new System.Drawing.Size(548, 467);
+            this.dataGridProduct.TabIndex = 50;
+            this.dataGridProduct.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridProduct.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dataGridProduct.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dataGridProduct.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dataGridProduct.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dataGridProduct.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridProduct.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridProduct.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dataGridProduct.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridProduct.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridProduct.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dataGridProduct.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataGridProduct.ThemeStyle.HeaderStyle.Height = 4;
+            this.dataGridProduct.ThemeStyle.ReadOnly = false;
+            this.dataGridProduct.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridProduct.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridProduct.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridProduct.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
+            this.dataGridProduct.ThemeStyle.RowsStyle.Height = 28;
+            this.dataGridProduct.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridProduct.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // cbbUnit
             // 
@@ -119,6 +180,7 @@
             this.btnRefresh.TabIndex = 47;
             this.btnRefresh.Text = "Làm mới";
             this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // cbbCategory1
             // 
@@ -144,17 +206,6 @@
             this.cbbCategories.TabIndex = 45;
             this.cbbCategories.Text = "Chọn loại";
             // 
-            // dataGridProduct
-            // 
-            this.dataGridProduct.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridProduct.Location = new System.Drawing.Point(444, 135);
-            this.dataGridProduct.Name = "dataGridProduct";
-            this.dataGridProduct.RowHeadersWidth = 62;
-            this.dataGridProduct.RowTemplate.Height = 28;
-            this.dataGridProduct.Size = new System.Drawing.Size(525, 495);
-            this.dataGridProduct.TabIndex = 4;
-            // 
             // txtID
             // 
             this.txtID.BackColor = System.Drawing.Color.Aquamarine;
@@ -168,7 +219,7 @@
             this.btnDelete.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnDelete.Font = new System.Drawing.Font("Mongolian Baiti", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.SpringGreen;
-            this.btnDelete.Location = new System.Drawing.Point(282, 486);
+            this.btnDelete.Location = new System.Drawing.Point(150, 484);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(118, 68);
             this.btnDelete.TabIndex = 43;
@@ -180,7 +231,7 @@
             this.btnExit.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnExit.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.SpringGreen;
-            this.btnExit.Location = new System.Drawing.Point(147, 485);
+            this.btnExit.Location = new System.Drawing.Point(294, 485);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(118, 68);
             this.btnExit.TabIndex = 42;
@@ -294,6 +345,7 @@
             this.Controls.Add(this.cbbCategory);
             this.Name = "ManageProduct";
             this.Text = "ManageProduct";
+            this.Load += new System.EventHandler(this.ManageProduct_Load);
             this.cbbCategory.ResumeLayout(false);
             this.cbbCategory.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProduct)).EndInit();
@@ -305,7 +357,6 @@
 
         private System.Windows.Forms.Panel cbbCategory;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridProduct;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnExit;
@@ -323,5 +374,6 @@
         private System.Windows.Forms.ComboBox cbbCategories;
         private System.Windows.Forms.ComboBox cbbUnit;
         private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2DataGridView dataGridProduct;
     }
 }
