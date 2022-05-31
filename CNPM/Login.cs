@@ -24,22 +24,46 @@ namespace WindowsFormsApp1
             cnn.Open();
                 string user = txtUsername.Text;
                 string pass = txtPassword.Text;
-                using (SqlCommand StrQuer = new SqlCommand("SELECT * FROM taikhoan WHERE tentk=@username AND matk=@password", cnn))
+                string accountType = cbbAccountType.Text;
+                using (SqlCommand StrQuer = new SqlCommand("SELECT * FROM taikhoan WHERE tentk=@username AND matkhau=@password and loaitk=@accType", cnn))
                 {
                     StrQuer.Parameters.AddWithValue("@username", user);
                     StrQuer.Parameters.AddWithValue("@password", pass);
-                    SqlDataReader dr = StrQuer.ExecuteReader();
+                    StrQuer.Parameters.AddWithValue("@accType", accountType);
+                SqlDataReader dr = StrQuer.ExecuteReader();
                     if(dr.HasRows)
                     {
                         MessageBox.Show("loginSuccess");
+                    ControlManage controlManage = new ControlManage();
+                    this.Hide();
+                    controlManage.Show();
                     }
                     else
                     {
-                        MessageBox.Show("Check your username or password");
-                    }
+                        MessageBox.Show(txtUsername.Text+"\n"+txtPassword.Text);//"Check your username or password"
+                }
                 }
                 cnn.Close();
          
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            txtPassword.Text = "";
+            txtUsername.Text = "";
+            cbbAccountType.Text = "";
+        }
+
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            ChangePassword changePassword = new ChangePassword();
+            this.Hide();
+            changePassword.Show();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
