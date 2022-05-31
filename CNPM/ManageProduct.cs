@@ -20,25 +20,9 @@ namespace WindowsFormsApp1
 
    
 
-        private void btnCashier_Click(object sender, EventArgs e)
-        {
-            ManageCashier manageCashier = new ManageCashier();
-            manageCashier.Show();
-            this.Hide();
-        }
-
-        private void btnCategory_Click(object sender, EventArgs e)
-        {
-            ManageCategory manageCategory = new ManageCategory();
-            manageCategory.Show();
-            this.Hide();
-        }
+      
         SqlConnection cnn = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=QuanLyCuaHangTienLoi;Trusted_Connection=True");
 
-        private void addCategory()
-        {
-            
-        }
         private void btnADDProduct_Click(object sender, EventArgs e)
         {
             try
@@ -61,5 +45,11 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            ControlManage controlManage = new ControlManage();
+            controlManage.Show();
+            this.Hide();
+        }
     }
 }

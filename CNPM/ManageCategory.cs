@@ -12,19 +12,6 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void btnCashier_Click(object sender, EventArgs e)
-        {
-            ManageCashier manageCashier = new ManageCashier();
-            manageCashier.Show();
-            this.Hide();
-        }
-
-        private void btnCategory_Click(object sender, EventArgs e)
-        {
-            ManageProduct manaProduct = new ManageProduct();
-            manaProduct.Show();
-            this.Hide();
-        }
         SqlConnection cnn = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=QuanLyCuaHangTienLoi;Trusted_Connection=True");
         private void btnADDCashier_Click(object sender, EventArgs e)
         {
@@ -90,6 +77,32 @@ namespace WindowsFormsApp1
                 MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ControlManage controlManage = new ControlManage();
+            controlManage.Show();
+            this.Hide();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                cnn.Open();
+                string query = "select * from danhmuc where madanhmuc = '"+ txtID.Text + "' or (  tendanhmuc  like N'%"+ txtName.Text + "%' and tendanhmuc not like N'')";
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, cnn);
+                SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(sqlDataAdapter);
+                var dataSet = new DataSet();
+                sqlDataAdapter.Fill(dataSet);
+                dataGridCategoy.DataSource = dataSet.Tables[0];
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

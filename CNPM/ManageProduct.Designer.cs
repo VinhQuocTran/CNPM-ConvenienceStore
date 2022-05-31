@@ -48,8 +48,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnCashier = new System.Windows.Forms.Button();
-            this.btnCategory = new System.Windows.Forms.Button();
             this.cbbCategory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProduct)).BeginInit();
             this.SuspendLayout();
@@ -78,7 +76,7 @@
             this.cbbCategory.Controls.Add(this.label1);
             this.cbbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbCategory.ForeColor = System.Drawing.Color.White;
-            this.cbbCategory.Location = new System.Drawing.Point(159, 37);
+            this.cbbCategory.Location = new System.Drawing.Point(21, 27);
             this.cbbCategory.Name = "cbbCategory";
             this.cbbCategory.Size = new System.Drawing.Size(1033, 668);
             this.cbbCategory.TabIndex = 0;
@@ -98,17 +96,17 @@
             this.cbbUnit.Name = "cbbUnit";
             this.cbbUnit.Size = new System.Drawing.Size(235, 33);
             this.cbbUnit.TabIndex = 49;
-            this.cbbUnit.Text = "Select unit";
+            this.cbbUnit.Text = "Chọn đơn vị";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 285);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 25);
+            this.label2.Size = new System.Drawing.Size(75, 21);
             this.label2.TabIndex = 48;
-            this.label2.Text = "UNIT";
+            this.label2.Text = "ĐƠN VỊ";
             // 
             // btnRefresh
             // 
@@ -119,7 +117,7 @@
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(121, 36);
             this.btnRefresh.TabIndex = 47;
-            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.Text = "Làm mới";
             this.btnRefresh.UseVisualStyleBackColor = false;
             // 
             // cbbCategory1
@@ -132,7 +130,7 @@
             this.cbbCategory1.Name = "cbbCategory1";
             this.cbbCategory1.Size = new System.Drawing.Size(194, 33);
             this.cbbCategory1.TabIndex = 46;
-            this.cbbCategory1.Text = "Select category";
+            this.cbbCategory1.Text = "chọn loại";
             // 
             // cbbCategories
             // 
@@ -144,7 +142,7 @@
             this.cbbCategories.Name = "cbbCategories";
             this.cbbCategories.Size = new System.Drawing.Size(235, 33);
             this.cbbCategories.TabIndex = 45;
-            this.cbbCategories.Text = "Select category";
+            this.cbbCategories.Text = "Chọn loại";
             // 
             // dataGridProduct
             // 
@@ -174,7 +172,7 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(118, 68);
             this.btnDelete.TabIndex = 43;
-            this.btnDelete.Text = "DELETE";
+            this.btnDelete.Text = "XÓA";
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
             // btnExit
@@ -186,8 +184,9 @@
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(118, 68);
             this.btnExit.TabIndex = 42;
-            this.btnExit.Text = "EXIT";
+            this.btnExit.Text = "THOÁT";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnADDProduct
             // 
@@ -198,7 +197,7 @@
             this.btnADDProduct.Name = "btnADDProduct";
             this.btnADDProduct.Size = new System.Drawing.Size(118, 69);
             this.btnADDProduct.TabIndex = 41;
-            this.btnADDProduct.Text = "ADD";
+            this.btnADDProduct.Text = "THÊM";
             this.btnADDProduct.UseVisualStyleBackColor = false;
             this.btnADDProduct.Click += new System.EventHandler(this.btnADDProduct_Click);
             // 
@@ -229,52 +228,52 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(1, 227);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(85, 25);
+            this.label8.Size = new System.Drawing.Size(48, 21);
             this.label8.TabIndex = 36;
-            this.label8.Text = "PRICE";
+            this.label8.Text = "GIÁ";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(3, 338);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(150, 25);
+            this.label7.Size = new System.Drawing.Size(56, 21);
             this.label7.TabIndex = 35;
-            this.label7.Text = "CATEGORY";
+            this.label7.Text = "LOẠI";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(1, 396);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(143, 25);
+            this.label6.Size = new System.Drawing.Size(109, 21);
             this.label6.TabIndex = 34;
-            this.label6.Text = "QUANTITY";
+            this.label6.Text = "SỐ LƯỢNG";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1, 115);
+            this.label5.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(4, 114);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 25);
+            this.label5.Size = new System.Drawing.Size(149, 21);
             this.label5.TabIndex = 33;
-            this.label5.Text = "ID";
+            this.label5.Text = "MÃ SẢN PHẨM";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 171);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 25);
+            this.label3.Size = new System.Drawing.Size(156, 21);
             this.label3.TabIndex = 32;
-            this.label3.Text = "NAME";
+            this.label3.Text = "TÊN SẢN PHẨM";
             // 
             // label1
             // 
@@ -283,41 +282,15 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(287, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(359, 37);
+            this.label1.Size = new System.Drawing.Size(353, 37);
             this.label1.TabIndex = 0;
-            this.label1.Text = "MANAGE PRODUCTS";
-            // 
-            // btnCashier
-            // 
-            this.btnCashier.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnCashier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCashier.Location = new System.Drawing.Point(2, 37);
-            this.btnCashier.Name = "btnCashier";
-            this.btnCashier.Size = new System.Drawing.Size(158, 56);
-            this.btnCashier.TabIndex = 1;
-            this.btnCashier.Text = "Cashier";
-            this.btnCashier.UseVisualStyleBackColor = false;
-            this.btnCashier.Click += new System.EventHandler(this.btnCashier_Click);
-            // 
-            // btnCategory
-            // 
-            this.btnCategory.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategory.Location = new System.Drawing.Point(2, 119);
-            this.btnCategory.Name = "btnCategory";
-            this.btnCategory.Size = new System.Drawing.Size(158, 56);
-            this.btnCategory.TabIndex = 2;
-            this.btnCategory.Text = "Categories";
-            this.btnCategory.UseVisualStyleBackColor = false;
-            this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
+            this.label1.Text = "QUẢN LÝ SẢN PHẨM";
             // 
             // ManageProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1204, 861);
-            this.Controls.Add(this.btnCategory);
-            this.Controls.Add(this.btnCashier);
             this.Controls.Add(this.cbbCategory);
             this.Name = "ManageProduct";
             this.Text = "ManageProduct";
@@ -332,8 +305,6 @@
 
         private System.Windows.Forms.Panel cbbCategory;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnCashier;
-        private System.Windows.Forms.Button btnCategory;
         private System.Windows.Forms.DataGridView dataGridProduct;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Button btnDelete;
