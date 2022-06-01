@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.searchProductUserControl1 = new WindowsFormsApp1.searchProductUserControl();
+            this.createBillUserControl1 = new WindowsFormsApp1.createBillUserControl();
             this.buttonLogout = new System.Windows.Forms.Button();
             this.buttonChangePassword = new System.Windows.Forms.Button();
             this.buttonClearBill = new System.Windows.Forms.Button();
@@ -36,8 +38,6 @@
             this.buttonCreateBill = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.searchProductUserControl1 = new WindowsFormsApp1.searchProductUserControl();
-            this.createBillUserControl1 = new WindowsFormsApp1.createBillUserControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +51,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(797, 673);
             this.panel1.TabIndex = 1;
+            // 
+            // searchProductUserControl1
+            // 
+            this.searchProductUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchProductUserControl1.Location = new System.Drawing.Point(0, 0);
+            this.searchProductUserControl1.Name = "searchProductUserControl1";
+            this.searchProductUserControl1.Size = new System.Drawing.Size(797, 673);
+            this.searchProductUserControl1.TabIndex = 1;
+            // 
+            // createBillUserControl1
+            // 
+            this.createBillUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.createBillUserControl1.Location = new System.Drawing.Point(0, 0);
+            this.createBillUserControl1.Name = "createBillUserControl1";
+            this.createBillUserControl1.Size = new System.Drawing.Size(797, 673);
+            this.createBillUserControl1.TabIndex = 0;
             // 
             // buttonLogout
             // 
@@ -84,7 +100,7 @@
             this.buttonClearBill.Name = "buttonClearBill";
             this.buttonClearBill.Size = new System.Drawing.Size(160, 60);
             this.buttonClearBill.TabIndex = 3;
-            this.buttonClearBill.Text = "Xoá sản phẩm";
+            this.buttonClearBill.Text = "Xoá giỏ hàng";
             this.buttonClearBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonClearBill.UseVisualStyleBackColor = true;
             this.buttonClearBill.Click += new System.EventHandler(this.buttonClearBill_Click);
@@ -97,7 +113,7 @@
             this.buttonSearchProduct.Name = "buttonSearchProduct";
             this.buttonSearchProduct.Size = new System.Drawing.Size(160, 60);
             this.buttonSearchProduct.TabIndex = 2;
-            this.buttonSearchProduct.Text = "Tìm kiếm";
+            this.buttonSearchProduct.Text = "Sản phẩm";
             this.buttonSearchProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonSearchProduct.UseVisualStyleBackColor = true;
             this.buttonSearchProduct.Click += new System.EventHandler(this.buttonSearchProduct_Click);
@@ -132,22 +148,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(51, 50);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // searchProductUserControl1
-            // 
-            this.searchProductUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.searchProductUserControl1.Location = new System.Drawing.Point(0, 0);
-            this.searchProductUserControl1.Name = "searchProductUserControl1";
-            this.searchProductUserControl1.Size = new System.Drawing.Size(797, 673);
-            this.searchProductUserControl1.TabIndex = 1;
-            // 
-            // createBillUserControl1
-            // 
-            this.createBillUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.createBillUserControl1.Location = new System.Drawing.Point(0, 0);
-            this.createBillUserControl1.Name = "createBillUserControl1";
-            this.createBillUserControl1.Size = new System.Drawing.Size(797, 673);
-            this.createBillUserControl1.TabIndex = 0;
             // 
             // formCashier
             // 
