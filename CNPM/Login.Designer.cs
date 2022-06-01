@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
             this.btnChangePassword = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -38,7 +39,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.cbbAccountType = new System.Windows.Forms.ComboBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +59,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(747, 425);
             this.panel1.TabIndex = 54;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(606, 325);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(128, 55);
+            this.btnExit.TabIndex = 63;
+            this.btnExit.Text = "Thoát";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnChangePassword
             // 
@@ -134,6 +146,7 @@
             // cbbAccountType
             // 
             this.cbbAccountType.BackColor = System.Drawing.Color.White;
+            this.cbbAccountType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbAccountType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbAccountType.ForeColor = System.Drawing.Color.SpringGreen;
             this.cbbAccountType.FormattingEnabled = true;
@@ -144,7 +157,6 @@
             this.cbbAccountType.Name = "cbbAccountType";
             this.cbbAccountType.Size = new System.Drawing.Size(241, 33);
             this.cbbAccountType.TabIndex = 55;
-            this.cbbAccountType.Text = "Chọn chức vục";
             this.cbbAccountType.UseWaitCursor = true;
             // 
             // btnLogin
@@ -158,18 +170,6 @@
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(606, 325);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(128, 55);
-            this.btnExit.TabIndex = 63;
-            this.btnExit.Text = "Thoát";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // Login
             // 

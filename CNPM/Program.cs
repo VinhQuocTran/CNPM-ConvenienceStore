@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             // Application.Run(new Vinh());
-            Application.Run(new ManageProduct()); ;
+            Application.Run(new Login()); ;
             //Application.Run(new ManageCategory());
         }
     }

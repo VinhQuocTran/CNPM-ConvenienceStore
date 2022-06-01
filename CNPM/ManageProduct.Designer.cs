@@ -78,7 +78,7 @@
             this.cbbCategory.Controls.Add(this.label3);
             this.cbbCategory.Controls.Add(this.label1);
             this.cbbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbCategory.ForeColor = System.Drawing.Color.White;
+            this.cbbCategory.ForeColor = System.Drawing.Color.Black;
             this.cbbCategory.Location = new System.Drawing.Point(21, 27);
             this.cbbCategory.Name = "cbbCategory";
             this.cbbCategory.Size = new System.Drawing.Size(1033, 668);
@@ -105,7 +105,7 @@
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -141,10 +141,12 @@
             this.dataGridProduct.ThemeStyle.RowsStyle.Height = 28;
             this.dataGridProduct.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dataGridProduct.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataGridProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridProduct_CellContentClick);
             // 
             // cbbUnit
             // 
             this.cbbUnit.BackColor = System.Drawing.Color.White;
+            this.cbbUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbUnit.ForeColor = System.Drawing.Color.SpringGreen;
             this.cbbUnit.FormattingEnabled = true;
@@ -157,7 +159,6 @@
             this.cbbUnit.Name = "cbbUnit";
             this.cbbUnit.Size = new System.Drawing.Size(235, 33);
             this.cbbUnit.TabIndex = 49;
-            this.cbbUnit.Text = "Chọn đơn vị";
             // 
             // label2
             // 
@@ -174,7 +175,7 @@
             this.btnRefresh.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnRefresh.Font = new System.Drawing.Font("Mongolian Baiti", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.SpringGreen;
-            this.btnRefresh.Location = new System.Drawing.Point(766, 95);
+            this.btnRefresh.Location = new System.Drawing.Point(870, 114);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(121, 36);
             this.btnRefresh.TabIndex = 47;
@@ -185,18 +186,20 @@
             // cbbCategory1
             // 
             this.cbbCategory1.BackColor = System.Drawing.Color.White;
+            this.cbbCategory1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbCategory1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbCategory1.ForeColor = System.Drawing.Color.SpringGreen;
             this.cbbCategory1.FormattingEnabled = true;
-            this.cbbCategory1.Location = new System.Drawing.Point(566, 96);
+            this.cbbCategory1.Location = new System.Drawing.Point(658, 114);
             this.cbbCategory1.Name = "cbbCategory1";
             this.cbbCategory1.Size = new System.Drawing.Size(194, 33);
             this.cbbCategory1.TabIndex = 46;
-            this.cbbCategory1.Text = "chọn loại";
+            this.cbbCategory1.SelectedIndexChanged += new System.EventHandler(this.cbbCategory1_SelectedIndexChanged);
             // 
             // cbbCategories
             // 
             this.cbbCategories.BackColor = System.Drawing.Color.White;
+            this.cbbCategories.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbCategories.ForeColor = System.Drawing.Color.SpringGreen;
             this.cbbCategories.FormattingEnabled = true;
@@ -204,7 +207,7 @@
             this.cbbCategories.Name = "cbbCategories";
             this.cbbCategories.Size = new System.Drawing.Size(235, 33);
             this.cbbCategories.TabIndex = 45;
-            this.cbbCategories.Text = "Chọn loại";
+            this.cbbCategories.TabStop = false;
             // 
             // txtID
             // 
@@ -225,6 +228,7 @@
             this.btnDelete.TabIndex = 43;
             this.btnDelete.Text = "XÓA";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnExit
             // 

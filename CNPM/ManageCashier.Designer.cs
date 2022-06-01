@@ -60,6 +60,7 @@ namespace WindowsFormsApp1
             // cbbAccountType
             // 
             this.cbbAccountType.BackColor = System.Drawing.Color.White;
+            this.cbbAccountType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbAccountType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbAccountType.ForeColor = System.Drawing.Color.SpringGreen;
             this.cbbAccountType.FormattingEnabled = true;
@@ -70,7 +71,6 @@ namespace WindowsFormsApp1
             this.cbbAccountType.Name = "cbbAccountType";
             this.cbbAccountType.Size = new System.Drawing.Size(241, 33);
             this.cbbAccountType.TabIndex = 45;
-            this.cbbAccountType.Text = "Chọn chức vụ";
             this.cbbAccountType.UseWaitCursor = true;
             // 
             // btnDelete
