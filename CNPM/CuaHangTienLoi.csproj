@@ -51,6 +51,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="formCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formCashier.Designer.cs">
+      <DependentUpon>formCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="createBillUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="createBillUserControl.Designer.cs">
+      <DependentUpon>createBillUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="searchProductUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="searchProductUserControl.Designer.cs">
+      <DependentUpon>searchProductUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +81,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formCashier.resx">
+      <DependentUpon>formCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="createBillUserControl.resx">
+      <DependentUpon>createBillUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchProductUserControl.resx">
+      <DependentUpon>searchProductUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vinh.resx">
       <DependentUpon>Vinh.cs</DependentUpon>
