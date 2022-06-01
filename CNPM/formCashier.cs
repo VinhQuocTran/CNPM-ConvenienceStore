@@ -17,39 +17,35 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        public void setActivePanel(UserControl control)
         {
+            // Disable all user controls
+            createBillUserControl1.Visible = false;
+            searchProductUserControl1.Visible = false;
 
+            // Enable 1 user control
+            control.Visible = true;
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonSearchProduct_Click(object sender, EventArgs e)
         {
-
+            setActivePanel(searchProductUserControl1);
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void formCashier_Load(object sender, EventArgs e)
         {
-            //Application.Exit();
+            setActivePanel(createBillUserControl1);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonCreateBill_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void createBillControl1_Load(object sender, EventArgs e)
-        {
-
+            setActivePanel(createBillUserControl1);
         }
 
         private void buttonClearBill_Click(object sender, EventArgs e)
         {
-            //createBillUserControl.totalCart = 0;
-            //createBillUserControl.labelCartTotal.Text=
-            //createBillUserControl.orderDGV.Rows.Clear();
-            //labelCartTotal.Text = totalCart.ToString();
-            //orderDGV.Rows.Clear();
-            //n = 1;
+            createBillUserControl control = createBillUserControl1;
+            control.orderDGV.Rows.Clear();
         }
     }
 }

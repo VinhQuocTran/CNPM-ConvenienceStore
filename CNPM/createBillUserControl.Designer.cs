@@ -112,7 +112,6 @@
             this.comboBoxSelectCategory.Name = "comboBoxSelectCategory";
             this.comboBoxSelectCategory.Size = new System.Drawing.Size(177, 24);
             this.comboBoxSelectCategory.TabIndex = 4;
-            this.comboBoxSelectCategory.SelectedIndexChanged += new System.EventHandler(this.comboBoxSelectCategory_SelectedIndexChanged);
             this.comboBoxSelectCategory.SelectionChangeCommitted += new System.EventHandler(this.comboBoxSelectCategory_SelectionChangeCommitted);
             // 
             // labelProductUnit
@@ -442,7 +441,6 @@
         private System.Windows.Forms.Label labelProQuantity;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button buttonAddProduct;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonAddBill;
         private System.Windows.Forms.Button buttonPrintBill;
@@ -460,5 +458,6 @@
         private System.Drawing.Printing.PrintDocument printDocument1;
         public System.Windows.Forms.DataGridView orderDGV;
         public System.Windows.Forms.Label labelCartTotal;
+        public System.Windows.Forms.Button buttonAddProduct;
     }
 }

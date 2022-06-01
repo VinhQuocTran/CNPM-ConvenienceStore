@@ -48,7 +48,8 @@ namespace WindowsFormsApp1
         public createBillUserControl()
         {
             InitializeComponent();
-            
+            //searchProductUserControl fr2 = new searchProductUserControl(this);
+
             // Setting for Selecting Product Data Grid View in CreateBill
             populateProduct();
             productDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -87,9 +88,9 @@ namespace WindowsFormsApp1
         }
 
 
-        public static double totalCart = 0;
+        public double totalCart = 0;
         public static int n = 1;
-        private void buttonAddProduct_Click(object sender, EventArgs e)
+        public void buttonAddProduct_Click(object sender, EventArgs e)
         {
             if (labelProName.Text.Length == 0 || textBoxProQuantity.Text.Length == 0)
                 MessageBox.Show("Vui lòng chọn sản phẩm và nhập số lượng");
@@ -139,11 +140,7 @@ namespace WindowsFormsApp1
                     }
                 }
             }
-            
-            
             //labelCartTotal.Text += 'VNĐ';
-
-
         }
 
         private void textBoxProQuantity_KeyPress(object sender, KeyPressEventArgs e)
@@ -160,6 +157,12 @@ namespace WindowsFormsApp1
         private void orderDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        public void clearCartDGV()
+        {
+            this.orderDGV.Rows.Clear();
+            this.orderDGV.Refresh();
         }
 
         private void fillComboBox()
@@ -328,11 +331,6 @@ namespace WindowsFormsApp1
             }
             dr.Close();
             con.Close();
-        }
-
-        private void comboBoxSelectCategory_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

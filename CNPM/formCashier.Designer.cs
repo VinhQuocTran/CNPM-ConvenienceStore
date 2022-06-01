@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.createBillControl1 = new WindowsFormsApp1.createBillUserControl();
             this.buttonLogout = new System.Windows.Forms.Button();
             this.buttonChangePassword = new System.Windows.Forms.Button();
             this.buttonClearBill = new System.Windows.Forms.Button();
@@ -37,6 +36,8 @@
             this.buttonCreateBill = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.searchProductUserControl1 = new WindowsFormsApp1.searchProductUserControl();
+            this.createBillUserControl1 = new WindowsFormsApp1.createBillUserControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -44,20 +45,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Controls.Add(this.createBillControl1);
+            this.panel1.Controls.Add(this.searchProductUserControl1);
+            this.panel1.Controls.Add(this.createBillUserControl1);
             this.panel1.Location = new System.Drawing.Point(188, 36);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(797, 673);
             this.panel1.TabIndex = 1;
-            // 
-            // createBillControl1
-            // 
-            this.createBillControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.createBillControl1.Location = new System.Drawing.Point(0, 0);
-            this.createBillControl1.Name = "createBillControl1";
-            this.createBillControl1.Size = new System.Drawing.Size(797, 673);
-            this.createBillControl1.TabIndex = 0;
-            this.createBillControl1.Load += new System.EventHandler(this.createBillControl1_Load);
             // 
             // buttonLogout
             // 
@@ -70,7 +63,6 @@
             this.buttonLogout.Text = "Đăng xuất";
             this.buttonLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonLogout.UseVisualStyleBackColor = true;
-            this.buttonLogout.Click += new System.EventHandler(this.button5_Click);
             // 
             // buttonChangePassword
             // 
@@ -83,7 +75,6 @@
             this.buttonChangePassword.Text = "Đổi mật khẩu";
             this.buttonChangePassword.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonChangePassword.UseVisualStyleBackColor = true;
-            this.buttonChangePassword.Click += new System.EventHandler(this.button4_Click);
             // 
             // buttonClearBill
             // 
@@ -109,6 +100,7 @@
             this.buttonSearchProduct.Text = "Tìm kiếm";
             this.buttonSearchProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonSearchProduct.UseVisualStyleBackColor = true;
+            this.buttonSearchProduct.Click += new System.EventHandler(this.buttonSearchProduct_Click);
             // 
             // buttonCreateBill
             // 
@@ -121,7 +113,7 @@
             this.buttonCreateBill.Text = "Giỏ hàng";
             this.buttonCreateBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonCreateBill.UseVisualStyleBackColor = true;
-            this.buttonCreateBill.Click += new System.EventHandler(this.button1_Click);
+            this.buttonCreateBill.Click += new System.EventHandler(this.buttonCreateBill_Click);
             // 
             // label1
             // 
@@ -132,7 +124,6 @@
             this.label1.Size = new System.Drawing.Size(86, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thu ngân";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
@@ -142,7 +133,23 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // formCreateBill
+            // searchProductUserControl1
+            // 
+            this.searchProductUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchProductUserControl1.Location = new System.Drawing.Point(0, 0);
+            this.searchProductUserControl1.Name = "searchProductUserControl1";
+            this.searchProductUserControl1.Size = new System.Drawing.Size(797, 673);
+            this.searchProductUserControl1.TabIndex = 1;
+            // 
+            // createBillUserControl1
+            // 
+            this.createBillUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.createBillUserControl1.Location = new System.Drawing.Point(0, 0);
+            this.createBillUserControl1.Name = "createBillUserControl1";
+            this.createBillUserControl1.Size = new System.Drawing.Size(797, 673);
+            this.createBillUserControl1.TabIndex = 0;
+            // 
+            // formCashier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -156,9 +163,11 @@
             this.Controls.Add(this.buttonSearchProduct);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonCreateBill);
-            this.Name = "formCreateBill";
+            this.Name = "formCashier";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.formCashier_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -176,7 +185,9 @@
         private System.Windows.Forms.Button buttonLogout;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private createBillUserControl createBillControl1;
+        private createBillUserControl createBillUserControl1;
+        //public searchProductUserControl searchProductUserControl1;
+        private searchProductUserControl searchProductUserControl1;
     }
 }
 

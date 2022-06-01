@@ -63,6 +63,12 @@
     <Compile Include="createBillUserControl.Designer.cs">
       <DependentUpon>createBillUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="searchProductUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="searchProductUserControl.Designer.cs">
+      <DependentUpon>searchProductUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="createBillUserControl.resx">
       <DependentUpon>createBillUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchProductUserControl.resx">
+      <DependentUpon>searchProductUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vinh.resx">
       <DependentUpon>Vinh.cs</DependentUpon>
