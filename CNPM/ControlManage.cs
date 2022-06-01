@@ -15,37 +15,42 @@ namespace WindowsFormsApp1
         public ControlManage()
         {
             InitializeComponent();
+            Load += ControlManage_Load_1;
         }
 
-
-
-        private void btnCategory_Click(object sender, EventArgs e)
+        public void setActivityPanel(UserControl control)
         {
-            ManageCategory manageCategory = new ManageCategory();
-            manageCategory.Show();
-            this.Hide();
+            controlManageProduct1.Visible = false;
+            controlManageCashier1.Visible = false;
+            controlManageCategory1.Visible = false;
+            control.Visible = true;
+        }
+        private void ControlManage_Load_1(object sender, EventArgs e)
+        {
+            setActivityPanel(controlManageProduct1);
         }
 
 
         private void btnProduct_Click(object sender, EventArgs e)
         {
-            ManageProduct manaProduct = new ManageProduct();
-            manaProduct.Show();
-            this.Hide();
+            setActivityPanel(controlManageProduct1);
+        }
+
+        private void btnCategory_Click(object sender, EventArgs e)
+        {
+            setActivityPanel(controlManageCategory1);
         }
 
         private void btnCashier_Click(object sender, EventArgs e)
         {
-            ManageCashier manageCashier = new ManageCashier();
-            manageCashier.Show();
-            this.Hide();
+            setActivityPanel(controlManageCashier1);
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
             Login login = new Login();
-            login.Show();
             this.Hide();
+            login.Show();
         }
     }
 }

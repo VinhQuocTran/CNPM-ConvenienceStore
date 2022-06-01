@@ -61,29 +61,29 @@
     <Compile Include="ControlManage.Designer.cs">
       <DependentUpon>ControlManage.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlManageCashier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlManageCashier.Designer.cs">
+      <DependentUpon>ControlManageCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlManageCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlManageCategory.Designer.cs">
+      <DependentUpon>ControlManageCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlManageProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlManageProduct.Designer.cs">
+      <DependentUpon>ControlManageProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ManageCashier.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ManageCashier.Designer.cs">
-      <DependentUpon>ManageCashier.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ManageCategory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ManageCategory.Designer.cs">
-      <DependentUpon>ManageCategory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ManageProduct.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ManageProduct.Designer.cs">
-      <DependentUpon>ManageProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -109,17 +109,17 @@
     <EmbeddedResource Include="ControlManage.resx">
       <DependentUpon>ControlManage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ControlManageCashier.resx">
+      <DependentUpon>ControlManageCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlManageCategory.resx">
+      <DependentUpon>ControlManageCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlManageProduct.resx">
+      <DependentUpon>ControlManageProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ManageCashier.resx">
-      <DependentUpon>ManageCashier.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ManageCategory.resx">
-      <DependentUpon>ManageCategory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ManageProduct.resx">
-      <DependentUpon>ManageProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
