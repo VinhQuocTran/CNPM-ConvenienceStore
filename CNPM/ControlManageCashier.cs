@@ -24,7 +24,9 @@ namespace WindowsFormsApp1
             txtUsername.Text = dataGridCashier.SelectedRows[0].Cells[1].Value.ToString();
             txtPassword.Text = dataGridCashier.SelectedRows[0].Cells[2].Value.ToString();
             txtName.Text = dataGridCashier.SelectedRows[0].Cells[3].Value.ToString();
-            txtAge.Text = dataGridCashier.SelectedRows[0].Cells[4].Value.ToString();
+            txtSalary.Text = dataGridCashier.SelectedRows[0].Cells[4].Value.ToString();
+            string[] arr = dataGridCashier.SelectedRows[0].Cells[5].Value.ToString().Split('/');
+            dtDayWorking.Value = new DateTime( Convert.ToInt32(arr[2].Split(' ')[0]), Convert.ToInt32(arr[1]), Convert.ToInt32(arr[0]));
             cbbAccountType.Text = dataGridCashier.SelectedRows[0].Cells[5].Value.ToString();
         }
 
@@ -34,8 +36,8 @@ namespace WindowsFormsApp1
             {
                 cnn.Open();
                 string query = "insert into taikhoan values('" + txtUsername.Text +
-                    "','" + txtPassword.Text + "','" + txtName.Text + "'," + txtAge.Text + ",'" +
-                    cbbAccountType.Text + "')";
+                    "','" + txtPassword.Text + "','" + txtName.Text + "'," + txtSalary.Text + ",'" 
+                    +dtDayWorking.Value.Date+"','" + dtpBirthDay.Value.Date + "','"  + cbbAccountType.Text + "')";
                 SqlCommand sqlCommand = new SqlCommand(query, cnn);
                 sqlCommand.ExecuteNonQuery();
                 MessageBox.Show("Thêm nhân viên thành công");
@@ -92,7 +94,7 @@ namespace WindowsFormsApp1
                 string matk = dataGridCashier.SelectedRows[0].Cells[0].Value.ToString();
                 string query = "update taikhoan set tentk='" + txtUsername.Text +
                     "', matkhau='" + txtPassword.Text + "', hoten = '" + txtName.Text +
-                    "',tuoi = " + txtAge.Text + ", loaitk='" + cbbAccountType.Text + "' " + "where matk = " + matk;
+                    "',tuoi = " + dtpBirthDay.Value.Date+ ", loaitk='" + cbbAccountType.Text + "' " + "where matk = " + matk;
                 SqlCommand sqlCommand = new SqlCommand(query, cnn);
                 sqlCommand.ExecuteNonQuery();
                 MessageBox.Show("Update User successful");
@@ -105,23 +107,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                cnn.Open();
-                string query = "select * from taikhoan where hoten like N'%" + txtName.Text + "%'";
-                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, cnn);
-                SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(sqlDataAdapter);
-                var dataSet = new DataSet();
-                sqlDataAdapter.Fill(dataSet);
-                dataGridCashier.DataSource = dataSet.Tables[0];
-                cnn.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+
+
     }
 }

@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cbbUnit = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbbCategory1 = new System.Windows.Forms.ComboBox();
             this.cbbCategories = new System.Windows.Forms.ComboBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -46,26 +44,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbbCategory = new System.Windows.Forms.Panel();
             this.dataGridProduct = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtSampleProduct = new System.Windows.Forms.TextBox();
+            this.txtUnit = new System.Windows.Forms.TextBox();
             this.cbbCategory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProduct)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cbbUnit
-            // 
-            this.cbbUnit.BackColor = System.Drawing.Color.White;
-            this.cbbUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbUnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbUnit.ForeColor = System.Drawing.Color.SpringGreen;
-            this.cbbUnit.FormattingEnabled = true;
-            this.cbbUnit.Items.AddRange(new object[] {
-            "Kg",
-            "Bag",
-            "Bottle",
-            "Bin"});
-            this.cbbUnit.Location = new System.Drawing.Point(165, 277);
-            this.cbbUnit.Name = "cbbUnit";
-            this.cbbUnit.Size = new System.Drawing.Size(154, 33);
-            this.cbbUnit.TabIndex = 49;
             // 
             // label2
             // 
@@ -76,19 +60,6 @@
             this.label2.Size = new System.Drawing.Size(79, 23);
             this.label2.TabIndex = 48;
             this.label2.Text = "ĐƠN VỊ";
-            // 
-            // cbbCategory1
-            // 
-            this.cbbCategory1.BackColor = System.Drawing.Color.White;
-            this.cbbCategory1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbCategory1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbCategory1.ForeColor = System.Drawing.Color.SpringGreen;
-            this.cbbCategory1.FormattingEnabled = true;
-            this.cbbCategory1.Location = new System.Drawing.Point(622, 132);
-            this.cbbCategory1.Name = "cbbCategory1";
-            this.cbbCategory1.Size = new System.Drawing.Size(142, 33);
-            this.cbbCategory1.TabIndex = 46;
-            this.cbbCategory1.SelectedIndexChanged += new System.EventHandler(this.cbbCategory1_SelectedIndexChanged);
             // 
             // cbbCategories
             // 
@@ -225,10 +196,11 @@
             // cbbCategory
             // 
             this.cbbCategory.BackColor = System.Drawing.Color.LawnGreen;
+            this.cbbCategory.Controls.Add(this.txtUnit);
+            this.cbbCategory.Controls.Add(this.txtSampleProduct);
+            this.cbbCategory.Controls.Add(this.label4);
             this.cbbCategory.Controls.Add(this.dataGridProduct);
-            this.cbbCategory.Controls.Add(this.cbbUnit);
             this.cbbCategory.Controls.Add(this.label2);
-            this.cbbCategory.Controls.Add(this.cbbCategory1);
             this.cbbCategory.Controls.Add(this.cbbCategories);
             this.cbbCategory.Controls.Add(this.txtID);
             this.cbbCategory.Controls.Add(this.btnDelete);
@@ -268,6 +240,33 @@
             this.dataGridProduct.TabIndex = 51;
             this.dataGridProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridProduct_CellContentClick_1);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(377, 145);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(259, 23);
+            this.label4.TabIndex = 52;
+            this.label4.Text = "Tìm kiếm theo tên sản phẩm";
+            // 
+            // txtSampleProduct
+            // 
+            this.txtSampleProduct.BackColor = System.Drawing.Color.Aquamarine;
+            this.txtSampleProduct.Location = new System.Drawing.Point(642, 130);
+            this.txtSampleProduct.Name = "txtSampleProduct";
+            this.txtSampleProduct.Size = new System.Drawing.Size(122, 35);
+            this.txtSampleProduct.TabIndex = 53;
+            this.txtSampleProduct.TextChanged += new System.EventHandler(this.txtSampleProduct_TextChanged);
+            // 
+            // txtUnit
+            // 
+            this.txtUnit.BackColor = System.Drawing.Color.Aquamarine;
+            this.txtUnit.Location = new System.Drawing.Point(165, 273);
+            this.txtUnit.Name = "txtUnit";
+            this.txtUnit.Size = new System.Drawing.Size(154, 35);
+            this.txtUnit.TabIndex = 54;
+            // 
             // ControlManageProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -284,9 +283,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox cbbUnit;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbbCategory1;
         private System.Windows.Forms.ComboBox cbbCategories;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Button btnDelete;
@@ -302,5 +299,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel cbbCategory;
         private System.Windows.Forms.DataGridView dataGridProduct;
+        private System.Windows.Forms.TextBox txtUnit;
+        private System.Windows.Forms.TextBox txtSampleProduct;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -33,7 +33,6 @@ namespace WindowsFormsApp1
 
                 {
                     cbbCategories.Items.Add(dr[0]).ToString();
-                    cbbCategory1.Items.Add(dr[0]).ToString();
                 }
                 dr.Close();
                 cnn.Close();
@@ -61,16 +60,18 @@ namespace WindowsFormsApp1
             {
                 cnn.Open();
                 string query = "insert into sanpham values('" + txtID.Text +
-                    "','" + txtName.Text + "','" + txtPrice.Text + "','" + cbbUnit.Text + "','" +
+                    "','" + txtName.Text + "','" + txtPrice.Text + "','" + txtUnit.Text + "','" +
                     cbbCategories.Text + "'," + txtQuantity.Text + ")";
                 SqlCommand sqlCommand = new SqlCommand(query, cnn);
                 sqlCommand.ExecuteNonQuery();
                 MessageBox.Show("Thêm sản phẩm thành công");
                 cnn.Close();
+                showDataGrid();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                cnn.Close();
             }
         }
 
@@ -89,6 +90,8 @@ namespace WindowsFormsApp1
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                cnn.Close();
+
             }
         }
 
@@ -104,21 +107,29 @@ namespace WindowsFormsApp1
             txtID.Text = dataGridProduct.SelectedRows[0].Cells[0].Value.ToString();
             txtName.Text = dataGridProduct.SelectedRows[0].Cells[1].Value.ToString();
             txtPrice.Text = dataGridProduct.SelectedRows[0].Cells[2].Value.ToString();
-            cbbUnit.Text = dataGridProduct.SelectedRows[0].Cells[3].Value.ToString();
+            txtUnit.Text = dataGridProduct.SelectedRows[0].Cells[3].Value.ToString();
             cbbCategories.Text = dataGridProduct.SelectedRows[0].Cells[4].Value.ToString();
             txtQuantity.Text = dataGridProduct.SelectedRows[0].Cells[5].Value.ToString();
         }
 
-        private void cbbCategory1_SelectedIndexChanged(object sender, EventArgs e)
+        private void txtSampleProduct_TextChanged(object sender, EventArgs e)
         {
-            cnn.Open();
-            string query = "select * from sanpham where madanhmuc='" + cbbCategory1.Text + "'";
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, cnn);
-            SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(sqlDataAdapter);
-            var dataSet = new DataSet();
-            sqlDataAdapter.Fill(dataSet);
-            dataGridProduct.DataSource = dataSet.Tables[0];
-            cnn.Close();
+            try
+            {
+                cnn.Open();
+                string query = "select * from sanpham where  tensp  like N'%" + txtSampleProduct.Text + "%'";
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, cnn);
+                SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(sqlDataAdapter);
+                var dataSet = new DataSet();
+                sqlDataAdapter.Fill(dataSet);
+                dataGridProduct.DataSource = dataSet.Tables[0];
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                cnn.Close();
+            }
         }
     }
 }

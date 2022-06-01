@@ -30,12 +30,12 @@
         {
             this.btnProduct = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.controlManageCategory1 = new WindowsFormsApp1.ControlManageCategory();
-            this.controlManageCashier1 = new WindowsFormsApp1.ControlManageCashier();
-            this.controlManageProduct1 = new WindowsFormsApp1.ControlManageProduct();
             this.btnCategory = new System.Windows.Forms.Button();
             this.btnCashier = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.controlManageProduct1 = new WindowsFormsApp1.ControlManageProduct();
+            this.controlManageCategory1 = new WindowsFormsApp1.ControlManageCategory();
+            this.controlManageCashier1 = new WindowsFormsApp1.ControlManageCashier();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,8 +54,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel1.Controls.Add(this.controlManageCategory1);
             this.panel1.Controls.Add(this.controlManageCashier1);
+            this.panel1.Controls.Add(this.controlManageCategory1);
             this.panel1.Controls.Add(this.controlManageProduct1);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.Color.Black;
@@ -63,31 +63,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1350, 923);
             this.panel1.TabIndex = 7;
-            // 
-            // controlManageCategory1
-            // 
-            this.controlManageCategory1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlManageCategory1.Location = new System.Drawing.Point(0, 0);
-            this.controlManageCategory1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.controlManageCategory1.Name = "controlManageCategory1";
-            this.controlManageCategory1.Size = new System.Drawing.Size(1350, 923);
-            this.controlManageCategory1.TabIndex = 2;
-            // 
-            // controlManageCashier1
-            // 
-            this.controlManageCashier1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlManageCashier1.Location = new System.Drawing.Point(0, 0);
-            this.controlManageCashier1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.controlManageCashier1.Name = "controlManageCashier1";
-            this.controlManageCashier1.Size = new System.Drawing.Size(1350, 923);
-            this.controlManageCashier1.TabIndex = 1;
-            // 
-            // controlManageProduct1
-            // 
-            this.controlManageProduct1.Location = new System.Drawing.Point(0, 3);
-            this.controlManageProduct1.Name = "controlManageProduct1";
-            this.controlManageProduct1.Size = new System.Drawing.Size(1196, 1035);
-            this.controlManageProduct1.TabIndex = 0;
             // 
             // btnCategory
             // 
@@ -124,6 +99,33 @@
             this.btnLogout.Text = "Đăng xuất";
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // controlManageProduct1
+            // 
+            this.controlManageProduct1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.controlManageProduct1.Location = new System.Drawing.Point(0, 0);
+            this.controlManageProduct1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.controlManageProduct1.Name = "controlManageProduct1";
+            this.controlManageProduct1.Size = new System.Drawing.Size(1350, 923);
+            this.controlManageProduct1.TabIndex = 0;
+            // 
+            // controlManageCategory1
+            // 
+            this.controlManageCategory1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.controlManageCategory1.Location = new System.Drawing.Point(0, 0);
+            this.controlManageCategory1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.controlManageCategory1.Name = "controlManageCategory1";
+            this.controlManageCategory1.Size = new System.Drawing.Size(1350, 923);
+            this.controlManageCategory1.TabIndex = 1;
+            // 
+            // controlManageCashier1
+            // 
+            this.controlManageCashier1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.controlManageCashier1.Location = new System.Drawing.Point(0, 0);
+            this.controlManageCashier1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.controlManageCashier1.Name = "controlManageCashier1";
+            this.controlManageCashier1.Size = new System.Drawing.Size(1350, 923);
+            this.controlManageCashier1.TabIndex = 2;
             // 
             // ControlManage
             // 

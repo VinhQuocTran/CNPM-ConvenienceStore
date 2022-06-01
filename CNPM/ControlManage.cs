@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
 
         public void setActivityPanel(UserControl control)
         {
-            controlManageProduct1.Visible = false;
+           controlManageProduct1.Visible = false;
             controlManageCashier1.Visible = false;
             controlManageCategory1.Visible = false;
             control.Visible = true;
@@ -38,7 +38,7 @@ namespace WindowsFormsApp1
 
         private void btnCategory_Click(object sender, EventArgs e)
         {
-            setActivityPanel(controlManageCategory1);
+           setActivityPanel(controlManageCategory1);
         }
 
         private void btnCashier_Click(object sender, EventArgs e)

@@ -34,6 +34,7 @@ namespace WindowsFormsApp1
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                cnn.Close();
             }
         }
         private void showDataGrid()
@@ -62,6 +63,8 @@ namespace WindowsFormsApp1
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                cnn.Close();
+
             }
         }
 
@@ -70,7 +73,7 @@ namespace WindowsFormsApp1
             try
             {
                 cnn.Open();
-                string query = "select * from danhmuc where madanhmuc = '"+ txtID.Text + "' or (  tendanhmuc  like N'%"+ txtName.Text + "%' and tendanhmuc not like N'')";
+                string query = "select * from danhmuc where  tendanhmuc  like N'%"+ txtName.Text+"%'" ;
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, cnn);
                 SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(sqlDataAdapter);
                 var dataSet = new DataSet();
@@ -81,6 +84,8 @@ namespace WindowsFormsApp1
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                cnn.Close();
+
             }
         }
 
@@ -94,6 +99,47 @@ namespace WindowsFormsApp1
         private void ControlManageCategory_Load(object sender, EventArgs e)
         {
             showDataGrid();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                cnn.Open();
+                string query = "update danhmuc set tendanhmuc='" + txtName.Text +
+                    "', madanhmuc='" + txtID.Text + "', mieuta = '" + txtDescription.Text +
+                    "' where madanhmuc = '" + txtID.Text + "' or tendanhmuc = '" + txtName.Text + "'";
+                SqlCommand sqlCommand = new SqlCommand(query, cnn);
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("Sửa danh mục thành công");
+                cnn.Close();
+                showDataGrid();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                cnn.Close();
+            }
+        }
+
+        private void txtCateGory_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                cnn.Open();
+                string query = "select * from danhmuc where  tendanhmuc  like N'%" + txtCateGory.Text + "%'";
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, cnn);
+                SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(sqlDataAdapter);
+                var dataSet = new DataSet();
+                sqlDataAdapter.Fill(dataSet);
+                dataGridCategoy.DataSource = dataSet.Tables[0];
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                cnn.Close();
+            }
         }
     }
 }
