@@ -16,7 +16,6 @@ namespace WindowsFormsApp1
     {
        SqlConnection con = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=QuanLyCuaHangTienLoi;Trusted_Connection=True");
 
-
         private void populateProduct()
         {
             con.Open();

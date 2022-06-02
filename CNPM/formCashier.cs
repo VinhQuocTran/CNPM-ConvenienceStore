@@ -52,5 +52,13 @@ namespace WindowsFormsApp1
         {
             setActivePanel(controlChangePassword1);
         }
+
+        private void buttonLogout_Click(object sender, EventArgs e)
+        {
+            
+            Login login = new Login();
+            this.Hide();
+            login.Show();
+        }
     }
 }

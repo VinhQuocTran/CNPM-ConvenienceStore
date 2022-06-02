@@ -33,7 +33,7 @@ namespace WindowsFormsApp1
                 SqlDataReader dr = StrQuer.ExecuteReader();
                     if(dr.HasRows)
                     {
-                        MessageBox.Show("loginSuccess");
+                        MessageBox.Show("Đăng nhập thành công");
                         if(cbbAccountType.Text=="Admin")
                         {
                             ControlManage controlManage = new ControlManage();

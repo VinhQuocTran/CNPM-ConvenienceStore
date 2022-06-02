@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.controlChangePassword1 = new WindowsFormsApp1.ControlChangePassword();
+            this.createBillUserControl1 = new WindowsFormsApp1.createBillUserControl();
+            this.searchProductUserControl1 = new WindowsFormsApp1.searchProductUserControl();
             this.buttonLogout = new System.Windows.Forms.Button();
             this.buttonChangePassword = new System.Windows.Forms.Button();
             this.buttonClearBill = new System.Windows.Forms.Button();
@@ -36,9 +39,6 @@
             this.buttonCreateBill = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.createBillUserControl1 = new WindowsFormsApp1.createBillUserControl();
-            this.searchProductUserControl1 = new WindowsFormsApp1.searchProductUserControl();
-            this.controlChangePassword1 = new WindowsFormsApp1.ControlChangePassword();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +55,32 @@
             this.panel1.Size = new System.Drawing.Size(897, 841);
             this.panel1.TabIndex = 1;
             // 
+            // controlChangePassword1
+            // 
+            this.controlChangePassword1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.controlChangePassword1.Location = new System.Drawing.Point(0, 0);
+            this.controlChangePassword1.Name = "controlChangePassword1";
+            this.controlChangePassword1.Size = new System.Drawing.Size(897, 841);
+            this.controlChangePassword1.TabIndex = 2;
+            // 
+            // createBillUserControl1
+            // 
+            this.createBillUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.createBillUserControl1.Location = new System.Drawing.Point(0, 0);
+            this.createBillUserControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.createBillUserControl1.Name = "createBillUserControl1";
+            this.createBillUserControl1.Size = new System.Drawing.Size(897, 841);
+            this.createBillUserControl1.TabIndex = 1;
+            // 
+            // searchProductUserControl1
+            // 
+            this.searchProductUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchProductUserControl1.Location = new System.Drawing.Point(0, 0);
+            this.searchProductUserControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.searchProductUserControl1.Name = "searchProductUserControl1";
+            this.searchProductUserControl1.Size = new System.Drawing.Size(897, 841);
+            this.searchProductUserControl1.TabIndex = 0;
+            // 
             // buttonLogout
             // 
             this.buttonLogout.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -67,6 +93,7 @@
             this.buttonLogout.Text = "Đăng xuất";
             this.buttonLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonLogout.UseVisualStyleBackColor = true;
+            this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
             // 
             // buttonChangePassword
             // 
@@ -142,32 +169,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(57, 62);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // createBillUserControl1
-            // 
-            this.createBillUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.createBillUserControl1.Location = new System.Drawing.Point(0, 0);
-            this.createBillUserControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.createBillUserControl1.Name = "createBillUserControl1";
-            this.createBillUserControl1.Size = new System.Drawing.Size(897, 841);
-            this.createBillUserControl1.TabIndex = 1;
-            // 
-            // searchProductUserControl1
-            // 
-            this.searchProductUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.searchProductUserControl1.Location = new System.Drawing.Point(0, 0);
-            this.searchProductUserControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.searchProductUserControl1.Name = "searchProductUserControl1";
-            this.searchProductUserControl1.Size = new System.Drawing.Size(897, 841);
-            this.searchProductUserControl1.TabIndex = 0;
-            // 
-            // controlChangePassword1
-            // 
-            this.controlChangePassword1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlChangePassword1.Location = new System.Drawing.Point(0, 0);
-            this.controlChangePassword1.Name = "controlChangePassword1";
-            this.controlChangePassword1.Size = new System.Drawing.Size(897, 841);
-            this.controlChangePassword1.TabIndex = 2;
             // 
             // formCashier
             // 

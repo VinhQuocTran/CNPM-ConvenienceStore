@@ -47,8 +47,8 @@ namespace WindowsFormsApp1
                             SqlCommand sqlCommand = new SqlCommand(query, cnn);
                             sqlCommand.ExecuteNonQuery();
                             MessageBox.Show("Thay đổi mật khẩu thành công");
-                            Login login = new Login();
                             this.Hide();
+                            Login login = new Login();
                             login.Show();
                         }
                         else

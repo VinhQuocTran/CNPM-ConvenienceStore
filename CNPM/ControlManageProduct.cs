@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
             try
             {
                 cnn.Open();
-                cmd = new SqlCommand("Select tendanhmuc From danhmuc", cnn);
+                cmd = new SqlCommand("Select madanhmuc From danhmuc", cnn);
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
 
