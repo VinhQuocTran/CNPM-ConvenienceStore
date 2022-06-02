@@ -45,6 +45,7 @@ namespace WindowsFormsApp1
                     MessageBox.Show("Add Category successful");
                     cnn.Close();
                     showDataGrid();
+
                 }
 
             }

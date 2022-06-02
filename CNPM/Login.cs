@@ -34,9 +34,18 @@ namespace WindowsFormsApp1
                     if(dr.HasRows)
                     {
                         MessageBox.Show("loginSuccess");
-                    ControlManage controlManage = new ControlManage();
-                    this.Hide();
-                    controlManage.Show();
+                        if(cbbAccountType.Text=="Admin")
+                        {
+                            ControlManage controlManage = new ControlManage();
+                            this.Hide();
+                            controlManage.Show();
+                        }
+                        else
+                        {
+                            formCashier formCashier = new formCashier();
+                            this.Hide();
+                            formCashier.Show();
+                        }
                     }
                     else
                     {

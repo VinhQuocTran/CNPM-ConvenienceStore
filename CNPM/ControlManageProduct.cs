@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
         SqlConnection cnn = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=QuanLyCuaHangTienLoi;Trusted_Connection=True");
-        private void addCbbCategory()
+        public void addCbbCategory()
         {
             SqlCommand cmd;
             SqlDataReader dr;
@@ -84,6 +84,7 @@ namespace WindowsFormsApp1
                     MessageBox.Show("Thêm sản phẩm thành công");
                     cnn.Close();
                     showDataGrid();
+                    //addCbbCategory();
                 }
             }
             catch (Exception ex)
