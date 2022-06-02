@@ -59,14 +59,33 @@ namespace WindowsFormsApp1
             try
             {
                 cnn.Open();
-                string query = "insert into sanpham values('" + txtID.Text +
-                    "','" + txtName.Text + "','" + txtPrice.Text + "','" + txtUnit.Text + "','" +
-                    cbbCategories.Text + "'," + txtQuantity.Text + ")";
-                SqlCommand sqlCommand = new SqlCommand(query, cnn);
-                sqlCommand.ExecuteNonQuery();
-                MessageBox.Show("Thêm sản phẩm thành công");
-                cnn.Close();
-                showDataGrid();
+                SqlDataAdapter oks = new SqlDataAdapter("SELECT * FROM sanpham where masp = '" + txtID.Text + "'", cnn);
+                DataSet dataSet = new DataSet();
+                oks.Fill(dataSet);
+                if (txtID.Text==""|| txtName.Text == "" || txtPrice.Text == "" || txtQuantity.Text == "" || txtUnit.Text == "" 
+                    || cbbCategories.Text == "")
+                {
+                    MessageBox.Show("Vui lòng điền thông tin");
+                    cnn.Close();
+
+                }
+                else if (dataSet.Tables["Table"].Rows.Count > 0)
+                {
+                    MessageBox.Show("Mã sản phẩm này đã tồn tại");
+                    cnn.Close();
+                }
+                else
+                {
+                    cnn.Open();
+                    string query = "insert into sanpham values(N'" + txtID.Text +
+                        "',N'" + txtName.Text + "',N'" + txtPrice.Text + "',N'" + txtUnit.Text + "',N'" +
+                        cbbCategories.Text + "'," + txtQuantity.Text + ")";
+                    SqlCommand sqlCommand = new SqlCommand(query, cnn);
+                    sqlCommand.ExecuteNonQuery();
+                    MessageBox.Show("Thêm sản phẩm thành công");
+                    cnn.Close();
+                    showDataGrid();
+                }
             }
             catch (Exception ex)
             {
@@ -80,7 +99,7 @@ namespace WindowsFormsApp1
             try
             {
                 cnn.Open();
-                string query = "delete sanpham where masp = '" + txtID.Text + "'";
+                string query = "delete sanpham where masp = N'" + txtID.Text + "'";
                 SqlCommand sqlCommand = new SqlCommand(query, cnn);
                 sqlCommand.ExecuteNonQuery();
                 MessageBox.Show("Xóa sản phẩm thành công");
@@ -124,6 +143,28 @@ namespace WindowsFormsApp1
                 sqlDataAdapter.Fill(dataSet);
                 dataGridProduct.DataSource = dataSet.Tables[0];
                 cnn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                cnn.Close();
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                cnn.Open();
+                string query = "update sanpham set masp=N'" + txtID.Text +
+                    "', tensp=N'" + txtName.Text + "', giaban = " + txtPrice.Text +
+                    ",donvitinh = N'" + txtUnit.Text + "', madanhmuc=N'" + cbbCategories.Text
+                    + "',hangtrongkho =" + txtQuantity.Text+ " where masp = N'" + txtID.Text+"' or tensp=N'"+ txtName.Text+"N'";
+                SqlCommand sqlCommand = new SqlCommand(query, cnn);
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("Sửa thông tin sản phẩm thành công");
+                cnn.Close();
+                showDataGrid();
             }
             catch (Exception ex)
             {

@@ -49,11 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChangePassword.cs">
-      <SubType>Form</SubType>
+    <Compile Include="ControlChangePassword.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ChangePassword.Designer.cs">
-      <DependentUpon>ChangePassword.cs</DependentUpon>
+    <Compile Include="ControlChangePassword.Designer.cs">
+      <DependentUpon>ControlChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="ControlManage.cs">
       <SubType>Form</SubType>
@@ -98,8 +98,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ChangePassword.resx">
-      <DependentUpon>ChangePassword.cs</DependentUpon>
+    <EmbeddedResource Include="ControlChangePassword.resx">
+      <DependentUpon>ControlChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ControlManage.resx">
       <DependentUpon>ControlManage.cs</DependentUpon>

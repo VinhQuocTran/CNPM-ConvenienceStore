@@ -54,12 +54,6 @@ namespace WindowsFormsApp1
             cbbAccountType.Text = "";
         }
 
-        private void btnChangePassword_Click(object sender, EventArgs e)
-        {
-            ChangePassword changePassword = new ChangePassword();
-            this.Hide();
-            changePassword.Show();
-        }
 
         private void btnExit_Click(object sender, EventArgs e)
         {

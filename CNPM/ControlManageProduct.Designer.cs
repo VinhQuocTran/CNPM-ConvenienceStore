@@ -43,10 +43,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbbCategory = new System.Windows.Forms.Panel();
-            this.dataGridProduct = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtSampleProduct = new System.Windows.Forms.TextBox();
             this.txtUnit = new System.Windows.Forms.TextBox();
+            this.txtSampleProduct = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dataGridProduct = new System.Windows.Forms.DataGridView();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.cbbCategory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProduct)).BeginInit();
             this.SuspendLayout();
@@ -196,6 +197,7 @@
             // cbbCategory
             // 
             this.cbbCategory.BackColor = System.Drawing.Color.LawnGreen;
+            this.cbbCategory.Controls.Add(this.btnUpdate);
             this.cbbCategory.Controls.Add(this.txtUnit);
             this.cbbCategory.Controls.Add(this.txtSampleProduct);
             this.cbbCategory.Controls.Add(this.label4);
@@ -221,6 +223,33 @@
             this.cbbCategory.Size = new System.Drawing.Size(785, 606);
             this.cbbCategory.TabIndex = 1;
             // 
+            // txtUnit
+            // 
+            this.txtUnit.BackColor = System.Drawing.Color.Aquamarine;
+            this.txtUnit.Location = new System.Drawing.Point(165, 273);
+            this.txtUnit.Name = "txtUnit";
+            this.txtUnit.Size = new System.Drawing.Size(154, 35);
+            this.txtUnit.TabIndex = 54;
+            // 
+            // txtSampleProduct
+            // 
+            this.txtSampleProduct.BackColor = System.Drawing.Color.Aquamarine;
+            this.txtSampleProduct.Location = new System.Drawing.Point(642, 130);
+            this.txtSampleProduct.Name = "txtSampleProduct";
+            this.txtSampleProduct.Size = new System.Drawing.Size(122, 35);
+            this.txtSampleProduct.TabIndex = 53;
+            this.txtSampleProduct.TextChanged += new System.EventHandler(this.txtSampleProduct_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(377, 145);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(259, 23);
+            this.label4.TabIndex = 52;
+            this.label4.Text = "Tìm kiếm theo tên sản phẩm";
+            // 
             // dataGridProduct
             // 
             this.dataGridProduct.AllowUserToAddRows = false;
@@ -240,32 +269,18 @@
             this.dataGridProduct.TabIndex = 51;
             this.dataGridProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridProduct_CellContentClick_1);
             // 
-            // label4
+            // btnUpdate
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(377, 145);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(259, 23);
-            this.label4.TabIndex = 52;
-            this.label4.Text = "Tìm kiếm theo tên sản phẩm";
-            // 
-            // txtSampleProduct
-            // 
-            this.txtSampleProduct.BackColor = System.Drawing.Color.Aquamarine;
-            this.txtSampleProduct.Location = new System.Drawing.Point(642, 130);
-            this.txtSampleProduct.Name = "txtSampleProduct";
-            this.txtSampleProduct.Size = new System.Drawing.Size(122, 35);
-            this.txtSampleProduct.TabIndex = 53;
-            this.txtSampleProduct.TextChanged += new System.EventHandler(this.txtSampleProduct_TextChanged);
-            // 
-            // txtUnit
-            // 
-            this.txtUnit.BackColor = System.Drawing.Color.Aquamarine;
-            this.txtUnit.Location = new System.Drawing.Point(165, 273);
-            this.txtUnit.Name = "txtUnit";
-            this.txtUnit.Size = new System.Drawing.Size(154, 35);
-            this.txtUnit.TabIndex = 54;
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnUpdate.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.SpringGreen;
+            this.btnUpdate.Location = new System.Drawing.Point(6, 510);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(160, 60);
+            this.btnUpdate.TabIndex = 55;
+            this.btnUpdate.Text = "SỬA";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // ControlManageProduct
             // 
@@ -302,5 +317,6 @@
         private System.Windows.Forms.TextBox txtUnit;
         private System.Windows.Forms.TextBox txtSampleProduct;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }

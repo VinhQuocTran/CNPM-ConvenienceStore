@@ -24,12 +24,29 @@ namespace WindowsFormsApp1
             try
             {
                 cnn.Open();
-                string query = "insert into danhmuc values('" + txtID.Text + "','" + txtName.Text + "','" + txtDescription.Text + "')";
-                SqlCommand sqlCommand = new SqlCommand(query, cnn);
-                sqlCommand.ExecuteNonQuery();
-                MessageBox.Show("Add Category successful");
-                cnn.Close();
-                showDataGrid();
+                SqlDataAdapter oks = new SqlDataAdapter("SELECT * FROM danhmuc where madanhmuc = '" + txtID.Text + "'", cnn);
+                DataSet dataSet = new DataSet();
+                oks.Fill(dataSet);
+                if (dataSet.Tables["Table"].Rows.Count > 0)
+                {
+                    MessageBox.Show("Mã danh mục này đã tồn tại");
+                    cnn.Close();
+                }
+                else if (txtID.Text == "" || txtName.Text == "" || txtDescription.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+                    cnn.Close();
+                }
+                else
+                {
+                    string query = "insert into danhmuc values('" + txtID.Text + "',N'" + txtName.Text + "',N'" + txtDescription.Text + "')";
+                    SqlCommand sqlCommand = new SqlCommand(query, cnn);
+                    sqlCommand.ExecuteNonQuery();
+                    MessageBox.Show("Add Category successful");
+                    cnn.Close();
+                    showDataGrid();
+                }
+
             }
             catch (Exception ex)
             {
@@ -53,12 +70,29 @@ namespace WindowsFormsApp1
             try
             {
                 cnn.Open();
-                string query = "delete danhmuc where madanhmuc = '" + txtID.Text + "'";
-                SqlCommand sqlCommand = new SqlCommand(query, cnn);
-                sqlCommand.ExecuteNonQuery();
-                MessageBox.Show("Remove Category successful");
-                cnn.Close();
-                showDataGrid();
+                SqlDataAdapter oks = new SqlDataAdapter("SELECT * FROM sanpham where madanhmuc = '"+txtID.Text+"'", cnn);
+                DataSet dataSet = new DataSet();
+                oks.Fill(dataSet);
+                if (txtID.Text.Equals("") || txtName.Text.Equals("") || txtDescription.Equals(""))
+                {
+                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+                    cnn.Close();
+                }
+                else if (dataSet.Tables["Table"].Rows.Count > 1)
+                {
+                    MessageBox.Show("Vui lòng xóng hết sản phẩm có mã danh mục này");
+                    cnn.Close();
+                }
+                else
+                {
+                    string query = "delete danhmuc where madanhmuc = '" + txtID.Text + "'";
+                    SqlCommand sqlCommand = new SqlCommand(query, cnn);
+                    sqlCommand.ExecuteNonQuery();
+                    MessageBox.Show("Xóa danh mục thành công");
+                    cnn.Close();
+                    showDataGrid();
+                }
+
             }
             catch (Exception ex)
             {
@@ -68,26 +102,6 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                cnn.Open();
-                string query = "select * from danhmuc where  tendanhmuc  like N'%"+ txtName.Text+"%'" ;
-                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, cnn);
-                SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(sqlDataAdapter);
-                var dataSet = new DataSet();
-                sqlDataAdapter.Fill(dataSet);
-                dataGridCategoy.DataSource = dataSet.Tables[0];
-                cnn.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                cnn.Close();
-
-            }
-        }
 
         private void dataGridCategoy_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -106,14 +120,31 @@ namespace WindowsFormsApp1
             try
             {
                 cnn.Open();
-                string query = "update danhmuc set tendanhmuc='" + txtName.Text +
-                    "', madanhmuc='" + txtID.Text + "', mieuta = '" + txtDescription.Text +
-                    "' where madanhmuc = '" + txtID.Text + "' or tendanhmuc = '" + txtName.Text + "'";
-                SqlCommand sqlCommand = new SqlCommand(query, cnn);
-                sqlCommand.ExecuteNonQuery();
-                MessageBox.Show("Sửa danh mục thành công");
-                cnn.Close();
-                showDataGrid();
+                SqlDataAdapter oks = new SqlDataAdapter("SELECT * FROM sanpham where madanhmuc = '" + txtID.Text + "'", cnn);
+                DataSet dataSet = new DataSet();
+                oks.Fill(dataSet);
+                if (dataSet.Tables["Table"].Rows.Count > 1)
+                {
+                    MessageBox.Show("Vui lòng xóng hết sản phẩm có mã danh mục này và thử lại");
+                    cnn.Close();
+                }
+                else if (txtID.Text == "" || txtName.Text == "" || txtDescription.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+                    cnn.Close();
+                }
+                else
+                {
+                    string query = "update danhmuc set tendanhmuc=N'" + txtName.Text +
+                         "', madanhmuc='" + txtID.Text + "', mieuta = N'" + txtDescription.Text +
+                         "' where madanhmuc = '" + txtID.Text + "' or tendanhmuc = N'" + txtName.Text + "'";
+                    SqlCommand sqlCommand = new SqlCommand(query, cnn);
+                    sqlCommand.ExecuteNonQuery();
+                    MessageBox.Show("Sửa danh mục thành công");
+                    cnn.Close();
+                    showDataGrid();
+                }
+ 
             }
             catch (Exception ex)
             {

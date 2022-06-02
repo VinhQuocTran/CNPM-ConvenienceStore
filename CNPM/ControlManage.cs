@@ -23,6 +23,7 @@ namespace WindowsFormsApp1
            controlManageProduct1.Visible = false;
             controlManageCashier1.Visible = false;
             controlManageCategory1.Visible = false;
+            controlChangePassword1.Visible = false;
             control.Visible = true;
         }
         private void ControlManage_Load_1(object sender, EventArgs e)
@@ -45,7 +46,10 @@ namespace WindowsFormsApp1
         {
             setActivityPanel(controlManageCashier1);
         }
-
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            setActivityPanel(controlChangePassword1);
+        }
         private void btnLogout_Click(object sender, EventArgs e)
         {
             Login login = new Login();

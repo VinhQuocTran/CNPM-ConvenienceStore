@@ -33,9 +33,11 @@
             this.btnCategory = new System.Windows.Forms.Button();
             this.btnCashier = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.controlManageProduct1 = new WindowsFormsApp1.ControlManageProduct();
-            this.controlManageCategory1 = new WindowsFormsApp1.ControlManageCategory();
+            this.btnChangePassword = new System.Windows.Forms.Button();
             this.controlManageCashier1 = new WindowsFormsApp1.ControlManageCashier();
+            this.controlManageCategory1 = new WindowsFormsApp1.ControlManageCategory();
+            this.controlManageProduct1 = new WindowsFormsApp1.ControlManageProduct();
+            this.controlChangePassword1 = new WindowsFormsApp1.ControlChangePassword();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +56,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel1.Controls.Add(this.controlChangePassword1);
             this.panel1.Controls.Add(this.controlManageCashier1);
             this.panel1.Controls.Add(this.controlManageCategory1);
             this.panel1.Controls.Add(this.controlManageProduct1);
@@ -92,7 +95,7 @@
             // 
             this.btnLogout.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(3, 392);
+            this.btnLogout.Location = new System.Drawing.Point(3, 497);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(158, 55);
             this.btnLogout.TabIndex = 11;
@@ -100,23 +103,17 @@
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // controlManageProduct1
+            // btnChangePassword
             // 
-            this.controlManageProduct1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlManageProduct1.Location = new System.Drawing.Point(0, 0);
-            this.controlManageProduct1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.controlManageProduct1.Name = "controlManageProduct1";
-            this.controlManageProduct1.Size = new System.Drawing.Size(1350, 923);
-            this.controlManageProduct1.TabIndex = 0;
-            // 
-            // controlManageCategory1
-            // 
-            this.controlManageCategory1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlManageCategory1.Location = new System.Drawing.Point(0, 0);
-            this.controlManageCategory1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.controlManageCategory1.Name = "controlManageCategory1";
-            this.controlManageCategory1.Size = new System.Drawing.Size(1350, 923);
-            this.controlManageCategory1.TabIndex = 1;
+            this.btnChangePassword.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangePassword.Location = new System.Drawing.Point(2, 392);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.Size = new System.Drawing.Size(155, 81);
+            this.btnChangePassword.TabIndex = 12;
+            this.btnChangePassword.Text = "Đổi mật khẩu";
+            this.btnChangePassword.UseVisualStyleBackColor = false;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
             // controlManageCashier1
             // 
@@ -127,12 +124,40 @@
             this.controlManageCashier1.Size = new System.Drawing.Size(1350, 923);
             this.controlManageCashier1.TabIndex = 2;
             // 
+            // controlManageCategory1
+            // 
+            this.controlManageCategory1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.controlManageCategory1.Location = new System.Drawing.Point(0, 0);
+            this.controlManageCategory1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.controlManageCategory1.Name = "controlManageCategory1";
+            this.controlManageCategory1.Size = new System.Drawing.Size(1350, 923);
+            this.controlManageCategory1.TabIndex = 1;
+            // 
+            // controlManageProduct1
+            // 
+            this.controlManageProduct1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.controlManageProduct1.Location = new System.Drawing.Point(0, 0);
+            this.controlManageProduct1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.controlManageProduct1.Name = "controlManageProduct1";
+            this.controlManageProduct1.Size = new System.Drawing.Size(1350, 923);
+            this.controlManageProduct1.TabIndex = 0;
+            // 
+            // controlChangePassword1
+            // 
+            this.controlChangePassword1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.controlChangePassword1.Location = new System.Drawing.Point(0, 0);
+            this.controlChangePassword1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.controlChangePassword1.Name = "controlChangePassword1";
+            this.controlChangePassword1.Size = new System.Drawing.Size(1350, 923);
+            this.controlChangePassword1.TabIndex = 3;
+            // 
             // ControlManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1512, 1050);
+            this.Controls.Add(this.btnChangePassword);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnCashier);
             this.Controls.Add(this.btnProduct);
@@ -156,5 +181,7 @@
         private ControlManageProduct controlManageProduct1;
         private ControlManageCashier controlManageCashier1;
         private ControlManageCategory controlManageCategory1;
+        private System.Windows.Forms.Button btnChangePassword;
+        private ControlChangePassword controlChangePassword1;
     }
 }
