@@ -253,8 +253,6 @@ namespace WindowsFormsApp1
 
                 // Refresh BillDGV to show order
                 populateBill();
-
-                
             }
         }
 
