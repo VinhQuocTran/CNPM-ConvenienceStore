@@ -35,8 +35,7 @@ namespace WindowsFormsApp1
         private void btnProduct_Click(object sender, EventArgs e)
         {
             setActivityPanel(controlManageProduct1);
-            ControlManageProduct control = new ControlManageProduct();
-            control.addCbbCategory();
+            controlManageProduct1.addCbbCategory();
         }
 
         private void btnCategory_Click(object sender, EventArgs e)

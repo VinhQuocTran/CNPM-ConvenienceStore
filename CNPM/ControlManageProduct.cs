@@ -22,6 +22,7 @@ namespace WindowsFormsApp1
         {
             SqlCommand cmd;
             SqlDataReader dr;
+            cbbCategories.Items.Clear();
             try
             {
                 cnn.Open();
@@ -171,8 +172,6 @@ namespace WindowsFormsApp1
 
         private void cbbCategories_SelectedIndexChanged(object sender, EventArgs e)
         {
-           cbbCategories.Items.Clear();
-            addCbbCategory();
         }
     }
 }
