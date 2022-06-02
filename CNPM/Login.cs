@@ -40,11 +40,10 @@ namespace WindowsFormsApp1
                     }
                     else
                     {
-                        MessageBox.Show(txtUsername.Text+"\n"+txtPassword.Text);//"Check your username or password"
+                        MessageBox.Show("Vui lòng kiểm tra lại thông tin đăng nhập");
                 }
                 }
                 cnn.Close();
-         
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

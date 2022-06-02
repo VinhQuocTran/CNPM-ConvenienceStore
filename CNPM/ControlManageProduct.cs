@@ -65,7 +65,7 @@ namespace WindowsFormsApp1
                 if (txtID.Text==""|| txtName.Text == "" || txtPrice.Text == "" || txtQuantity.Text == "" || txtUnit.Text == "" 
                     || cbbCategories.Text == "")
                 {
-                    MessageBox.Show("Vui lòng điền thông tin");
+                    MessageBox.Show("Vui lòng điền đầy đủ thông tin");
                     cnn.Close();
 
                 }
@@ -76,7 +76,6 @@ namespace WindowsFormsApp1
                 }
                 else
                 {
-                    cnn.Open();
                     string query = "insert into sanpham values(N'" + txtID.Text +
                         "',N'" + txtName.Text + "',N'" + txtPrice.Text + "',N'" + txtUnit.Text + "',N'" +
                         cbbCategories.Text + "'," + txtQuantity.Text + ")";

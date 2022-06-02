@@ -78,7 +78,7 @@ namespace WindowsFormsApp1
                     MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
                     cnn.Close();
                 }
-                else if (dataSet.Tables["Table"].Rows.Count > 1)
+                else if (dataSet.Tables["Table"].Rows.Count > 0)
                 {
                     MessageBox.Show("Vui lòng xóng hết sản phẩm có mã danh mục này");
                     cnn.Close();
