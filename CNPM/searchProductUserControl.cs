@@ -14,6 +14,7 @@ namespace WindowsFormsApp1
 {
     public partial class searchProductUserControl : UserControl
     {
+        SqlConnection con = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=QuanLyCuaHangTienLoi;Trusted_Connection=True");
 
         public searchProductUserControl()
         {
@@ -33,7 +34,6 @@ namespace WindowsFormsApp1
         //    this.createBillControl = tmp;
         //}
 
-        SqlConnection con = new SqlConnection("Data Source=MY-LAPTOP\\SQLEXPRESS;Initial Catalog=QuanLyCuaHangTienLoi;Integrated Security=True");
 
         private void populateProduct()
         {

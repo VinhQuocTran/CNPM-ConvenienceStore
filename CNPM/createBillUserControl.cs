@@ -14,7 +14,8 @@ namespace WindowsFormsApp1
 {
     public partial class createBillUserControl : UserControl
     {
-        SqlConnection con = new SqlConnection("Data Source=MY-LAPTOP\\SQLEXPRESS;Initial Catalog=QuanLyCuaHangTienLoi;Integrated Security=True");
+       SqlConnection con = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=QuanLyCuaHangTienLoi;Trusted_Connection=True");
+
 
         private void populateProduct()
         {

@@ -22,7 +22,7 @@ namespace WindowsFormsApp1
             // Disable all user controls
             createBillUserControl1.Visible = false;
             searchProductUserControl1.Visible = false;
-
+            controlChangePassword1.Visible = false;
             // Enable 1 user control
             control.Visible = true;
         }
@@ -46,6 +46,11 @@ namespace WindowsFormsApp1
         {
             createBillUserControl control = createBillUserControl1;
             control.orderDGV.Rows.Clear();
+        }
+
+        private void buttonChangePassword_Click(object sender, EventArgs e)
+        {
+            setActivePanel(controlChangePassword1);
         }
     }
 }

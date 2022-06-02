@@ -43,11 +43,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cbbCategory = new System.Windows.Forms.Panel();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.txtUnit = new System.Windows.Forms.TextBox();
             this.txtSampleProduct = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridProduct = new System.Windows.Forms.DataGridView();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.cbbCategory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProduct)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +74,7 @@
             this.cbbCategories.Size = new System.Drawing.Size(154, 33);
             this.cbbCategories.TabIndex = 45;
             this.cbbCategories.TabStop = false;
+            this.cbbCategories.SelectedIndexChanged += new System.EventHandler(this.cbbCategories_SelectedIndexChanged);
             // 
             // txtID
             // 
@@ -223,6 +224,19 @@
             this.cbbCategory.Size = new System.Drawing.Size(785, 606);
             this.cbbCategory.TabIndex = 1;
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnUpdate.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.SpringGreen;
+            this.btnUpdate.Location = new System.Drawing.Point(6, 510);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(160, 60);
+            this.btnUpdate.TabIndex = 55;
+            this.btnUpdate.Text = "SỬA";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // txtUnit
             // 
             this.txtUnit.BackColor = System.Drawing.Color.Aquamarine;
@@ -268,19 +282,6 @@
             this.dataGridProduct.Size = new System.Drawing.Size(383, 287);
             this.dataGridProduct.TabIndex = 51;
             this.dataGridProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridProduct_CellContentClick_1);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnUpdate.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.SpringGreen;
-            this.btnUpdate.Location = new System.Drawing.Point(6, 510);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(160, 60);
-            this.btnUpdate.TabIndex = 55;
-            this.btnUpdate.Text = "SỬA";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // ControlManageProduct
             // 

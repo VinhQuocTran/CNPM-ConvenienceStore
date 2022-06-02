@@ -25,10 +25,8 @@ namespace WindowsFormsApp1
             try
             {
                 cnn.Open();
-
-                cmd = new SqlCommand("Select madanhmuc From danhmuc", cnn);
+                cmd = new SqlCommand("Select tendanhmuc From danhmuc", cnn);
                 dr = cmd.ExecuteReader();
-
                 while (dr.Read())
 
                 {
@@ -36,7 +34,6 @@ namespace WindowsFormsApp1
                 }
                 dr.Close();
                 cnn.Close();
-                showDataGrid();
             }
             catch (Exception ex)
             {
@@ -84,7 +81,6 @@ namespace WindowsFormsApp1
                     MessageBox.Show("Thêm sản phẩm thành công");
                     cnn.Close();
                     showDataGrid();
-                    //addCbbCategory();
                 }
             }
             catch (Exception ex)
@@ -171,6 +167,12 @@ namespace WindowsFormsApp1
                 MessageBox.Show(ex.Message);
                 cnn.Close();
             }
+        }
+
+        private void cbbCategories_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           cbbCategories.Items.Clear();
+            addCbbCategory();
         }
     }
 }
