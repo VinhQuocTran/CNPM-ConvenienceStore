@@ -31,5 +31,10 @@ namespace WindowsFormsApp1
         {
             //Application.Exit();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
