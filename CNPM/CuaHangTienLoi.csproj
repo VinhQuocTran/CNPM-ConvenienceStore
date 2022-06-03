@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6755D991-7144-435B-8A0C-F1AFA33F4BBD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.3.2, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.3.2\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControlChangePassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlChangePassword.Designer.cs">
+      <DependentUpon>ControlChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formManager.Designer.cs">
+      <DependentUpon>formManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlManageCashier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlManageCashier.Designer.cs">
+      <DependentUpon>ControlManageCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlManageCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlManageCategory.Designer.cs">
+      <DependentUpon>ControlManageCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlManageProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlManageProduct.Designer.cs">
+      <DependentUpon>ControlManageProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formLogin.Designer.cs">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newFormMainManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newFormMainManager.Designer.cs">
+      <DependentUpon>newFormMainManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newFormMainCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newFormMainCashier.Designer.cs">
+      <DependentUpon>newFormMainCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formCashier.Designer.cs">
+      <DependentUpon>formCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlCreateBill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlCreateBill.Designer.cs">
+      <DependentUpon>ControlCreateBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlSearchProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlSearchProduct.Designer.cs">
+      <DependentUpon>ControlSearchProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ControlChangePassword.resx">
+      <DependentUpon>ControlChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formManager.resx">
+      <DependentUpon>formManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlManageCashier.resx">
+      <DependentUpon>ControlManageCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlManageCategory.resx">
+      <DependentUpon>ControlManageCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlManageProduct.resx">
+      <DependentUpon>ControlManageProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formLogin.resx">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newFormMainManager.resx">
+      <DependentUpon>newFormMainManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newFormMainCashier.resx">
+      <DependentUpon>newFormMainCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formCashier.resx">
+      <DependentUpon>formCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlCreateBill.resx">
+      <DependentUpon>ControlCreateBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlSearchProduct.resx">
+      <DependentUpon>ControlSearchProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\CircleK.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output - manager.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-bill.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-card.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-category.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-clerk.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-logout.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-padlock.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-product.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-switch.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-user.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\a\output - manager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\a\output-bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\a\output-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\a\output-category.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\a\output-clerk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\a\output-logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\a\output-padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\a\output-product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\a\output-search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\a\output-switch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\a\output-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output - manager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-category.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-clerk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-switch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\Icon\output - manager.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boxwhite.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CircleK.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clearbill.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clerk.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manager.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\options-lines.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smartphone.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smartphoneWhite.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\Icon\a.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\bill.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\category.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\clearcart.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\clerk.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\logout.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\manager.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\padlock.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\product.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\switch.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\user.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
