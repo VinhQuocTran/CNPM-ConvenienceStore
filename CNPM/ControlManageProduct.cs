@@ -58,17 +58,19 @@ namespace WindowsFormsApp1
         {
             SqlCommand cmd;
             SqlDataReader dr;
-            string nameCategory;
+            string nameCategory="";
             try
             {
                 cnn.Open();
-                string query = "select tensanpham from sanpham where ='" + cbbCategories.Text + "'";
-                cmd = new SqlCommand("Select tendanhmuc From danhmuc", cnn);
+                string query = "select madanhmuc from danhmuc where tendanhmuc =N'" + cbbCategories.Text + "'";
+                cmd = new SqlCommand(query, cnn);
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
 
                 {
                     nameCategory=dr[0].ToString();
+
+
                 }
                 dr.Close();
                 cnn.Close();
@@ -77,11 +79,12 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show(ex.Message);
             }
-            return "";
+            return nameCategory;
         }
         private void btnADDProduct_Click(object sender, EventArgs e)
         {
-            string nameCategory = convertIDtoNameCategory();
+            string nameCategory = "";
+            nameCategory = convertIDtoNameCategory();
             try
             {
                 cnn.Open();

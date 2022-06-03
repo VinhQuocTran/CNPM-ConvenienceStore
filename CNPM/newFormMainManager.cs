@@ -23,6 +23,7 @@ namespace WindowsFormsApp1
             SidePanel.Height = btnChangePassword.Height;
             SidePanel.Top = btnChangePassword.Top;
             setActivePanel(controlChangePassword1);
+            
         }
 
         public void setActivePanel(UserControl control)

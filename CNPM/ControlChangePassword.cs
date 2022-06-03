@@ -46,9 +46,10 @@ namespace WindowsFormsApp1
                             string query = "update taikhoan set matkhau ='" + newpass + "' where  tentk='" + username + "'";
                             SqlCommand sqlCommand = new SqlCommand(query, cnn);
                             sqlCommand.ExecuteNonQuery();
+
                             MessageBox.Show("Thay đổi mật khẩu thành công");
-                            formLogin login = new formLogin();
                             this.Hide();
+                            formLogin login = new formLogin();
                             login.Show();
                         }
                         else
