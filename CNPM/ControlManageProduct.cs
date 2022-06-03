@@ -22,13 +22,13 @@ namespace WindowsFormsApp1
         {
             SqlCommand cmd;
             SqlDataReader dr;
+            cbbCategories.Items.Clear();
             try
             {
                 cnn.Open();
 
-                cmd = new SqlCommand("Select madanhmuc From danhmuc", cnn);
+                cmd = new SqlCommand("Select tendanhmuc From danhmuc", cnn);
                 dr = cmd.ExecuteReader();
-
                 while (dr.Read())
 
                 {
@@ -36,7 +36,6 @@ namespace WindowsFormsApp1
                 }
                 dr.Close();
                 cnn.Close();
-                showDataGrid();
             }
             catch (Exception ex)
             {
@@ -54,8 +53,35 @@ namespace WindowsFormsApp1
             dataGridProduct.DataSource = dataSet.Tables[0];
             cnn.Close();
         }
+
+        public string convertIDtoNameCategory()
+        {
+            SqlCommand cmd;
+            SqlDataReader dr;
+            string nameCategory;
+            try
+            {
+                cnn.Open();
+                string query = "select tensanpham from sanpham where ='" + cbbCategories.Text + "'";
+                cmd = new SqlCommand("Select tendanhmuc From danhmuc", cnn);
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+
+                {
+                    nameCategory=dr[0].ToString();
+                }
+                dr.Close();
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return "";
+        }
         private void btnADDProduct_Click(object sender, EventArgs e)
         {
+            string nameCategory = convertIDtoNameCategory();
             try
             {
                 cnn.Open();
@@ -78,13 +104,12 @@ namespace WindowsFormsApp1
                 {
                     string query = "insert into sanpham values(N'" + txtID.Text +
                         "',N'" + txtName.Text + "',N'" + txtPrice.Text + "',N'" + txtUnit.Text + "',N'" +
-                        cbbCategories.Text + "'," + txtQuantity.Text + ")";
+                        nameCategory + "'," + txtQuantity.Text + ")";
                     SqlCommand sqlCommand = new SqlCommand(query, cnn);
                     sqlCommand.ExecuteNonQuery();
                     MessageBox.Show("Thêm sản phẩm thành công");
                     cnn.Close();
                     showDataGrid();
-                    //addCbbCategory();
                 }
             }
             catch (Exception ex)
@@ -181,6 +206,28 @@ namespace WindowsFormsApp1
             txtUnit.Text = dataGridProduct.SelectedRows[0].Cells[3].Value.ToString();
             cbbCategories.Text = dataGridProduct.SelectedRows[0].Cells[4].Value.ToString();
             txtQuantity.Text = dataGridProduct.SelectedRows[0].Cells[5].Value.ToString();
+        }
+
+        private void textBoxProPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == '.'))
+                e.Handled = true;
+
+            TextBox txtDecimal = sender as TextBox;
+
+            if (e.KeyChar == '.' && txtDecimal.Text.Contains("."))
+                e.Handled = true;
+        }
+
+        private void textBoxProQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == '.'))
+                e.Handled = true;
+
+            TextBox txtDecimal = sender as TextBox;
+
+            if (e.KeyChar == '.' && txtDecimal.Text.Contains("."))
+                e.Handled = true;
         }
     }
 }
