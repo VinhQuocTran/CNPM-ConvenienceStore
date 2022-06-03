@@ -46,7 +46,9 @@ namespace WindowsFormsApp1
                             string query = "update taikhoan set matkhau ='" + newpass + "' where  tentk='" + username + "'";
                             SqlCommand sqlCommand = new SqlCommand(query, cnn);
                             sqlCommand.ExecuteNonQuery();
+
                             MessageBox.Show("Thay đổi mật khẩu thành công");
+<<<<<<< HEAD
                             formLogin login = new formLogin();
                             var frm = Application.OpenForms.Cast<Form>().Where(x => x.Name == "newFormMainCashier" || x.Name == "newFormMainManager").FirstOrDefault();
                             if (null != frm)
@@ -54,6 +56,10 @@ namespace WindowsFormsApp1
                                 frm.Hide();
                             }
 
+=======
+                            this.Hide();
+                            formLogin login = new formLogin();
+>>>>>>> FixBugManage
                             login.Show();
                         }
                         else

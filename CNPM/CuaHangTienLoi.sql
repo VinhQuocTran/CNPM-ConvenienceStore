@@ -17,7 +17,6 @@ create table danhmuc
 	tendanhmuc nvarchar(50),
 	mieuta nvarchar(50)
 )
-
 if exists(select*from sysobjects where name='taikhoan')
 drop table taikhoan
 go

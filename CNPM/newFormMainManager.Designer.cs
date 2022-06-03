@@ -38,11 +38,11 @@
             this.btnProduct = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.controlChangePassword1 = new WindowsFormsApp1.ControlChangePassword();
             this.controlManageProduct1 = new WindowsFormsApp1.ControlManageProduct();
             this.controlManageCategory1 = new WindowsFormsApp1.ControlManageCategory();
             this.controlManageCashier1 = new WindowsFormsApp1.ControlManageCashier();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.MainPanel.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -60,16 +60,18 @@
             this.panel1.Controls.Add(this.btnProduct);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(227, 800);
+            this.panel1.Size = new System.Drawing.Size(255, 1000);
             this.panel1.TabIndex = 0;
             // 
             // SidePanel
             // 
             this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(170)))), ((int)(((byte)(26)))));
-            this.SidePanel.Location = new System.Drawing.Point(213, 205);
+            this.SidePanel.Location = new System.Drawing.Point(240, 256);
+            this.SidePanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SidePanel.Name = "SidePanel";
-            this.SidePanel.Size = new System.Drawing.Size(14, 61);
+            this.SidePanel.Size = new System.Drawing.Size(16, 76);
             this.SidePanel.TabIndex = 3;
             // 
             // btnChangePassword
@@ -80,9 +82,10 @@
             this.btnChangePassword.ForeColor = System.Drawing.Color.White;
             this.btnChangePassword.Image = global::WindowsFormsApp1.Properties.Resources.padlock;
             this.btnChangePassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChangePassword.Location = new System.Drawing.Point(3, 436);
+            this.btnChangePassword.Location = new System.Drawing.Point(3, 545);
+            this.btnChangePassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.Size = new System.Drawing.Size(226, 61);
+            this.btnChangePassword.Size = new System.Drawing.Size(254, 76);
             this.btnChangePassword.TabIndex = 7;
             this.btnChangePassword.Text = "   Đổi mật khẩu";
             this.btnChangePassword.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -92,9 +95,10 @@
             // NavigationPanel
             // 
             this.NavigationPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(170)))), ((int)(((byte)(26)))));
-            this.NavigationPanel.Location = new System.Drawing.Point(232, 0);
+            this.NavigationPanel.Location = new System.Drawing.Point(261, 0);
+            this.NavigationPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.NavigationPanel.Name = "NavigationPanel";
-            this.NavigationPanel.Size = new System.Drawing.Size(900, 34);
+            this.NavigationPanel.Size = new System.Drawing.Size(1012, 42);
             this.NavigationPanel.TabIndex = 1;
             // 
             // btnCashier
@@ -105,9 +109,10 @@
             this.btnCashier.ForeColor = System.Drawing.Color.White;
             this.btnCashier.Image = global::WindowsFormsApp1.Properties.Resources.clearcart;
             this.btnCashier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCashier.Location = new System.Drawing.Point(3, 359);
+            this.btnCashier.Location = new System.Drawing.Point(3, 449);
+            this.btnCashier.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCashier.Name = "btnCashier";
-            this.btnCashier.Size = new System.Drawing.Size(226, 61);
+            this.btnCashier.Size = new System.Drawing.Size(254, 76);
             this.btnCashier.TabIndex = 6;
             this.btnCashier.Text = "   Tài khoản";
             this.btnCashier.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -122,9 +127,10 @@
             this.btnCategory.ForeColor = System.Drawing.Color.White;
             this.btnCategory.Image = global::WindowsFormsApp1.Properties.Resources.search;
             this.btnCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCategory.Location = new System.Drawing.Point(3, 282);
+            this.btnCategory.Location = new System.Drawing.Point(3, 352);
+            this.btnCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCategory.Name = "btnCategory";
-            this.btnCategory.Size = new System.Drawing.Size(226, 61);
+            this.btnCategory.Size = new System.Drawing.Size(254, 76);
             this.btnCategory.TabIndex = 3;
             this.btnCategory.Text = "   Danh mục";
             this.btnCategory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -139,9 +145,10 @@
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Image = global::WindowsFormsApp1.Properties.Resources.logout;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(2, 747);
+            this.btnLogout.Location = new System.Drawing.Point(-2, 877);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(223, 50);
+            this.btnLogout.Size = new System.Drawing.Size(251, 62);
             this.btnLogout.TabIndex = 5;
             this.btnLogout.Text = "   Đăng xuất";
             this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -157,9 +164,10 @@
             this.btnProduct.ForeColor = System.Drawing.Color.White;
             this.btnProduct.Image = global::WindowsFormsApp1.Properties.Resources.bill;
             this.btnProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProduct.Location = new System.Drawing.Point(3, 205);
+            this.btnProduct.Location = new System.Drawing.Point(3, 256);
+            this.btnProduct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnProduct.Name = "btnProduct";
-            this.btnProduct.Size = new System.Drawing.Size(225, 61);
+            this.btnProduct.Size = new System.Drawing.Size(253, 76);
             this.btnProduct.TabIndex = 2;
             this.btnProduct.Text = "   Sản phẩm";
             this.btnProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -172,9 +180,10 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::WindowsFormsApp1.Properties.Resources.switch1;
-            this.button1.Location = new System.Drawing.Point(834, 2);
+            this.button1.Location = new System.Drawing.Point(938, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 53);
+            this.button1.Size = new System.Drawing.Size(63, 66);
             this.button1.TabIndex = 3;
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -187,10 +196,21 @@
             this.MainPanel.Controls.Add(this.controlManageProduct1);
             this.MainPanel.Controls.Add(this.controlManageCategory1);
             this.MainPanel.Controls.Add(this.controlManageCashier1);
-            this.MainPanel.Location = new System.Drawing.Point(227, 55);
+            this.MainPanel.Location = new System.Drawing.Point(255, 69);
+            this.MainPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(893, 696);
+            this.MainPanel.Size = new System.Drawing.Size(1005, 870);
             this.MainPanel.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(170)))), ((int)(((byte)(26)))));
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Location = new System.Drawing.Point(255, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1005, 72);
+            this.panel2.TabIndex = 3;
             // 
             // controlChangePassword1
             // 
@@ -198,7 +218,7 @@
             this.controlChangePassword1.Location = new System.Drawing.Point(0, 0);
             this.controlChangePassword1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.controlChangePassword1.Name = "controlChangePassword1";
-            this.controlChangePassword1.Size = new System.Drawing.Size(893, 696);
+            this.controlChangePassword1.Size = new System.Drawing.Size(1005, 870);
             this.controlChangePassword1.TabIndex = 3;
             // 
             // controlManageProduct1
@@ -207,7 +227,7 @@
             this.controlManageProduct1.Location = new System.Drawing.Point(0, 0);
             this.controlManageProduct1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.controlManageProduct1.Name = "controlManageProduct1";
-            this.controlManageProduct1.Size = new System.Drawing.Size(893, 696);
+            this.controlManageProduct1.Size = new System.Drawing.Size(1005, 870);
             this.controlManageProduct1.TabIndex = 2;
             // 
             // controlManageCategory1
@@ -216,7 +236,7 @@
             this.controlManageCategory1.Location = new System.Drawing.Point(0, 0);
             this.controlManageCategory1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.controlManageCategory1.Name = "controlManageCategory1";
-            this.controlManageCategory1.Size = new System.Drawing.Size(893, 696);
+            this.controlManageCategory1.Size = new System.Drawing.Size(1005, 870);
             this.controlManageCategory1.TabIndex = 1;
             // 
             // controlManageCashier1
@@ -225,27 +245,19 @@
             this.controlManageCashier1.Location = new System.Drawing.Point(0, 0);
             this.controlManageCashier1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.controlManageCashier1.Name = "controlManageCashier1";
-            this.controlManageCashier1.Size = new System.Drawing.Size(893, 696);
+            this.controlManageCashier1.Size = new System.Drawing.Size(1005, 870);
             this.controlManageCashier1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(170)))), ((int)(((byte)(26)))));
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(227, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(893, 58);
-            this.panel2.TabIndex = 3;
             // 
             // newFormMainManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1119, 800);
+            this.ClientSize = new System.Drawing.Size(1259, 1000);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "newFormMainManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "newFormMainCashier";

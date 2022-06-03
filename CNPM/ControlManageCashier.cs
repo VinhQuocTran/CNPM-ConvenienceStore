@@ -50,7 +50,8 @@ namespace WindowsFormsApp1
         private void showDataGrid()
         {
             cnn.Open();
-            string query = "select * from taikhoan";
+            string query = "SELECT tentk as \" Tên tài khoản\",matkhau as \"Mật khẩu\",hoten as \"Giá bán\",mucluong as \"Mức lương\",ngaynhanviec as \" Ngày nhận việc\",ngaysinh as \"Ngày sinh\", loaitk as\" Loại tài khoản\" from taikhoan";
+
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, cnn);
             SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(sqlDataAdapter);
             var dataSet = new DataSet();
@@ -128,5 +129,17 @@ namespace WindowsFormsApp1
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void textBoxProQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back || e.KeyChar == '.'))
+                e.Handled = true;
+
+            TextBox txtDecimal = sender as TextBox;
+
+            if (e.KeyChar == '.' && txtDecimal.Text.Contains("."))
+                e.Handled = true;
+        }
+
     }
 }

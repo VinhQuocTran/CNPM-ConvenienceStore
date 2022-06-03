@@ -58,7 +58,7 @@ namespace WindowsFormsApp1
         private void showDataGrid()
         {
             cnn.Open();
-            string query = "select * from danhmuc";
+            string query = "SELECT madanhmuc as \" Mã danh mục\",tendanhmuc as \"Tên danh mục\",mieuta as \"Miêu tả\" from danhmuc";
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, cnn);
             SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(sqlDataAdapter);
             var dataSet = new DataSet();
