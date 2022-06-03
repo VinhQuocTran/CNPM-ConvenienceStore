@@ -257,6 +257,11 @@ namespace WindowsFormsApp1
 
                 // Refresh BillDGV to show order
                 populateBill();
+                populateProduct();
+                labelProQuantity.Text = "";
+                labelProName.Text = "";
+                labelProUnit.Text = "";
+                labelProQuantity.Text = "";
             }
         }
 

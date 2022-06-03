@@ -35,6 +35,7 @@ namespace WindowsFormsApp1
         {
             controlCreateBill1.orderDGV.Rows.Clear();
             ControlCreateBill.totalCart = 0;
+            controlCreateBill1.labelCartTotal.Text = ControlCreateBill.totalCart.ToString();
             ControlCreateBill.n = 1;
             MessageBox.Show("Xoá hết sản phẩm trong giỏ hàng thành công");
         }
