@@ -12,7 +12,7 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
-    public partial class createBillUserControl : UserControl
+    public partial class ControlCreateBill : UserControl
     {
         SqlConnection con = new SqlConnection("Data Source=MY-LAPTOP\\SQLEXPRESS;Initial Catalog=QuanLyCuaHangTienLoi;Integrated Security=True");
 
@@ -45,7 +45,7 @@ namespace WindowsFormsApp1
             con.Close();
         }
 
-        public createBillUserControl()
+        public ControlCreateBill()
         {
             InitializeComponent();
             //searchProductUserControl fr2 = new searchProductUserControl(this);
@@ -54,19 +54,23 @@ namespace WindowsFormsApp1
             populateProduct();
             productDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             productDGV.EnableHeadersVisualStyles = false;
+            productDGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             productDGV.ColumnHeadersDefaultCellStyle.BackColor = Color.LightCoral;
             productDGV.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.LightCoral;
 
-            // Setting for Bill Data Grid View in CreateBill
+
+            //// Setting for Bill Data Grid View in CreateBill
             populateBill();
             billDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             billDGV.EnableHeadersVisualStyles = false;
+            billDGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             billDGV.ColumnHeadersDefaultCellStyle.BackColor = Color.LightCoral;
             billDGV.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.LightCoral;
 
             // Setting for Product Cart Data Grid View in CreateBill
             orderDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             orderDGV.EnableHeadersVisualStyles = false;
+            orderDGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             orderDGV.ColumnHeadersDefaultCellStyle.BackColor = Color.LightCoral;
             orderDGV.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.LightCoral;
         }
@@ -88,7 +92,7 @@ namespace WindowsFormsApp1
         }
 
 
-        public double totalCart = 0;
+        public static double totalCart = 0;
         public static int n = 1;
         public void buttonAddProduct_Click(object sender, EventArgs e)
         {
@@ -253,8 +257,6 @@ namespace WindowsFormsApp1
 
                 // Refresh BillDGV to show order
                 populateBill();
-
-                
             }
         }
 

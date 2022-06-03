@@ -30,6 +30,7 @@ namespace WindowsFormsApp1
         private void buttonSearchProduct_Click(object sender, EventArgs e)
         {
             setActivePanel(searchProductUserControl1);
+            searchProductUserControl1.populateProduct();
         }
 
         private void formCashier_Load(object sender, EventArgs e)
@@ -44,7 +45,7 @@ namespace WindowsFormsApp1
 
         private void buttonClearBill_Click(object sender, EventArgs e)
         {
-            createBillUserControl control = createBillUserControl1;
+            ControlCreateBill control = createBillUserControl1;
             control.orderDGV.Rows.Clear();
         }
     }

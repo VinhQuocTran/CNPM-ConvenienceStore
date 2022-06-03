@@ -12,10 +12,10 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
-    public partial class searchProductUserControl : UserControl
+    public partial class ControlSearchProduct : UserControl
     {
 
-        public searchProductUserControl()
+        public ControlSearchProduct()
         {
             InitializeComponent();
             //this.createBillControl = tmp;
@@ -35,7 +35,7 @@ namespace WindowsFormsApp1
 
         SqlConnection con = new SqlConnection("Data Source=MY-LAPTOP\\SQLEXPRESS;Initial Catalog=QuanLyCuaHangTienLoi;Integrated Security=True");
 
-        private void populateProduct()
+        public void populateProduct()
         {
             con.Open();
             string query = "SELECT sp.masp,tensp as \"Tên Sản Phẩm\",tendanhmuc as \"Tên danh mục\",giaban as \"Giá bán\",donvitinh as \"Đơn vị tính\",hangtrongkho as \"Hàng trong kho\" from sanpham sp inner join danhmuc dm on dm.madanhmuc=sp.madanhmuc";
@@ -121,8 +121,7 @@ namespace WindowsFormsApp1
 
         private void buttonAddProduct_Click(object sender, EventArgs e)
         {
-            createBillUserControl control = new createBillUserControl();
-            //control.buttonAddProduct_Click(sender,e);
+            ControlCreateBill control = new ControlCreateBill();
             control.clearCartDGV();
         }
     }
