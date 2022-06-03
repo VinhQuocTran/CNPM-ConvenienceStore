@@ -17,7 +17,6 @@ create table danhmuc
 	tendanhmuc nvarchar(50),
 	mieuta nvarchar(50)
 )
-
 if exists(select*from sysobjects where name='taikhoan')
 drop table taikhoan
 go
@@ -52,7 +51,9 @@ create table hoadon
 (
 	mahd int identity(1,1) primary key not null,
 	ngayxuat datetime,
-	tongtien float
+	tongtien float,
+	nguoiban int,
+	constraint Fk_HoaDon_Taikhoan FOREIGN KEY (nguoiban) REFERENCES taikhoan(matk)
 )
 if exists(select*from sysobjects where name='chitiethoadon')
 drop table chitiethoadon
@@ -68,4 +69,5 @@ create table chitiethoadon
 	constraint Fk_ChiTietHoaDon_SanPham foreign key (masp) references sanpham(masp)
 )
 
-
+insert into taikhoan
+values ('admin','admin','Administrator',500000,'2022-06-01','2022-06-01','Admin')

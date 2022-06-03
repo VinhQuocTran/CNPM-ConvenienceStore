@@ -39,6 +39,8 @@ namespace WindowsFormsApp1
                     {
                         StrQuer.Parameters.AddWithValue("@password", oldpass);
                         StrQuer.Parameters.AddWithValue("@username", username);
+                        formLogin login = new formLogin();
+
                         SqlDataReader dr = StrQuer.ExecuteReader();
                         if (dr.HasRows)
                         {
@@ -46,8 +48,14 @@ namespace WindowsFormsApp1
                             string query = "update taikhoan set matkhau ='" + newpass + "' where  tentk='" + username + "'";
                             SqlCommand sqlCommand = new SqlCommand(query, cnn);
                             sqlCommand.ExecuteNonQuery();
+
                             MessageBox.Show("Thay đổi mật khẩu thành công");
-                            formLogin login = new formLogin();
+                            var frm = Application.OpenForms.Cast<Form>().Where(x => x.Name == "newFormMainCashier" || x.Name == "newFormMainManager").FirstOrDefault();
+                            if (null != frm)
+                            {
+                                frm.Hide();
+                            }
+
                             this.Hide();
                             login.Show();
                         }

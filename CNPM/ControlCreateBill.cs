@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
 {
     public partial class ControlCreateBill : UserControl
     {
-        SqlConnection con = new SqlConnection("Data Source=MY-LAPTOP\\SQLEXPRESS;Initial Catalog=QuanLyCuaHangTienLoi;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=QuanLyCuaHangTienLoi;Trusted_Connection=True");
 
         private void populateProduct()
         {
@@ -35,11 +35,10 @@ namespace WindowsFormsApp1
         private void populateBill()
         {
             con.Open();
-            string query = "SELECT mahd as \"Mã hoá đơn\",convert(varchar,ngayxuat,22) as \"Giờ bán\",tongtien as \"Tổng tiền\" from hoadon where day(ngayxuat)=day(getdate())";
+            string query = "SELECT mahd as \"Mã hoá đơn\",convert(varchar,ngayxuat,22) as \"Giờ bán\",tongtien as \"Tổng tiền\",hoten as \"Người bán\" from hoadon hd inner join taikhoan tk on hd.nguoiban=tk.matk where day(ngayxuat)=day(getdate())";
             var sda = new SqlDataAdapter(query, con);
             var builder = new SqlCommandBuilder(sda);
             var dataSet = new DataSet();
-
             sda.Fill(dataSet);
             billDGV.DataSource = dataSet.Tables[0];
             con.Close();
@@ -210,7 +209,7 @@ namespace WindowsFormsApp1
             else
             {
                 string time = "\'" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "\'";
-                string query = "insert into hoadon values (" + time + "," + totalCart + ")";
+                string query = "insert into hoadon values (" + time + "," + totalCart + "," + formLogin.matk+")";
                 //MessageBox.Show(query);
 
                 con.Open();
@@ -257,6 +256,11 @@ namespace WindowsFormsApp1
 
                 // Refresh BillDGV to show order
                 populateBill();
+                populateProduct();
+                labelProQuantity.Text = "";
+                labelProName.Text = "";
+                labelProUnit.Text = "";
+                labelProQuantity.Text = "";
             }
         }
 

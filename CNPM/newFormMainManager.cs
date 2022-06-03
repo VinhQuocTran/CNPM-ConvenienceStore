@@ -23,6 +23,7 @@ namespace WindowsFormsApp1
             SidePanel.Height = btnChangePassword.Height;
             SidePanel.Top = btnChangePassword.Top;
             setActivePanel(controlChangePassword1);
+            
         }
 
         public void setActivePanel(UserControl control)
@@ -51,6 +52,7 @@ namespace WindowsFormsApp1
             SidePanel.Height = btnProduct.Height;
             SidePanel.Top = btnProduct.Top;
             setActivePanel(controlManageProduct1);
+            controlManageProduct1.addCbbCategory();
         }
 
         private void btnCategory_Click(object sender, EventArgs e)
