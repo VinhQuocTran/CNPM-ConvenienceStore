@@ -39,6 +39,8 @@ namespace WindowsFormsApp1
                     {
                         StrQuer.Parameters.AddWithValue("@password", oldpass);
                         StrQuer.Parameters.AddWithValue("@username", username);
+                        formLogin login = new formLogin();
+
                         SqlDataReader dr = StrQuer.ExecuteReader();
                         if (dr.HasRows)
                         {
@@ -55,7 +57,6 @@ namespace WindowsFormsApp1
                                 frm.Hide();
                             }
 
-                            formLogin login = new formLogin();
                             this.Hide();
                             login.Show();
                         }
