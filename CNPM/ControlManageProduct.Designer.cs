@@ -166,9 +166,9 @@
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(497, 180);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 27);
+            this.label7.Size = new System.Drawing.Size(139, 27);
             this.label7.TabIndex = 35;
-            this.label7.Text = "LOẠI";
+            this.label7.Text = "DANH MỤC";
             // 
             // label6
             // 

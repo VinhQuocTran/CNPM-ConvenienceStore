@@ -45,7 +45,7 @@ namespace WindowsFormsApp1
         private void showDataGrid()
         {
             cnn.Open();
-            string query = "select * from sanpham";
+            string query= "SELECT masp as \" Mã sản phẩm\",tensp as \"Tên Sản Phẩm\",giaban as \"Giá bán\",donvitinh as \"Đơn vị tính\",madanhmuc as \" Mã danh mục\",hangtrongkho as \" Hàng trong kho\" from sanpham";
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, cnn);
             SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(sqlDataAdapter);
             var dataSet = new DataSet();
@@ -69,8 +69,6 @@ namespace WindowsFormsApp1
 
                 {
                     nameCategory=dr[0].ToString();
-
-
                 }
                 dr.Close();
                 cnn.Close();
@@ -78,6 +76,7 @@ namespace WindowsFormsApp1
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                cnn.Close();
             }
             return nameCategory;
         }
@@ -127,12 +126,24 @@ namespace WindowsFormsApp1
             try
             {
                 cnn.Open();
-                string query = "delete sanpham where masp = N'" + txtID.Text + "'";
-                SqlCommand sqlCommand = new SqlCommand(query, cnn);
-                sqlCommand.ExecuteNonQuery();
-                MessageBox.Show("Xóa sản phẩm thành công");
-                cnn.Close();
-                showDataGrid();
+                SqlDataAdapter oks = new SqlDataAdapter("SELECT * FROM chitiethoadon where masp = '" + txtID.Text + "'", cnn);
+                DataSet dataSet = new DataSet();
+                oks.Fill(dataSet);
+                if (dataSet.Tables["Table"].Rows.Count > 0)
+                {
+                    MessageBox.Show("Vui lòng xóa chi tiết hóa đơn có sản phẩm này");
+                    cnn.Close();
+                }
+                else
+                {
+                    cnn.Open();
+                    string query = "delete sanpham where masp = N'" + txtID.Text + "'";
+                    SqlCommand sqlCommand = new SqlCommand(query, cnn);
+                    sqlCommand.ExecuteNonQuery();
+                    MessageBox.Show("Xóa sản phẩm thành công");
+                    cnn.Close();
+                    showDataGrid();
+                }
             }
             catch (Exception ex)
             {
@@ -147,17 +158,6 @@ namespace WindowsFormsApp1
             addCbbCategory();
             showDataGrid();
         }
-
-
-        //private void dataGridProduct_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    txtID.Text = dataGridProduct.SelectedRows[0].Cells[0].Value.ToString();
-        //    txtName.Text = dataGridProduct.SelectedRows[0].Cells[1].Value.ToString();
-        //    txtPrice.Text = dataGridProduct.SelectedRows[0].Cells[2].Value.ToString();
-        //    txtUnit.Text = dataGridProduct.SelectedRows[0].Cells[3].Value.ToString();
-        //    cbbCategories.Text = dataGridProduct.SelectedRows[0].Cells[4].Value.ToString();
-        //    txtQuantity.Text = dataGridProduct.SelectedRows[0].Cells[5].Value.ToString();
-        //}
 
         private void txtSampleProduct_TextChanged(object sender, EventArgs e)
         {
@@ -181,12 +181,14 @@ namespace WindowsFormsApp1
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            string idCategory = "";
+            idCategory = convertIDtoNameCategory();
             try
             {
                 cnn.Open();
                 string query = "update sanpham set masp=N'" + txtID.Text +
                     "', tensp=N'" + txtName.Text + "', giaban = " + txtPrice.Text +
-                    ",donvitinh = N'" + txtUnit.Text + "', madanhmuc=N'" + cbbCategories.Text
+                    ",donvitinh = N'" + txtUnit.Text + "', madanhmuc=N'" + idCategory
                     + "',hangtrongkho =" + txtQuantity.Text+ " where masp = N'" + txtID.Text+"' or tensp=N'"+ txtName.Text+"N'";
                 SqlCommand sqlCommand = new SqlCommand(query, cnn);
                 sqlCommand.ExecuteNonQuery();
@@ -200,6 +202,32 @@ namespace WindowsFormsApp1
                 cnn.Close();
             }
         }
+        public string convertNametoIDCategory()
+        {
+            SqlCommand cmd;
+            SqlDataReader dr;
+            string nameCategory = "";
+            string idCategory = dataGridProduct.SelectedRows[0].Cells[4].Value.ToString();
+            try
+            {
+                cnn.Open();
+                string query = "select tendanhmuc from danhmuc where madanhmuc =N'" + idCategory+ "'";
+                cmd = new SqlCommand(query, cnn);
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    nameCategory = dr[0].ToString();
+                }
+                dr.Close();
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                cnn.Close();
+            }
+            return nameCategory;
+        }
 
         private void dataGridProduct_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -207,7 +235,7 @@ namespace WindowsFormsApp1
             txtName.Text = dataGridProduct.SelectedRows[0].Cells[1].Value.ToString();
             txtPrice.Text = dataGridProduct.SelectedRows[0].Cells[2].Value.ToString();
             txtUnit.Text = dataGridProduct.SelectedRows[0].Cells[3].Value.ToString();
-            cbbCategories.Text = dataGridProduct.SelectedRows[0].Cells[4].Value.ToString();
+            cbbCategories.Text = convertNametoIDCategory();
             txtQuantity.Text = dataGridProduct.SelectedRows[0].Cells[5].Value.ToString();
         }
 
