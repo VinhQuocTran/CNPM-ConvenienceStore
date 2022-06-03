@@ -55,11 +55,11 @@
     <Compile Include="ControlChangePassword.Designer.cs">
       <DependentUpon>ControlChangePassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="ControlManage.cs">
+    <Compile Include="formManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ControlManage.Designer.cs">
-      <DependentUpon>ControlManage.cs</DependentUpon>
+    <Compile Include="formManager.Designer.cs">
+      <DependentUpon>formManager.cs</DependentUpon>
     </Compile>
     <Compile Include="ControlManageCashier.cs">
       <SubType>UserControl</SubType>
@@ -79,11 +79,17 @@
     <Compile Include="ControlManageProduct.Designer.cs">
       <DependentUpon>ControlManageProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="formLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="formLogin.Designer.cs">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newFormMainCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newFormMainCashier.Designer.cs">
+      <DependentUpon>newFormMainCashier.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -96,31 +102,31 @@
     <Compile Include="formCashier.Designer.cs">
       <DependentUpon>formCashier.cs</DependentUpon>
     </Compile>
-    <Compile Include="createBillUserControl.cs">
+    <Compile Include="ControlCreateBill.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="createBillUserControl.Designer.cs">
-      <DependentUpon>createBillUserControl.cs</DependentUpon>
+    <Compile Include="ControlCreateBill.Designer.cs">
+      <DependentUpon>ControlCreateBill.cs</DependentUpon>
     </Compile>
-    <Compile Include="searchProductUserControl.cs">
+    <Compile Include="ControlSearchProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="searchProductUserControl.Designer.cs">
-      <DependentUpon>searchProductUserControl.cs</DependentUpon>
+    <Compile Include="ControlSearchProduct.Designer.cs">
+      <DependentUpon>ControlSearchProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vinh.cs">
+    <Compile Include="test.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vinh.Designer.cs">
-      <DependentUpon>Vinh.cs</DependentUpon>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ControlChangePassword.resx">
       <DependentUpon>ControlChangePassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ControlManage.resx">
-      <DependentUpon>ControlManage.cs</DependentUpon>
+    <EmbeddedResource Include="formManager.resx">
+      <DependentUpon>formManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ControlManageCashier.resx">
       <DependentUpon>ControlManageCashier.cs</DependentUpon>
@@ -131,8 +137,11 @@
     <EmbeddedResource Include="ControlManageProduct.resx">
       <DependentUpon>ControlManageProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="formLogin.resx">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newFormMainCashier.resx">
+      <DependentUpon>newFormMainCashier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -142,14 +151,14 @@
     <EmbeddedResource Include="formCashier.resx">
       <DependentUpon>formCashier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="createBillUserControl.resx">
-      <DependentUpon>createBillUserControl.cs</DependentUpon>
+    <EmbeddedResource Include="ControlCreateBill.resx">
+      <DependentUpon>ControlCreateBill.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="searchProductUserControl.resx">
-      <DependentUpon>searchProductUserControl.cs</DependentUpon>
+    <EmbeddedResource Include="ControlSearchProduct.resx">
+      <DependentUpon>ControlSearchProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vinh.resx">
-      <DependentUpon>Vinh.cs</DependentUpon>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

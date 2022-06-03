@@ -45,7 +45,7 @@ namespace WindowsFormsApp1
 
         private void buttonClearBill_Click(object sender, EventArgs e)
         {
-            createBillUserControl control = createBillUserControl1;
+            ControlCreateBill control = createBillUserControl1;
             control.orderDGV.Rows.Clear();
         }
     }

@@ -12,7 +12,7 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
-    public partial class createBillUserControl : UserControl
+    public partial class ControlCreateBill : UserControl
     {
         SqlConnection con = new SqlConnection("Data Source=MY-LAPTOP\\SQLEXPRESS;Initial Catalog=QuanLyCuaHangTienLoi;Integrated Security=True");
 
@@ -45,7 +45,7 @@ namespace WindowsFormsApp1
             con.Close();
         }
 
-        public createBillUserControl()
+        public ControlCreateBill()
         {
             InitializeComponent();
             //searchProductUserControl fr2 = new searchProductUserControl(this);

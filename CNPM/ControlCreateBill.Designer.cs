@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class createBillUserControl
+    partial class ControlCreateBill
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(createBillUserControl));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlCreateBill));
             this.labelProductName = new System.Windows.Forms.Label();
             this.productDGV = new System.Windows.Forms.DataGridView();
             this.labelProductPrice = new System.Windows.Forms.Label();
@@ -388,7 +388,7 @@
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
-            // createBillUserControl
+            // ControlCreateBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -415,7 +415,7 @@
             this.Controls.Add(this.labelProductPrice);
             this.Controls.Add(this.productDGV);
             this.Controls.Add(this.labelProductName);
-            this.Name = "createBillUserControl";
+            this.Name = "ControlCreateBill";
             this.Size = new System.Drawing.Size(797, 673);
             this.Load += new System.EventHandler(this.CreateBillControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.productDGV)).EndInit();

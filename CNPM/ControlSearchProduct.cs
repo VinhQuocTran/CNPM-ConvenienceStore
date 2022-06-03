@@ -12,10 +12,10 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
-    public partial class searchProductUserControl : UserControl
+    public partial class ControlSearchProduct : UserControl
     {
 
-        public searchProductUserControl()
+        public ControlSearchProduct()
         {
             InitializeComponent();
             //this.createBillControl = tmp;
@@ -121,7 +121,7 @@ namespace WindowsFormsApp1
 
         private void buttonAddProduct_Click(object sender, EventArgs e)
         {
-            createBillUserControl control = new createBillUserControl();
+            ControlCreateBill control = new ControlCreateBill();
             control.clearCartDGV();
         }
     }

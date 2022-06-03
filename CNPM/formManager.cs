@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class ControlManage : Form
+    public partial class formManager : Form
     {
-        public ControlManage()
+        public formManager()
         {
             InitializeComponent();
             Load += ControlManage_Load_1;
@@ -54,7 +54,7 @@ namespace WindowsFormsApp1
         }
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
+            formLogin login = new formLogin();
             this.Hide();
             login.Show();
         }

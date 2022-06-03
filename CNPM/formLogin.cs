@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Login : Form
+    public partial class formLogin : Form
     {
-        public Login()
+        public formLogin()
         {
             InitializeComponent();
         }
@@ -36,7 +36,7 @@ namespace WindowsFormsApp1
                         MessageBox.Show("loginSuccess");
                         if(cbbAccountType.Text=="Admin")
                         {
-                            ControlManage controlManage = new ControlManage();
+                            formManager controlManage = new formManager();
                             this.Hide();
                             controlManage.Show();
                         }

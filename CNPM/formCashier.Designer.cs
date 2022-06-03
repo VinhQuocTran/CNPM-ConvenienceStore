@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.searchProductUserControl1 = new WindowsFormsApp1.searchProductUserControl();
-            this.createBillUserControl1 = new WindowsFormsApp1.createBillUserControl();
+            this.searchProductUserControl1 = new WindowsFormsApp1.ControlSearchProduct();
+            this.createBillUserControl1 = new WindowsFormsApp1.ControlCreateBill();
             this.buttonLogout = new System.Windows.Forms.Button();
             this.buttonChangePassword = new System.Windows.Forms.Button();
             this.buttonClearBill = new System.Windows.Forms.Button();
@@ -196,9 +196,9 @@
         private System.Windows.Forms.Button buttonLogout;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private createBillUserControl createBillUserControl1;
+        private ControlCreateBill createBillUserControl1;
         //public searchProductUserControl searchProductUserControl1;
-        private searchProductUserControl searchProductUserControl1;
+        private ControlSearchProduct searchProductUserControl1;
         private System.Windows.Forms.Button button1;
     }
 }

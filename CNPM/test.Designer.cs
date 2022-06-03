@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Vinh
+    partial class test
     {
         /// <summary>
         /// Required designer variable.
