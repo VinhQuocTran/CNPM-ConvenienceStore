@@ -35,7 +35,7 @@ namespace WindowsFormsApp1
         private void populateBill()
         {
             con.Open();
-            string query = "SELECT mahd as \"Mã hoá đơn\",convert(varchar,ngayxuat,22) as \"Giờ bán\",tongtien as \"Tổng tiền\" from hoadon where day(ngayxuat)=day(getdate())";
+            string query = "SELECT mahd as \"Mã hoá đơn\",convert(varchar,ngayxuat,22) as \"Giờ bán\",tongtien as \"Tổng tiền\",hoten as \"Người bán\" from hoadon hd inner join taikhoan tk on hd.nguoiban=tk.matk where day(ngayxuat)=day(getdate())";
             var sda = new SqlDataAdapter(query, con);
             var builder = new SqlCommandBuilder(sda);
             var dataSet = new DataSet();
@@ -210,7 +210,7 @@ namespace WindowsFormsApp1
             else
             {
                 string time = "\'" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "\'";
-                string query = "insert into hoadon values (" + time + "," + totalCart + ")";
+                string query = "insert into hoadon values (" + time + "," + totalCart + "," + formLogin.matk+")";
                 //MessageBox.Show(query);
 
                 con.Open();

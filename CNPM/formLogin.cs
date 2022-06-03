@@ -13,6 +13,7 @@ namespace WindowsFormsApp1
 {
     public partial class formLogin : Form
     {
+        public static string matk = "";
         public formLogin()
         {
             InitializeComponent();
@@ -30,10 +31,12 @@ namespace WindowsFormsApp1
                     StrQuer.Parameters.AddWithValue("@username", user);
                     StrQuer.Parameters.AddWithValue("@password", pass);
                     StrQuer.Parameters.AddWithValue("@accType", accountType);
-                SqlDataReader dr = StrQuer.ExecuteReader();
+                    SqlDataReader dr = StrQuer.ExecuteReader();
                     if(dr.HasRows)
                     {
                         MessageBox.Show("Đăng nhập thành công");
+                        if (dr.Read())
+                            matk = dr["matk"].ToString();
                         if(cbbAccountType.Text=="Admin")
                         {
                             newFormMainManager controlManage = new newFormMainManager();
