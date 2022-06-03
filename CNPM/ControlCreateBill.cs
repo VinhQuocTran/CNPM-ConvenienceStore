@@ -39,7 +39,6 @@ namespace WindowsFormsApp1
             var sda = new SqlDataAdapter(query, con);
             var builder = new SqlCommandBuilder(sda);
             var dataSet = new DataSet();
-
             sda.Fill(dataSet);
             billDGV.DataSource = dataSet.Tables[0];
             con.Close();

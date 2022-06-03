@@ -50,7 +50,6 @@ namespace WindowsFormsApp1
                             sqlCommand.ExecuteNonQuery();
 
                             MessageBox.Show("Thay đổi mật khẩu thành công");
-                            formLogin login = new formLogin();
                             var frm = Application.OpenForms.Cast<Form>().Where(x => x.Name == "newFormMainCashier" || x.Name == "newFormMainManager").FirstOrDefault();
                             if (null != frm)
                             {
