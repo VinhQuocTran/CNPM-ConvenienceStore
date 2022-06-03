@@ -15,41 +15,57 @@ namespace WindowsFormsApp1
         public newFormMainCashier()
         {
             InitializeComponent();
+            setActivePanel(controlCreateBill1);
         }
 
         private void buttonCreateBill_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = buttonCreateBill.Height;
-            setActivePanel(createBillUserControl1);
+            SidePanel.Top = buttonCreateBill.Top;
+            setActivePanel(controlCreateBill1);
         }
 
         private void buttonSearchProduct_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = buttonSearchProduct.Height;
-            setActivePanel(searchProductUserControl1);
+            SidePanel.Top = buttonSearchProduct.Top;
+            setActivePanel(controlSearchProduct1);
+            controlSearchProduct1.populateProduct();
         }
 
         private void buttonClearBill_Click(object sender, EventArgs e)
         {
-            ControlCreateBill control = createBillUserControl1;
-            control.orderDGV.Rows.Clear();
+            controlCreateBill1.orderDGV.Rows.Clear();
+            ControlCreateBill.totalCart = 0;
+            ControlCreateBill.n = 1;
+            MessageBox.Show("Xoá hết sản phẩm trong giỏ hàng thành công");
         }
 
         private void buttonChangePassword_Click(object sender, EventArgs e)
         {
             SidePanel.Height = buttonChangePassword.Height;
+            SidePanel.Top = buttonChangePassword.Top;
+            setActivePanel(controlChangePassword1);
         }
 
         public void setActivePanel(UserControl control)
         {
             // Disable all user controls
-            createBillUserControl1.Visible = false;
-            searchProductUserControl1.Visible = false;
+            controlSearchProduct1.Visible = false;
+            controlCreateBill1.Visible = false;
+            controlChangePassword1.Visible = false;
 
             // Enable 1 user control
             control.Visible = true;
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
-
+        private void buttonLogout_Click_1(object sender, EventArgs e)
+        {
+            formLogin login = new formLogin();
+            this.Hide();
+            login.Show();
+        }
     }
 }

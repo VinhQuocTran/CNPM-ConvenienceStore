@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
 
         public void setActivityPanel(UserControl control)
         {
-           controlManageProduct1.Visible = false;
+            controlManageProduct1.Visible = false;
             controlManageCashier1.Visible = false;
             controlManageCategory1.Visible = false;
             controlChangePassword1.Visible = false;

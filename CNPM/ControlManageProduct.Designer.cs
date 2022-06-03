@@ -41,13 +41,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.cbbCategory = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.txtUnit = new System.Windows.Forms.TextBox();
             this.txtSampleProduct = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridProduct = new System.Windows.Forms.DataGridView();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.cbbCategory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProduct)).BeginInit();
             this.SuspendLayout();
@@ -55,10 +55,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 285);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(442, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 23);
+            this.label2.Size = new System.Drawing.Size(76, 22);
             this.label2.TabIndex = 48;
             this.label2.Text = "ĐƠN VỊ";
             // 
@@ -66,31 +66,37 @@
             // 
             this.cbbCategories.BackColor = System.Drawing.Color.White;
             this.cbbCategories.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbCategories.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbCategories.ForeColor = System.Drawing.Color.SpringGreen;
             this.cbbCategories.FormattingEnabled = true;
-            this.cbbCategories.Location = new System.Drawing.Point(165, 329);
+            this.cbbCategories.Location = new System.Drawing.Point(586, 137);
+            this.cbbCategories.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbCategories.Name = "cbbCategories";
-            this.cbbCategories.Size = new System.Drawing.Size(154, 33);
+            this.cbbCategories.Size = new System.Drawing.Size(170, 30);
             this.cbbCategories.TabIndex = 45;
             this.cbbCategories.TabStop = false;
             // 
             // txtID
             // 
             this.txtID.BackColor = System.Drawing.Color.Aquamarine;
-            this.txtID.Location = new System.Drawing.Point(165, 105);
+            this.txtID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Location = new System.Drawing.Point(212, 90);
+            this.txtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(154, 35);
+            this.txtID.Size = new System.Drawing.Size(170, 30);
             this.txtID.TabIndex = 44;
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnDelete.Font = new System.Drawing.Font("Mongolian Baiti", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.SpringGreen;
-            this.btnDelete.Location = new System.Drawing.Point(8, 444);
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(170)))), ((int)(((byte)(26)))));
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.Black;
+            this.btnDelete.Location = new System.Drawing.Point(725, 245);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(160, 60);
+            this.btnDelete.Size = new System.Drawing.Size(142, 48);
             this.btnDelete.TabIndex = 43;
             this.btnDelete.Text = "XÓA";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -98,12 +104,15 @@
             // 
             // btnADDProduct
             // 
-            this.btnADDProduct.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnADDProduct.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnADDProduct.ForeColor = System.Drawing.Color.SpringGreen;
-            this.btnADDProduct.Location = new System.Drawing.Point(174, 444);
+            this.btnADDProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(170)))), ((int)(((byte)(26)))));
+            this.btnADDProduct.FlatAppearance.BorderSize = 0;
+            this.btnADDProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnADDProduct.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnADDProduct.ForeColor = System.Drawing.Color.Black;
+            this.btnADDProduct.Location = new System.Drawing.Point(392, 245);
+            this.btnADDProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnADDProduct.Name = "btnADDProduct";
-            this.btnADDProduct.Size = new System.Drawing.Size(160, 60);
+            this.btnADDProduct.Size = new System.Drawing.Size(142, 48);
             this.btnADDProduct.TabIndex = 41;
             this.btnADDProduct.Text = "THÊM";
             this.btnADDProduct.UseVisualStyleBackColor = false;
@@ -112,91 +121,87 @@
             // txtQuantity
             // 
             this.txtQuantity.BackColor = System.Drawing.Color.Aquamarine;
-            this.txtQuantity.Location = new System.Drawing.Point(165, 386);
+            this.txtQuantity.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuantity.Location = new System.Drawing.Point(587, 182);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(154, 35);
+            this.txtQuantity.Size = new System.Drawing.Size(170, 30);
             this.txtQuantity.TabIndex = 39;
             // 
             // txtPrice
             // 
             this.txtPrice.BackColor = System.Drawing.Color.Aquamarine;
-            this.txtPrice.Location = new System.Drawing.Point(165, 222);
+            this.txtPrice.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.Location = new System.Drawing.Point(212, 186);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(154, 35);
+            this.txtPrice.Size = new System.Drawing.Size(170, 30);
             this.txtPrice.TabIndex = 38;
             // 
             // txtName
             // 
             this.txtName.BackColor = System.Drawing.Color.Aquamarine;
-            this.txtName.Location = new System.Drawing.Point(165, 162);
+            this.txtName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(212, 137);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(154, 35);
+            this.txtName.Size = new System.Drawing.Size(170, 30);
             this.txtName.TabIndex = 37;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(2, 228);
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(35, 189);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 23);
+            this.label8.Size = new System.Drawing.Size(44, 22);
             this.label8.TabIndex = 36;
             this.label8.Text = "GIÁ";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 338);
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(442, 144);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 23);
+            this.label7.Size = new System.Drawing.Size(55, 22);
             this.label7.TabIndex = 35;
             this.label7.Text = "LOẠI";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(2, 395);
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(442, 189);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(119, 23);
+            this.label6.Size = new System.Drawing.Size(109, 22);
             this.label6.TabIndex = 34;
             this.label6.Text = "SỐ LƯỢNG";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(4, 114);
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(37, 98);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(147, 23);
+            this.label5.Size = new System.Drawing.Size(146, 22);
             this.label5.TabIndex = 33;
             this.label5.Text = "MÃ SẢN PHẨM";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 171);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(36, 144);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(155, 23);
+            this.label3.Size = new System.Drawing.Size(153, 22);
             this.label3.TabIndex = 32;
             this.label3.Text = "TÊN SẢN PHẨM";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(286, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(353, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "QUẢN LÝ SẢN PHẨM";
-            // 
             // cbbCategory
             // 
-            this.cbbCategory.BackColor = System.Drawing.Color.LawnGreen;
+            this.cbbCategory.BackColor = System.Drawing.Color.White;
+            this.cbbCategory.Controls.Add(this.label1);
             this.cbbCategory.Controls.Add(this.btnUpdate);
             this.cbbCategory.Controls.Add(this.txtUnit);
             this.cbbCategory.Controls.Add(this.txtSampleProduct);
@@ -215,38 +220,70 @@
             this.cbbCategory.Controls.Add(this.label6);
             this.cbbCategory.Controls.Add(this.label5);
             this.cbbCategory.Controls.Add(this.label3);
-            this.cbbCategory.Controls.Add(this.label1);
-            this.cbbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbCategory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbbCategory.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbCategory.ForeColor = System.Drawing.Color.Black;
-            this.cbbCategory.Location = new System.Drawing.Point(9, 55);
+            this.cbbCategory.Location = new System.Drawing.Point(0, 0);
+            this.cbbCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbCategory.Name = "cbbCategory";
-            this.cbbCategory.Size = new System.Drawing.Size(785, 606);
+            this.cbbCategory.Size = new System.Drawing.Size(893, 696);
             this.cbbCategory.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(170)))), ((int)(((byte)(26)))));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(37, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(830, 44);
+            this.label1.TabIndex = 76;
+            this.label1.Text = "QUẢN LÝ SẢN PHẨM";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(170)))), ((int)(((byte)(26)))));
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.Black;
+            this.btnUpdate.Location = new System.Drawing.Point(560, 245);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(142, 48);
+            this.btnUpdate.TabIndex = 55;
+            this.btnUpdate.Text = "SỬA";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txtUnit
             // 
             this.txtUnit.BackColor = System.Drawing.Color.Aquamarine;
-            this.txtUnit.Location = new System.Drawing.Point(165, 273);
+            this.txtUnit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUnit.Location = new System.Drawing.Point(586, 88);
+            this.txtUnit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUnit.Name = "txtUnit";
-            this.txtUnit.Size = new System.Drawing.Size(154, 35);
+            this.txtUnit.Size = new System.Drawing.Size(170, 30);
             this.txtUnit.TabIndex = 54;
             // 
             // txtSampleProduct
             // 
             this.txtSampleProduct.BackColor = System.Drawing.Color.Aquamarine;
-            this.txtSampleProduct.Location = new System.Drawing.Point(642, 130);
+            this.txtSampleProduct.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSampleProduct.Location = new System.Drawing.Point(272, 316);
+            this.txtSampleProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSampleProduct.Name = "txtSampleProduct";
-            this.txtSampleProduct.Size = new System.Drawing.Size(122, 35);
+            this.txtSampleProduct.Size = new System.Drawing.Size(225, 30);
             this.txtSampleProduct.TabIndex = 53;
             this.txtSampleProduct.TextChanged += new System.EventHandler(this.txtSampleProduct_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(377, 145);
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(37, 319);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(259, 23);
+            this.label4.Size = new System.Drawing.Size(229, 22);
             this.label4.TabIndex = 52;
             this.label4.Text = "Tìm kiếm theo tên sản phẩm";
             // 
@@ -254,41 +291,30 @@
             // 
             this.dataGridProduct.AllowUserToAddRows = false;
             this.dataGridProduct.AllowUserToDeleteRows = false;
-            this.dataGridProduct.AllowUserToResizeColumns = false;
             this.dataGridProduct.AllowUserToResizeRows = false;
             this.dataGridProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridProduct.BackgroundColor = System.Drawing.Color.White;
             this.dataGridProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridProduct.Location = new System.Drawing.Point(381, 171);
+            this.dataGridProduct.Location = new System.Drawing.Point(41, 362);
+            this.dataGridProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridProduct.Name = "dataGridProduct";
             this.dataGridProduct.ReadOnly = true;
             this.dataGridProduct.RowHeadersVisible = false;
             this.dataGridProduct.RowHeadersWidth = 62;
             this.dataGridProduct.RowTemplate.Height = 28;
             this.dataGridProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridProduct.Size = new System.Drawing.Size(383, 287);
+            this.dataGridProduct.Size = new System.Drawing.Size(826, 263);
             this.dataGridProduct.TabIndex = 51;
-            this.dataGridProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridProduct_CellContentClick_1);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnUpdate.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.SpringGreen;
-            this.btnUpdate.Location = new System.Drawing.Point(6, 510);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(160, 60);
-            this.btnUpdate.TabIndex = 55;
-            this.btnUpdate.Text = "SỬA";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.dataGridProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridProduct_CellClick);
             // 
             // ControlManageProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.cbbCategory);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ControlManageProduct";
-            this.Size = new System.Drawing.Size(797, 673);
+            this.Size = new System.Drawing.Size(893, 696);
             this.Load += new System.EventHandler(this.ControlManageProduct_Load);
             this.cbbCategory.ResumeLayout(false);
             this.cbbCategory.PerformLayout();
@@ -311,12 +337,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel cbbCategory;
         private System.Windows.Forms.DataGridView dataGridProduct;
         private System.Windows.Forms.TextBox txtUnit;
         private System.Windows.Forms.TextBox txtSampleProduct;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Label label1;
     }
 }

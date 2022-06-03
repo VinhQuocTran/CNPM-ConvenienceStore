@@ -19,26 +19,6 @@ namespace WindowsFormsApp1
         }
         SqlConnection cnn = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=QuanLyCuaHangTienLoi;Trusted_Connection=True");
 
-        private void dataGridCashier_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                txtUsername.Text = dataGridCashier.SelectedRows[0].Cells[1].Value.ToString();
-                txtPassword.Text = dataGridCashier.SelectedRows[0].Cells[2].Value.ToString();
-                txtName.Text = dataGridCashier.SelectedRows[0].Cells[3].Value.ToString();
-                txtSalary.Text = dataGridCashier.SelectedRows[0].Cells[4].Value.ToString();
-                string[] arr = dataGridCashier.SelectedRows[0].Cells[5].Value.ToString().Split('/');
-                dtDayWorking.Value = new DateTime(Convert.ToInt32(arr[2].Split(' ')[0]), Convert.ToInt32(arr[0]), Convert.ToInt32(arr[1]));
-                string[] arr1 = dataGridCashier.SelectedRows[0].Cells[6].Value.ToString().Split('/');
-                dtpBirthDay.Value= new DateTime(Convert.ToInt32(arr1[2].Split(' ')[0]), Convert.ToInt32(arr1[0]), Convert.ToInt32(arr1[1]));
-                cbbAccountType.Text = dataGridCashier.SelectedRows[0].Cells[7].Value.ToString();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
         private void btnADDCashier_Click(object sender, EventArgs e)
         {
             try
@@ -126,6 +106,26 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show(ex.Message);
                 cnn.Close();
+            }
+        }
+
+        private void dataGridCashier_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                txtUsername.Text = dataGridCashier.SelectedRows[0].Cells[1].Value.ToString();
+                txtPassword.Text = dataGridCashier.SelectedRows[0].Cells[2].Value.ToString();
+                txtName.Text = dataGridCashier.SelectedRows[0].Cells[3].Value.ToString();
+                txtSalary.Text = dataGridCashier.SelectedRows[0].Cells[4].Value.ToString();
+                string[] arr = dataGridCashier.SelectedRows[0].Cells[5].Value.ToString().Split('/');
+                dtDayWorking.Value = new DateTime(Convert.ToInt32(arr[2].Split(' ')[0]), Convert.ToInt32(arr[0]), Convert.ToInt32(arr[1]));
+                string[] arr1 = dataGridCashier.SelectedRows[0].Cells[6].Value.ToString().Split('/');
+                dtpBirthDay.Value = new DateTime(Convert.ToInt32(arr1[2].Split(' ')[0]), Convert.ToInt32(arr1[0]), Convert.ToInt32(arr1[1]));
+                cbbAccountType.Text = dataGridCashier.SelectedRows[0].Cells[7].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

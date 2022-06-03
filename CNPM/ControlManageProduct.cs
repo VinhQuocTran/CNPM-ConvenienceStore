@@ -121,15 +121,15 @@ namespace WindowsFormsApp1
         }
 
 
-        private void dataGridProduct_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            txtID.Text = dataGridProduct.SelectedRows[0].Cells[0].Value.ToString();
-            txtName.Text = dataGridProduct.SelectedRows[0].Cells[1].Value.ToString();
-            txtPrice.Text = dataGridProduct.SelectedRows[0].Cells[2].Value.ToString();
-            txtUnit.Text = dataGridProduct.SelectedRows[0].Cells[3].Value.ToString();
-            cbbCategories.Text = dataGridProduct.SelectedRows[0].Cells[4].Value.ToString();
-            txtQuantity.Text = dataGridProduct.SelectedRows[0].Cells[5].Value.ToString();
-        }
+        //private void dataGridProduct_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        //{
+        //    txtID.Text = dataGridProduct.SelectedRows[0].Cells[0].Value.ToString();
+        //    txtName.Text = dataGridProduct.SelectedRows[0].Cells[1].Value.ToString();
+        //    txtPrice.Text = dataGridProduct.SelectedRows[0].Cells[2].Value.ToString();
+        //    txtUnit.Text = dataGridProduct.SelectedRows[0].Cells[3].Value.ToString();
+        //    cbbCategories.Text = dataGridProduct.SelectedRows[0].Cells[4].Value.ToString();
+        //    txtQuantity.Text = dataGridProduct.SelectedRows[0].Cells[5].Value.ToString();
+        //}
 
         private void txtSampleProduct_TextChanged(object sender, EventArgs e)
         {
@@ -171,6 +171,16 @@ namespace WindowsFormsApp1
                 MessageBox.Show(ex.Message);
                 cnn.Close();
             }
+        }
+
+        private void dataGridProduct_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtID.Text = dataGridProduct.SelectedRows[0].Cells[0].Value.ToString();
+            txtName.Text = dataGridProduct.SelectedRows[0].Cells[1].Value.ToString();
+            txtPrice.Text = dataGridProduct.SelectedRows[0].Cells[2].Value.ToString();
+            txtUnit.Text = dataGridProduct.SelectedRows[0].Cells[3].Value.ToString();
+            cbbCategories.Text = dataGridProduct.SelectedRows[0].Cells[4].Value.ToString();
+            txtQuantity.Text = dataGridProduct.SelectedRows[0].Cells[5].Value.ToString();
         }
     }
 }

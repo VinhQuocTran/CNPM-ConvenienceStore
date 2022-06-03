@@ -54,19 +54,23 @@ namespace WindowsFormsApp1
             populateProduct();
             productDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             productDGV.EnableHeadersVisualStyles = false;
+            productDGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             productDGV.ColumnHeadersDefaultCellStyle.BackColor = Color.LightCoral;
             productDGV.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.LightCoral;
 
-            // Setting for Bill Data Grid View in CreateBill
+
+            //// Setting for Bill Data Grid View in CreateBill
             populateBill();
             billDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             billDGV.EnableHeadersVisualStyles = false;
+            billDGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             billDGV.ColumnHeadersDefaultCellStyle.BackColor = Color.LightCoral;
             billDGV.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.LightCoral;
 
             // Setting for Product Cart Data Grid View in CreateBill
             orderDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             orderDGV.EnableHeadersVisualStyles = false;
+            orderDGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             orderDGV.ColumnHeadersDefaultCellStyle.BackColor = Color.LightCoral;
             orderDGV.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.LightCoral;
         }
@@ -88,7 +92,7 @@ namespace WindowsFormsApp1
         }
 
 
-        public double totalCart = 0;
+        public static double totalCart = 0;
         public static int n = 1;
         public void buttonAddProduct_Click(object sender, EventArgs e)
         {

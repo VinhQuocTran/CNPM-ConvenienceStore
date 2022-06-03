@@ -85,16 +85,17 @@
     <Compile Include="formLogin.Designer.cs">
       <DependentUpon>formLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="newFormMainManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newFormMainManager.Designer.cs">
+      <DependentUpon>newFormMainManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="newFormMainCashier.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="newFormMainCashier.Designer.cs">
       <DependentUpon>newFormMainCashier.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="formCashier.cs">
       <SubType>Form</SubType>
@@ -113,6 +114,11 @@
     </Compile>
     <Compile Include="ControlSearchProduct.Designer.cs">
       <DependentUpon>ControlSearchProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="test.cs">
       <SubType>Form</SubType>
@@ -140,11 +146,14 @@
     <EmbeddedResource Include="formLogin.resx">
       <DependentUpon>formLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="newFormMainManager.resx">
+      <DependentUpon>newFormMainManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="newFormMainCashier.resx">
       <DependentUpon>newFormMainCashier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
@@ -172,6 +181,201 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\CircleK.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output - manager.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-bill.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-card.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-category.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-clerk.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-logout.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-padlock.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-product.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-switch.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-user.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\a\output - manager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\a\output-bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\a\output-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\a\output-category.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\a\output-clerk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\a\output-logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\a\output-padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\a\output-product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\a\output-search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\a\output-switch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\a\output-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output - manager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-category.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-clerk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-switch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\output-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\Icon\output - manager.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boxwhite.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CircleK.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clearbill.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clerk.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manager.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\options-lines.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smartphone.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smartphoneWhite.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\Icon\a.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\bill.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\category.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\clearcart.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\clerk.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\logout.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\manager.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\padlock.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\product.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\switch.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PNGfile\user.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -33,16 +33,16 @@ namespace WindowsFormsApp1
                 SqlDataReader dr = StrQuer.ExecuteReader();
                     if(dr.HasRows)
                     {
-                        MessageBox.Show("loginSuccess");
+                        MessageBox.Show("Đăng nhập thành công");
                         if(cbbAccountType.Text=="Admin")
                         {
-                            formManager controlManage = new formManager();
+                            newFormMainManager controlManage = new newFormMainManager();
                             this.Hide();
                             controlManage.Show();
                         }
                         else
                         {
-                            formCashier formCashier = new formCashier();
+                            newFormMainCashier formCashier = new newFormMainCashier();
                             this.Hide();
                             formCashier.Show();
                         }
@@ -50,7 +50,7 @@ namespace WindowsFormsApp1
                     else
                     {
                         MessageBox.Show("Vui lòng kiểm tra lại thông tin đăng nhập");
-                }
+                    }
                 }
                 cnn.Close();
         }
