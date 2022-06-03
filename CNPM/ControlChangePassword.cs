@@ -48,7 +48,6 @@ namespace WindowsFormsApp1
                             sqlCommand.ExecuteNonQuery();
 
                             MessageBox.Show("Thay đổi mật khẩu thành công");
-<<<<<<< HEAD
                             formLogin login = new formLogin();
                             var frm = Application.OpenForms.Cast<Form>().Where(x => x.Name == "newFormMainCashier" || x.Name == "newFormMainManager").FirstOrDefault();
                             if (null != frm)
@@ -56,10 +55,8 @@ namespace WindowsFormsApp1
                                 frm.Hide();
                             }
 
-=======
-                            this.Hide();
                             formLogin login = new formLogin();
->>>>>>> FixBugManage
+                            this.Hide();
                             login.Show();
                         }
                         else
