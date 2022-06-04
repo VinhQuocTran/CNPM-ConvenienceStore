@@ -42,7 +42,7 @@ namespace WindowsFormsApp1
                     string query = "insert into danhmuc values('" + txtID.Text + "',N'" + txtName.Text + "',N'" + txtDescription.Text + "')";
                     SqlCommand sqlCommand = new SqlCommand(query, cnn);
                     sqlCommand.ExecuteNonQuery();
-                    MessageBox.Show("Add Category successful");
+                    MessageBox.Show("Thêm danh mục thành công");
                     cnn.Close();
                     showDataGrid();
 
@@ -121,15 +121,7 @@ namespace WindowsFormsApp1
             try
             {
                 cnn.Open();
-                SqlDataAdapter oks = new SqlDataAdapter("SELECT * FROM sanpham where madanhmuc = '" + txtID.Text + "'", cnn);
-                DataSet dataSet = new DataSet();
-                oks.Fill(dataSet);
-                if (dataSet.Tables["Table"].Rows.Count > 1)
-                {
-                    MessageBox.Show("Vui lòng xóng hết sản phẩm có mã danh mục này và thử lại");
-                    cnn.Close();
-                }
-                else if (txtID.Text == "" || txtName.Text == "" || txtDescription.Text == "")
+                if (txtID.Text == "" || txtName.Text == "" || txtDescription.Text == "")
                 {
                     MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
                     cnn.Close();
@@ -145,7 +137,6 @@ namespace WindowsFormsApp1
                     cnn.Close();
                     showDataGrid();
                 }
- 
             }
             catch (Exception ex)
             {
