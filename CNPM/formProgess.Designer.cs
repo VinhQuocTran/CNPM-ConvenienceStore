@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.timer = new System.Windows.Forms.Timer(this.components);
             this.circularProgressBar = new CircularProgressBar.CircularProgressBar();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -57,10 +55,6 @@
             this.label3.Size = new System.Drawing.Size(99, 15);
             this.label3.TabIndex = 3;
             this.label3.Text = "( Phiên bản 2.0 )";
-            // 
-            // timer
-            // 
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // circularProgressBar
             // 
@@ -127,7 +121,6 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Timer timer;
         private CircularProgressBar.CircularProgressBar circularProgressBar;
         private System.Windows.Forms.Label label2;
     }
