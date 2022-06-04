@@ -343,25 +343,6 @@ namespace WindowsFormsApp1
             con.Close();
         }
 
-        private void btnExport_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Title = "Export Excel";
-            saveFileDialog.Filter = "Excel (*.xlsx)|*.xlsx|Excel 2003 (*.xls)|*.xls";
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                try
-                {
-                    ExportExcel(saveFileDialog.FileName);
-                    MessageBox.Show("Xuất file thành công");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Xuất file không thành công!\n"+ex.Message);
-                }
-            }
-        }
-
         private void ExportExcel(string path)
         {
             Excel.Application application = new Excel.Application();
@@ -382,6 +363,25 @@ namespace WindowsFormsApp1
             application.Columns.AutoFit();
             application.ActiveWorkbook.SaveCopyAs(path);
             application.ActiveWorkbook.Saved = true;
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Title = "Export Excel";
+            saveFileDialog.Filter = "Excel (*.xlsx)|*.xlsx|Excel 2003 (*.xls)|*.xls";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    ExportExcel(saveFileDialog.FileName);
+                    MessageBox.Show("Xuất file thành công");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Xuất file không thành công!\n" + ex.Message);
+                }
+            }
         }
     }
 }
