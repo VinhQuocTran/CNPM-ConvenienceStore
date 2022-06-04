@@ -33,11 +33,7 @@ namespace WindowsFormsApp1
         //    this.createBillControl = tmp;
         //}
 
-<<<<<<< Updated upstream
         SqlConnection con = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=QuanLyCuaHangTienLoi;Trusted_Connection=True");
-=======
-        SqlConnection con = new SqlConnection("Data Source=TRANTRI\\SQLEXPRESS;Initial Catalog=QuanLyCuaHangTienLoi;Integrated Security=True");
->>>>>>> Stashed changes
 
         public void populateProduct()
         {

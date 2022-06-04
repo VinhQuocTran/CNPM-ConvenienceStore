@@ -503,7 +503,6 @@
             this.btnExportFile.TabIndex = 25;
             this.btnExportFile.Text = "Xuất file Excel";
             this.btnExportFile.UseVisualStyleBackColor = false;
-            this.btnExportFile.Click += new System.EventHandler(this.btnExportFile_Click);
             // 
             // ControlCreateBill
             // 
