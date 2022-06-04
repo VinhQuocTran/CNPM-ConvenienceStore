@@ -14,7 +14,11 @@ namespace WindowsFormsApp1
 {
     public partial class ControlCreateBill : UserControl
     {
+<<<<<<< Updated upstream
         SqlConnection con = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=QuanLyCuaHangTienLoi;Trusted_Connection=True");
+=======
+        SqlConnection con = new SqlConnection("Data Source=TRANTRI\\SQLEXPRESS;Initial Catalog=QuanLyCuaHangTienLoi;Integrated Security=True");
+>>>>>>> Stashed changes
 
         private void populateProduct()
         {

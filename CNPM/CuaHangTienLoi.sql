@@ -69,5 +69,8 @@ create table chitiethoadon
 	constraint Fk_ChiTietHoaDon_SanPham foreign key (masp) references sanpham(masp)
 )
 
+<<<<<<< Updated upstream
 insert into taikhoan
 values ('admin','admin','Administrator',500000,'2022-06-01','2022-06-01','Admin')
+=======
+>>>>>>> Stashed changes
