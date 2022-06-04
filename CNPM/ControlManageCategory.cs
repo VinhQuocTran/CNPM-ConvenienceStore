@@ -74,14 +74,9 @@ namespace WindowsFormsApp1
                 SqlDataAdapter oks = new SqlDataAdapter("SELECT * FROM sanpham where madanhmuc = '"+txtID.Text+"'", cnn);
                 DataSet dataSet = new DataSet();
                 oks.Fill(dataSet);
-                if (txtID.Text.Equals("") || txtName.Text.Equals("") || txtDescription.Equals(""))
+                if (dataSet.Tables["Table"].Rows.Count > 0)
                 {
-                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
-                    cnn.Close();
-                }
-                else if (dataSet.Tables["Table"].Rows.Count > 0)
-                {
-                    MessageBox.Show("Vui lòng xóng hết sản phẩm có mã danh mục này");
+                    MessageBox.Show("Vui lòng xóa hết sản phẩm có mã danh mục này");
                     cnn.Close();
                 }
                 else
@@ -93,7 +88,6 @@ namespace WindowsFormsApp1
                     cnn.Close();
                     showDataGrid();
                 }
-
             }
             catch (Exception ex)
             {
