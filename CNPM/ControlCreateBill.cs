@@ -9,6 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
+using OfficeOpenXml;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace WindowsFormsApp1
 {
@@ -173,7 +176,7 @@ namespace WindowsFormsApp1
             SqlCommand cmd = new SqlCommand("SELECT * FROM danhmuc", con);
             con.Open();
             SqlDataReader sqlReader = cmd.ExecuteReader();
-            comboBoxSelectCategory.Items.Add("Tat ca");
+            comboBoxSelectCategory.Items.Add("Tất cả");
             while (sqlReader.Read())
             {
                 comboBoxSelectCategory.Items.Add(sqlReader["tendanhmuc"].ToString());
@@ -337,6 +340,47 @@ namespace WindowsFormsApp1
             }
             dr.Close();
             con.Close();
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Title = "Export Excel";
+            saveFileDialog.Filter = "Excel (*.xlsx)|*.xlsx|Excel 2003 (*.xls)|*.xls";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    ExportExcel(saveFileDialog.FileName);
+                    MessageBox.Show("Xuất file thành công");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Xuất file không thành công!\n"+ex.Message);
+                }
+            }
+        }
+
+        private void ExportExcel(string path)
+        {
+            Excel.Application application = new Excel.Application();
+            application.Application.Workbooks.Add(Type.Missing);
+            // Add columns info
+            for (int i = 0; i < billDGV.Columns.Count; i++)
+            {
+                application.Cells[1, i + 1] = billDGV.Columns[i].HeaderText;
+            }
+            // Add rows info
+            for (int i = 0; i < billDGV.Rows.Count; i++)
+            {
+                for (int j = 0; j < billDGV.Columns.Count; j++)
+                {
+                    application.Cells[i + 2, j + 1] = billDGV.Rows[i].Cells[j].Value;
+                }
+            }
+            application.Columns.AutoFit();
+            application.ActiveWorkbook.SaveCopyAs(path);
+            application.ActiveWorkbook.Saved = true;
         }
     }
 }

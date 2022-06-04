@@ -50,7 +50,7 @@ namespace WindowsFormsApp1
         private void showDataGrid()
         {
             cnn.Open();
-            string query = "SELECT matk, tentk as \" Tên tài khoản\",matkhau as \"Mật khẩu\",hoten as \"Giá bán\",mucluong as \"Mức lương\",ngaynhanviec as \" Ngày nhận việc\",ngaysinh as \"Ngày sinh\", loaitk as\" Loại tài khoản\" from taikhoan";
+            string query = "SELECT matk, tentk as \" Tên tài khoản\",matkhau as \"Mật khẩu\",hoten as \"Họ tên\",mucluong as \"Mức lương\",ngaynhanviec as \" Ngày nhận việc\",ngaysinh as \"Ngày sinh\", loaitk as\" Loại tài khoản\" from taikhoan";
 
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, cnn);
             SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(sqlDataAdapter);

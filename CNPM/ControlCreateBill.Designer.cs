@@ -66,6 +66,7 @@
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.productDGV = new System.Windows.Forms.DataGridView();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.btnExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.orderDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.billDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productDGV)).BeginInit();
@@ -75,9 +76,10 @@
             // 
             this.labelProductName.AutoSize = true;
             this.labelProductName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelProductName.Location = new System.Drawing.Point(18, 55);
+            this.labelProductName.Location = new System.Drawing.Point(14, 45);
+            this.labelProductName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelProductName.Name = "labelProductName";
-            this.labelProductName.Size = new System.Drawing.Size(118, 22);
+            this.labelProductName.Size = new System.Drawing.Size(93, 19);
             this.labelProductName.TabIndex = 0;
             this.labelProductName.Text = "Tên sản phẩm";
             // 
@@ -85,9 +87,10 @@
             // 
             this.labelProductPrice.AutoSize = true;
             this.labelProductPrice.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelProductPrice.Location = new System.Drawing.Point(18, 140);
+            this.labelProductPrice.Location = new System.Drawing.Point(14, 114);
+            this.labelProductPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelProductPrice.Name = "labelProductPrice";
-            this.labelProductPrice.Size = new System.Drawing.Size(72, 22);
+            this.labelProductPrice.Size = new System.Drawing.Size(56, 19);
             this.labelProductPrice.TabIndex = 3;
             this.labelProductPrice.Text = "Giá bán";
             // 
@@ -95,9 +98,10 @@
             // 
             this.comboBoxSelectCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSelectCategory.FormattingEnabled = true;
-            this.comboBoxSelectCategory.Location = new System.Drawing.Point(22, 343);
+            this.comboBoxSelectCategory.Location = new System.Drawing.Point(16, 279);
+            this.comboBoxSelectCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxSelectCategory.Name = "comboBoxSelectCategory";
-            this.comboBoxSelectCategory.Size = new System.Drawing.Size(177, 24);
+            this.comboBoxSelectCategory.Size = new System.Drawing.Size(134, 21);
             this.comboBoxSelectCategory.TabIndex = 4;
             this.comboBoxSelectCategory.SelectionChangeCommitted += new System.EventHandler(this.comboBoxSelectCategory_SelectionChangeCommitted);
             // 
@@ -105,9 +109,10 @@
             // 
             this.labelProductUnit.AutoSize = true;
             this.labelProductUnit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelProductUnit.Location = new System.Drawing.Point(18, 98);
+            this.labelProductUnit.Location = new System.Drawing.Point(14, 80);
+            this.labelProductUnit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelProductUnit.Name = "labelProductUnit";
-            this.labelProductUnit.Size = new System.Drawing.Size(99, 22);
+            this.labelProductUnit.Size = new System.Drawing.Size(74, 19);
             this.labelProductUnit.TabIndex = 5;
             this.labelProductUnit.Text = "Đơn vị tính";
             // 
@@ -115,9 +120,10 @@
             // 
             this.labelProductEnterQuantity.AutoSize = true;
             this.labelProductEnterQuantity.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelProductEnterQuantity.Location = new System.Drawing.Point(18, 226);
+            this.labelProductEnterQuantity.Location = new System.Drawing.Point(14, 184);
+            this.labelProductEnterQuantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelProductEnterQuantity.Name = "labelProductEnterQuantity";
-            this.labelProductEnterQuantity.Size = new System.Drawing.Size(126, 22);
+            this.labelProductEnterQuantity.Size = new System.Drawing.Size(99, 19);
             this.labelProductEnterQuantity.TabIndex = 6;
             this.labelProductEnterQuantity.Text = "Nhập số lượng";
             // 
@@ -125,9 +131,10 @@
             // 
             this.labelProName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelProName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelProName.Location = new System.Drawing.Point(169, 49);
+            this.labelProName.Location = new System.Drawing.Point(127, 40);
+            this.labelProName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelProName.Name = "labelProName";
-            this.labelProName.Size = new System.Drawing.Size(156, 25);
+            this.labelProName.Size = new System.Drawing.Size(118, 21);
             this.labelProName.TabIndex = 8;
             this.labelProName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -135,9 +142,10 @@
             // 
             this.labelProUnit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelProUnit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelProUnit.Location = new System.Drawing.Point(169, 92);
+            this.labelProUnit.Location = new System.Drawing.Point(127, 75);
+            this.labelProUnit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelProUnit.Name = "labelProUnit";
-            this.labelProUnit.Size = new System.Drawing.Size(156, 25);
+            this.labelProUnit.Size = new System.Drawing.Size(118, 21);
             this.labelProUnit.TabIndex = 9;
             this.labelProUnit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -145,19 +153,21 @@
             // 
             this.labelProPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelProPrice.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelProPrice.Location = new System.Drawing.Point(169, 134);
+            this.labelProPrice.Location = new System.Drawing.Point(127, 109);
+            this.labelProPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelProPrice.Name = "labelProPrice";
-            this.labelProPrice.Size = new System.Drawing.Size(156, 25);
+            this.labelProPrice.Size = new System.Drawing.Size(118, 21);
             this.labelProPrice.TabIndex = 10;
             this.labelProPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBoxProQuantity
             // 
             this.textBoxProQuantity.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxProQuantity.Location = new System.Drawing.Point(170, 223);
+            this.textBoxProQuantity.Location = new System.Drawing.Point(128, 181);
+            this.textBoxProQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxProQuantity.Name = "textBoxProQuantity";
             this.textBoxProQuantity.ShortcutsEnabled = false;
-            this.textBoxProQuantity.Size = new System.Drawing.Size(156, 30);
+            this.textBoxProQuantity.Size = new System.Drawing.Size(118, 26);
             this.textBoxProQuantity.TabIndex = 11;
             this.textBoxProQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxProQuantity_KeyPress);
             // 
@@ -165,9 +175,10 @@
             // 
             this.labelProQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelProQuantity.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelProQuantity.Location = new System.Drawing.Point(169, 175);
+            this.labelProQuantity.Location = new System.Drawing.Point(127, 142);
+            this.labelProQuantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelProQuantity.Name = "labelProQuantity";
-            this.labelProQuantity.Size = new System.Drawing.Size(156, 25);
+            this.labelProQuantity.Size = new System.Drawing.Size(118, 21);
             this.labelProQuantity.TabIndex = 13;
             this.labelProQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -175,9 +186,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(18, 181);
+            this.label2.Location = new System.Drawing.Point(14, 147);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 22);
+            this.label2.Size = new System.Drawing.Size(103, 19);
             this.label2.TabIndex = 12;
             this.label2.Text = "Hàng trong kho";
             // 
@@ -185,9 +197,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(362, 30);
+            this.label1.Location = new System.Drawing.Point(272, 24);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 22);
+            this.label1.Size = new System.Drawing.Size(63, 19);
             this.label1.TabIndex = 14;
             this.label1.Text = "Giỏ hàng";
             // 
@@ -224,7 +237,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.orderDGV.DefaultCellStyle = dataGridViewCellStyle2;
             this.orderDGV.GridColor = System.Drawing.SystemColors.Control;
-            this.orderDGV.Location = new System.Drawing.Point(386, 55);
+            this.orderDGV.Location = new System.Drawing.Point(290, 45);
+            this.orderDGV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.orderDGV.Name = "orderDGV";
             this.orderDGV.ReadOnly = true;
             this.orderDGV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -232,7 +246,7 @@
             this.orderDGV.RowHeadersWidth = 51;
             this.orderDGV.RowTemplate.Height = 24;
             this.orderDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.orderDGV.Size = new System.Drawing.Size(492, 242);
+            this.orderDGV.Size = new System.Drawing.Size(369, 197);
             this.orderDGV.TabIndex = 15;
             this.orderDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.orderDGV_CellContentClick);
             // 
@@ -285,9 +299,10 @@
             this.buttonAddProduct.FlatAppearance.BorderSize = 0;
             this.buttonAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddProduct.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddProduct.Location = new System.Drawing.Point(170, 274);
+            this.buttonAddProduct.Location = new System.Drawing.Point(128, 223);
+            this.buttonAddProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAddProduct.Name = "buttonAddProduct";
-            this.buttonAddProduct.Size = new System.Drawing.Size(156, 46);
+            this.buttonAddProduct.Size = new System.Drawing.Size(117, 37);
             this.buttonAddProduct.TabIndex = 16;
             this.buttonAddProduct.Text = "Thêm vào giỏ";
             this.buttonAddProduct.UseVisualStyleBackColor = false;
@@ -297,9 +312,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(606, 310);
+            this.label3.Location = new System.Drawing.Point(454, 252);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 22);
+            this.label3.Size = new System.Drawing.Size(68, 19);
             this.label3.TabIndex = 17;
             this.label3.Text = "Tổng tiền:";
             // 
@@ -307,9 +323,10 @@
             // 
             this.labelCartTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelCartTotal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCartTotal.Location = new System.Drawing.Point(719, 310);
+            this.labelCartTotal.Location = new System.Drawing.Point(539, 252);
+            this.labelCartTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCartTotal.Name = "labelCartTotal";
-            this.labelCartTotal.Size = new System.Drawing.Size(159, 25);
+            this.labelCartTotal.Size = new System.Drawing.Size(120, 21);
             this.labelCartTotal.TabIndex = 18;
             this.labelCartTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -319,9 +336,10 @@
             this.buttonAddBill.FlatAppearance.BorderSize = 0;
             this.buttonAddBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddBill.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddBill.Location = new System.Drawing.Point(544, 642);
+            this.buttonAddBill.Location = new System.Drawing.Point(438, 522);
+            this.buttonAddBill.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAddBill.Name = "buttonAddBill";
-            this.buttonAddBill.Size = new System.Drawing.Size(131, 55);
+            this.buttonAddBill.Size = new System.Drawing.Size(98, 45);
             this.buttonAddBill.TabIndex = 19;
             this.buttonAddBill.Text = "Thanh toán";
             this.buttonAddBill.UseVisualStyleBackColor = false;
@@ -333,9 +351,10 @@
             this.buttonPrintBill.FlatAppearance.BorderSize = 0;
             this.buttonPrintBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPrintBill.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPrintBill.Location = new System.Drawing.Point(747, 642);
+            this.buttonPrintBill.Location = new System.Drawing.Point(560, 522);
+            this.buttonPrintBill.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonPrintBill.Name = "buttonPrintBill";
-            this.buttonPrintBill.Size = new System.Drawing.Size(131, 55);
+            this.buttonPrintBill.Size = new System.Drawing.Size(98, 45);
             this.buttonPrintBill.TabIndex = 20;
             this.buttonPrintBill.Text = "In hoá đơn";
             this.buttonPrintBill.UseVisualStyleBackColor = false;
@@ -347,9 +366,10 @@
             this.buttonDeleteProductFromCart.FlatAppearance.BorderSize = 0;
             this.buttonDeleteProductFromCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDeleteProductFromCart.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDeleteProductFromCart.Location = new System.Drawing.Point(386, 301);
+            this.buttonDeleteProductFromCart.Location = new System.Drawing.Point(290, 245);
+            this.buttonDeleteProductFromCart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonDeleteProductFromCart.Name = "buttonDeleteProductFromCart";
-            this.buttonDeleteProductFromCart.Size = new System.Drawing.Size(157, 34);
+            this.buttonDeleteProductFromCart.Size = new System.Drawing.Size(118, 28);
             this.buttonDeleteProductFromCart.TabIndex = 21;
             this.buttonDeleteProductFromCart.Text = "Xoá khỏi giỏ";
             this.buttonDeleteProductFromCart.UseVisualStyleBackColor = false;
@@ -381,7 +401,8 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.billDGV.DefaultCellStyle = dataGridViewCellStyle4;
             this.billDGV.GridColor = System.Drawing.SystemColors.Control;
-            this.billDGV.Location = new System.Drawing.Point(386, 393);
+            this.billDGV.Location = new System.Drawing.Point(290, 319);
+            this.billDGV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.billDGV.MultiSelect = false;
             this.billDGV.Name = "billDGV";
             this.billDGV.ReadOnly = true;
@@ -390,25 +411,27 @@
             this.billDGV.RowHeadersWidth = 51;
             this.billDGV.RowTemplate.Height = 24;
             this.billDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.billDGV.Size = new System.Drawing.Size(492, 196);
+            this.billDGV.Size = new System.Drawing.Size(369, 159);
             this.billDGV.TabIndex = 22;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(382, 368);
+            this.label4.Location = new System.Drawing.Point(286, 299);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(197, 22);
+            this.label4.Size = new System.Drawing.Size(155, 19);
             this.label4.TabIndex = 23;
             this.label4.Text = "Hoá đơn bán trong ngày";
             // 
             // labelProId
             // 
             this.labelProId.AutoSize = true;
-            this.labelProId.Location = new System.Drawing.Point(166, 32);
+            this.labelProId.Location = new System.Drawing.Point(124, 26);
+            this.labelProId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelProId.Name = "labelProId";
-            this.labelProId.Size = new System.Drawing.Size(45, 17);
+            this.labelProId.Size = new System.Drawing.Size(36, 13);
             this.labelProId.TabIndex = 24;
             this.labelProId.Text = "MãSP";
             // 
@@ -442,7 +465,8 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.productDGV.DefaultCellStyle = dataGridViewCellStyle6;
             this.productDGV.GridColor = System.Drawing.SystemColors.Control;
-            this.productDGV.Location = new System.Drawing.Point(22, 373);
+            this.productDGV.Location = new System.Drawing.Point(16, 303);
+            this.productDGV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.productDGV.MultiSelect = false;
             this.productDGV.Name = "productDGV";
             this.productDGV.ReadOnly = true;
@@ -451,7 +475,7 @@
             this.productDGV.RowHeadersWidth = 51;
             this.productDGV.RowTemplate.Height = 24;
             this.productDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.productDGV.Size = new System.Drawing.Size(304, 324);
+            this.productDGV.Size = new System.Drawing.Size(228, 263);
             this.productDGV.TabIndex = 1;
             this.productDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productDGV_CellClick);
             // 
@@ -466,10 +490,26 @@
             this.printPreviewDialog1.Name = "printPreviewDialog2";
             this.printPreviewDialog1.Visible = false;
             // 
+            // btnExport
+            // 
+            this.btnExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(170)))), ((int)(((byte)(26)))));
+            this.btnExport.FlatAppearance.BorderSize = 0;
+            this.btnExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExport.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExport.Location = new System.Drawing.Point(290, 521);
+            this.btnExport.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(118, 45);
+            this.btnExport.TabIndex = 25;
+            this.btnExport.Text = "Xuất file Excel";
+            this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
             // ControlCreateBill
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnExport);
             this.Controls.Add(this.labelProId);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.billDGV);
@@ -493,8 +533,9 @@
             this.Controls.Add(this.labelProductPrice);
             this.Controls.Add(this.productDGV);
             this.Controls.Add(this.labelProductName);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ControlCreateBill";
-            this.Size = new System.Drawing.Size(900, 700);
+            this.Size = new System.Drawing.Size(675, 569);
             this.Load += new System.EventHandler(this.CreateBillControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.orderDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.billDGV)).EndInit();
@@ -537,5 +578,6 @@
         public System.Windows.Forms.Label labelCartTotal;
         public System.Windows.Forms.Button buttonAddProduct;
         private System.Windows.Forms.DataGridView productDGV;
+        private System.Windows.Forms.Button btnExport;
     }
 }
