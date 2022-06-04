@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,33 +16,30 @@ namespace WindowsFormsApp1
         public formProgess()
         {
             InitializeComponent();
-            circularProgressBar.Value = 0;
+            circularProgressBar.Hide();
         }
 
-        private Timer time = new Timer();
-
-        private void timer_Tick(object sender, EventArgs e)
+        private void runLabel_Click(object sender, EventArgs e)
         {
-
-            circularProgressBar.Value++;
-            circularProgressBar.Text = circularProgressBar.Value.ToString() + "%";
-            if (circularProgressBar.Value == circularProgressBar.Maximum)
+            runLabel.Hide();
+            circularProgressBar.Show();
+            for (int i = 1; i <= circularProgressBar.Maximum; i++)
             {
-                time.Enabled = false;
-                time.Stop();
-                formLogin formLogin = new formLogin();
-                this.Hide();
-                formLogin.Show();
+                Thread.Sleep(5);
+                circularProgressBar.Value = i;
+                circularProgressBar.Update();
+                circularProgressBar.Text = circularProgressBar.Value.ToString() + "%";
             }
+            this.Hide();
+            formLogin formLogin = new formLogin();
+            formLogin.Show();
         }
 
         private void formProgess_Load(object sender, EventArgs e)
         {
-            time.Enabled = true;
-            time.Interval = 90;
+            circularProgressBar.Value = 0;
+            circularProgressBar.Minimum = 0;
             circularProgressBar.Maximum = 100;
-            time.Tick += new EventHandler(timer_Tick);
-            time.Start();
         }
 
     }
