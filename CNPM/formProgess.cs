@@ -39,7 +39,6 @@ namespace WindowsFormsApp1
             circularProgressBar.Maximum = 100;
             timer.Tick += new EventHandler(timer_Tick);
             timer.Start();
-
         }
 
     }
