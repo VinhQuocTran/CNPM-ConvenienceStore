@@ -32,6 +32,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.circularProgressBar = new CircularProgressBar.CircularProgressBar();
             this.label2 = new System.Windows.Forms.Label();
+            this.runLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -50,7 +51,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.label3.Location = new System.Drawing.Point(165, 80);
+            this.label3.Location = new System.Drawing.Point(165, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 15);
             this.label3.TabIndex = 3;
@@ -61,12 +62,12 @@
             this.circularProgressBar.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
             this.circularProgressBar.AnimationSpeed = 500;
             this.circularProgressBar.BackColor = System.Drawing.Color.Transparent;
-            this.circularProgressBar.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.circularProgressBar.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.circularProgressBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(149)))));
             this.circularProgressBar.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
             this.circularProgressBar.InnerMargin = 2;
             this.circularProgressBar.InnerWidth = -1;
-            this.circularProgressBar.Location = new System.Drawing.Point(147, 120);
+            this.circularProgressBar.Location = new System.Drawing.Point(147, 116);
             this.circularProgressBar.MarqueeAnimationSpeed = 2000;
             this.circularProgressBar.Name = "circularProgressBar";
             this.circularProgressBar.OuterColor = System.Drawing.Color.Gray;
@@ -93,18 +94,31 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.label2.Location = new System.Drawing.Point(165, 276);
+            this.label2.Location = new System.Drawing.Point(165, 274);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 15);
             this.label2.TabIndex = 7;
             this.label2.Text = "© CNPM nhóm 2";
+            // 
+            // runLabel
+            // 
+            this.runLabel.AutoSize = true;
+            this.runLabel.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.runLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
+            this.runLabel.Location = new System.Drawing.Point(181, 168);
+            this.runLabel.Name = "runLabel";
+            this.runLabel.Size = new System.Drawing.Size(70, 31);
+            this.runLabel.TabIndex = 8;
+            this.runLabel.Text = "RUN";
+            this.runLabel.Click += new System.EventHandler(this.runLabel_Click);
             // 
             // formProgess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.ClientSize = new System.Drawing.Size(439, 324);
+            this.ClientSize = new System.Drawing.Size(439, 297);
+            this.Controls.Add(this.runLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.circularProgressBar);
             this.Controls.Add(this.label3);
@@ -123,5 +137,6 @@
         private System.Windows.Forms.Label label3;
         private CircularProgressBar.CircularProgressBar circularProgressBar;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label runLabel;
     }
 }
