@@ -136,7 +136,6 @@ namespace WindowsFormsApp1
                 }
                 else
                 {
-                    cnn.Open();
                     string query = "delete sanpham where masp = N'" + txtID.Text + "'";
                     SqlCommand sqlCommand = new SqlCommand(query, cnn);
                     sqlCommand.ExecuteNonQuery();
