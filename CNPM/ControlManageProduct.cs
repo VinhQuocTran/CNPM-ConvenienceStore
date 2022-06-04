@@ -183,18 +183,30 @@ namespace WindowsFormsApp1
         {
             string idCategory = "";
             idCategory = convertIDtoNameCategory();
+
             try
             {
                 cnn.Open();
-                string query = "update sanpham set masp=N'" + txtID.Text +
-                    "', tensp=N'" + txtName.Text + "', giaban = " + txtPrice.Text +
-                    ",donvitinh = N'" + txtUnit.Text + "', madanhmuc=N'" + idCategory
-                    + "',hangtrongkho =" + txtQuantity.Text+ " where masp = N'" + txtID.Text+"' or tensp=N'"+ txtName.Text+"N'";
-                SqlCommand sqlCommand = new SqlCommand(query, cnn);
-                sqlCommand.ExecuteNonQuery();
-                MessageBox.Show("Sửa thông tin sản phẩm thành công");
-                cnn.Close();
-                showDataGrid();
+                if (txtID.Text == "" || txtName.Text == "" || txtPrice.Text == "" || txtQuantity.Text == "" || txtUnit.Text == ""
+                  || cbbCategories.Text == "")
+                {
+                    MessageBox.Show("Vui lòng điền đầy đủ thông tin");
+                    cnn.Close();
+
+                }
+                else
+                {
+                    string query = "update sanpham set masp=N'" + txtID.Text +
+                   "', tensp=N'" + txtName.Text + "', giaban = " + txtPrice.Text +
+                   ",donvitinh = N'" + txtUnit.Text + "', madanhmuc=N'" + idCategory
+                   + "',hangtrongkho =" + txtQuantity.Text + " where masp = N'" + txtID.Text + "' or tensp=N'" + txtName.Text + "N'";
+                    SqlCommand sqlCommand = new SqlCommand(query, cnn);
+                    sqlCommand.ExecuteNonQuery();
+                    MessageBox.Show("Sửa thông tin sản phẩm thành công");
+                    cnn.Close();
+                    showDataGrid();
+                }
+               
             }
             catch (Exception ex)
             {
