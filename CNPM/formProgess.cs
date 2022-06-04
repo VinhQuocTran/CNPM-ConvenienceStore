@@ -20,12 +20,9 @@ namespace WindowsFormsApp1
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            if (circularProgressBar.Value < 100)
-            {
-                circularProgressBar.Value++;
-                circularProgressBar.Text = circularProgressBar.Value.ToString() + "%";
-            }
-            else
+            circularProgressBar.Value++;
+            circularProgressBar.Text = circularProgressBar.Value.ToString() + "%";
+            if (circularProgressBar.Value == circularProgressBar.Maximum)
             {
                 timer.Enabled = false;
                 timer.Stop();
@@ -37,10 +34,11 @@ namespace WindowsFormsApp1
 
         private void formProgess_Load(object sender, EventArgs e)
         {
-            timer.Start();
+            timer.Enabled = true;
             timer.Interval = 100;
             circularProgressBar.Maximum = 100;
             timer.Tick += new EventHandler(timer_Tick);
+            timer.Start();
 
         }
 
