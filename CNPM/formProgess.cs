@@ -22,12 +22,22 @@ namespace WindowsFormsApp1
 
         private void timer_Tick(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             circularProgressBar.Increment(1);
             circularProgressBar.Text = circularProgressBar.Value.ToString() + "%";
             
             if (circularProgressBar.Value == circularProgressBar.Maximum)
             {
                 time.Stop();
+=======
+            circularProgressBar.Value++;
+            circularProgressBar.Text = circularProgressBar.Value.ToString() + "%";
+            if (circularProgressBar.Value == circularProgressBar.Maximum)
+            {
+                timer.Enabled = false;
+                timer.Stop();
+                formLogin formLogin = new formLogin();
+>>>>>>> Tri-branch
                 this.Hide();
                 formLogin formLogin = new formLogin();
                 formLogin.Show();
@@ -36,10 +46,18 @@ namespace WindowsFormsApp1
 
         private void formProgess_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             time.Interval = 90;
             circularProgressBar.Maximum = 100;
             time.Tick += new EventHandler(timer_Tick);
             time.Start();
+=======
+            timer.Enabled = true;
+            timer.Interval = 100;
+            circularProgressBar.Maximum = 100;
+            timer.Tick += new EventHandler(timer_Tick);
+            timer.Start();
+>>>>>>> Tri-branch
         }
 
     }
