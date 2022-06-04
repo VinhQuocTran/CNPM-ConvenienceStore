@@ -125,18 +125,28 @@ namespace WindowsFormsApp1
         {
             try
             {
+                string query = "";
                 cnn.Open();
                 SqlDataAdapter oks = new SqlDataAdapter("SELECT * FROM chitiethoadon where masp = '" + txtID.Text + "'", cnn);
                 DataSet dataSet = new DataSet();
                 oks.Fill(dataSet);
                 if (dataSet.Tables["Table"].Rows.Count > 0)
                 {
-                    MessageBox.Show("Vui lòng xóa chi tiết hóa đơn có sản phẩm này");
+                    query = "alter table chitiethoadon nocheck constraint all";
+                    SqlCommand sqlCommand = new SqlCommand(query, cnn);
+                    sqlCommand.ExecuteNonQuery();
+                    query = "delete sanpham where masp = N'" + txtID.Text + "'";
+                    sqlCommand = new SqlCommand(query, cnn);
+                    sqlCommand.ExecuteNonQuery();
+                    query = "alter table chitiethoadon check constraint all";
+                    sqlCommand = new SqlCommand(query, cnn);
+                    MessageBox.Show("Xóa sản phẩm thành công");
                     cnn.Close();
+                    showDataGrid();
                 }
                 else
                 {
-                    string query = "delete sanpham where masp = N'" + txtID.Text + "'";
+                    query = "delete sanpham where masp = N'" + txtID.Text + "'";
                     SqlCommand sqlCommand = new SqlCommand(query, cnn);
                     sqlCommand.ExecuteNonQuery();
                     MessageBox.Show("Xóa sản phẩm thành công");
