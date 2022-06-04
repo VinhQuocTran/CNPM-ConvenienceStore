@@ -70,13 +70,23 @@ namespace WindowsFormsApp1
             try
             {
                 cnn.Open();
-                string matk = dataGridCashier.SelectedRows[0].Cells[0].Value.ToString();
-                string query = "delete taikhoan where matk = " + matk;
-                SqlCommand sqlCommand = new SqlCommand(query, cnn);
-                sqlCommand.ExecuteNonQuery();
-                MessageBox.Show("Xóa nhân viên thành công");
-                cnn.Close();
-                showDataGrid();
+
+                if (txtName.Text == "" || txtPassword.Text == "" || txtUsername.Text == "" || txtSalary.Text == ""
+                    || cbbAccountType.Text == "")
+                {
+                    MessageBox.Show("Vui lòng điền đầy đủ thông tin");
+                    cnn.Close();
+                }
+                else
+                {
+                    string matk = dataGridCashier.SelectedRows[0].Cells[0].Value.ToString();
+                    string query = "delete taikhoan where matk = " + matk;
+                    SqlCommand sqlCommand = new SqlCommand(query, cnn);
+                    sqlCommand.ExecuteNonQuery();
+                    MessageBox.Show("Xóa nhân viên thành công");
+                    cnn.Close();
+                    showDataGrid();
+                }
 
             }
             catch (Exception ex)
