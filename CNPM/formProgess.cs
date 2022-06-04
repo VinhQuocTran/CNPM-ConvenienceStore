@@ -18,17 +18,17 @@ namespace WindowsFormsApp1
             circularProgressBar.Value = 0;
         }
 
+        private Timer time = new Timer();
+
         private void timer_Tick(object sender, EventArgs e)
         {
-            if (circularProgressBar.Value < 100)
+
+            circularProgressBar.Value++;
+            circularProgressBar.Text = circularProgressBar.Value.ToString() + "%";
+            if (circularProgressBar.Value == circularProgressBar.Maximum)
             {
-                circularProgressBar.Value++;
-                circularProgressBar.Text = circularProgressBar.Value.ToString() + "%";
-            }
-            else
-            {
-                timer.Enabled = false;
-                timer.Stop();
+                time.Enabled = false;
+                time.Stop();
                 formLogin formLogin = new formLogin();
                 this.Hide();
                 formLogin.Show();
@@ -37,11 +37,11 @@ namespace WindowsFormsApp1
 
         private void formProgess_Load(object sender, EventArgs e)
         {
-            timer.Start();
-            timer.Interval = 100;
+            time.Enabled = true;
+            time.Interval = 90;
             circularProgressBar.Maximum = 100;
-            timer.Tick += new EventHandler(timer_Tick);
-
+            time.Tick += new EventHandler(timer_Tick);
+            time.Start();
         }
 
     }

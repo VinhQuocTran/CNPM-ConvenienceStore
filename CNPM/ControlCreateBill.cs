@@ -308,8 +308,13 @@ namespace WindowsFormsApp1
 
         private void buttonPrintBill_Click(object sender, EventArgs e)
         {
-            if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
-                printDocument1.Print();
+            if (billDGV.SelectedRows.Count > 0)
+            {
+                if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
+                    printDocument1.Print();
+            }
+            else
+                MessageBox.Show("Vui lòng chọn hoá đơn");
         }
 
         private void printDocument1_PrintPage(object sender,System.Drawing.Printing.PrintPageEventArgs e)
