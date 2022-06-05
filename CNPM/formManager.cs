@@ -10,15 +10,23 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class formManager : Form
+    public partial class FormManager : Form
     {
-        public formManager()
+        public FormManager()
         {
             InitializeComponent();
-            Load += ControlManage_Load_1;
+            setActivePanel(controlManageProduct1);
         }
 
-        public void setActivityPanel(UserControl control)
+        private void buttonChangePassword_Click(object sender, EventArgs e)
+        {
+            SidePanel.Height = btnChangePassword.Height;
+            SidePanel.Top = btnChangePassword.Top;
+            setActivePanel(controlChangePassword1);
+            
+        }
+
+        public void setActivePanel(UserControl control)
         {
             controlManageProduct1.Visible = false;
             controlManageCashier1.Visible = false;
@@ -26,37 +34,39 @@ namespace WindowsFormsApp1
             controlChangePassword1.Visible = false;
             control.Visible = true;
         }
-        private void ControlManage_Load_1(object sender, EventArgs e)
+
+        private void button1_Click(object sender, EventArgs e)
         {
-            setActivityPanel(controlManageProduct1);
+            Application.Exit();
         }
 
+        private void buttonLogout_Click_1(object sender, EventArgs e)
+        {
+            FormLogin login = new FormLogin();
+            this.Hide();
+            login.Show();
+        }
 
         private void btnProduct_Click(object sender, EventArgs e)
         {
-            setActivityPanel(controlManageProduct1);
-            ControlManageProduct control = new ControlManageProduct();
-            control.addCbbCategory();
+            SidePanel.Height = btnProduct.Height;
+            SidePanel.Top = btnProduct.Top;
+            setActivePanel(controlManageProduct1);
+            controlManageProduct1.addCbbCategory();
         }
 
         private void btnCategory_Click(object sender, EventArgs e)
         {
-           setActivityPanel(controlManageCategory1);
+            SidePanel.Height = btnCategory.Height;
+            SidePanel.Top = btnCategory.Top;
+            setActivePanel(controlManageCategory1);
         }
 
         private void btnCashier_Click(object sender, EventArgs e)
         {
-            setActivityPanel(controlManageCashier1);
-        }
-        private void btnChangePassword_Click(object sender, EventArgs e)
-        {
-            setActivityPanel(controlChangePassword1);
-        }
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            formLogin login = new formLogin();
-            this.Hide();
-            login.Show();
+            SidePanel.Height = btnCashier.Height;
+            SidePanel.Top = btnCashier.Top;
+            setActivePanel(controlManageCashier1);
         }
     }
 }

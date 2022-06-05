@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class formLogin : Form
+    public partial class FormLogin : Form
     {
         public static string matk = "";
         public static string tentk = "";
-        public formLogin()
+        public FormLogin()
         {
             InitializeComponent();
         }
@@ -41,13 +41,13 @@ namespace WindowsFormsApp1
                             matk = dr["matk"].ToString();
                         if(cbbAccountType.Text=="Admin")
                         {
-                            newFormMainManager controlManage = new newFormMainManager();
+                            FormManager controlManage = new FormManager();
                             this.Hide();
                             controlManage.Show();
                         }
                         else
                         {
-                            newFormMainCashier formCashier = new newFormMainCashier();
+                            FormCashier formCashier = new FormCashier();
                             this.Hide();
                             formCashier.Show();
                         }

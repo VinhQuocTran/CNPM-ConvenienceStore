@@ -11,7 +11,7 @@ using FontAwesome.Sharp;
 
 namespace WindowsFormsApp1
 {
-    public partial class formAboutUs : Form
+    public partial class FormAboutUs : Form
     {
         // Fields
         private IconButton currentBtn;
@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
 
 
         // Constructor
-        public formAboutUs()
+        public FormAboutUs()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -155,7 +155,7 @@ namespace WindowsFormsApp1
         private void iconPictureBoxClose_Click(object sender, EventArgs e)
         {
             this.Hide();
-            formProgess formProgress = new formProgess();
+            FormProgess formProgress = new FormProgess();
             formProgress.Show();
         }
 

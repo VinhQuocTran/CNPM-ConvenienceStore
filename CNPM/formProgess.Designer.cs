@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class formProgess
+    partial class FormProgess
     {
         /// <summary>
         /// Required designer variable.

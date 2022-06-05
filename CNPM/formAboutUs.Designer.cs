@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class formAboutUs
+    partial class FormAboutUs
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formAboutUs));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAboutUs));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.iconButtonMember3 = new FontAwesome.Sharp.IconButton();
             this.iconButtonMember2 = new FontAwesome.Sharp.IconButton();
@@ -43,15 +43,15 @@
             this.iconPictureBoxClose = new FontAwesome.Sharp.IconPictureBox();
             this.labelPictureComboBox = new System.Windows.Forms.Label();
             this.iconPictureBox = new FontAwesome.Sharp.IconPictureBox();
-            this.fourthUC1 = new WindowsFormsApp1.FourthUC();
-            this.thirdUC1 = new WindowsFormsApp1.ThirdUC();
-            this.firstUC1 = new WindowsFormsApp1.FirstUC();
-            this.defaultUC1 = new WindowsFormsApp1.DefaultUC();
+            this.fourthUC1 = new WindowsFormsApp1.ControlAboutUs5();
+            this.thirdUC1 = new WindowsFormsApp1.ControlAboutUs4();
+            this.firstUC1 = new WindowsFormsApp1.ControlAboutUs2();
+            this.defaultUC1 = new WindowsFormsApp1.ControlAboutUs1();
             this.controlChangePassword1 = new WindowsFormsApp1.ControlChangePassword();
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.bunifuTransition2 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.secondUC1 = new WindowsFormsApp1.SecondUC();
+            this.secondUC1 = new WindowsFormsApp1.ControlAboutUs3();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -430,13 +430,13 @@
         private System.Windows.Forms.Label labelPictureComboBox;
         private FontAwesome.Sharp.IconPictureBox iconPictureBoxClose;
         private ControlChangePassword controlChangePassword1;
-        private DefaultUC defaultUC1;
-        private FirstUC firstUC1;
-        private ThirdUC thirdUC1;
-        private FourthUC fourthUC1;
+        private ControlAboutUs1 defaultUC1;
+        private ControlAboutUs2 firstUC1;
+        private ControlAboutUs4 thirdUC1;
+        private ControlAboutUs5 fourthUC1;
         private BunifuAnimatorNS.BunifuTransition bunifuTransition2;
         private BunifuAnimatorNS.BunifuTransition bunifuTransition1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private SecondUC secondUC1;
+        private ControlAboutUs3 secondUC1;
     }
 }

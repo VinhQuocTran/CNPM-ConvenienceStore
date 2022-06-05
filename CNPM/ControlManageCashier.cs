@@ -130,7 +130,7 @@ namespace WindowsFormsApp1
                     cnn.Close();
                     showDataGrid();
                 }
-                else if (formLogin.tentk.Equals(txtUsername.Text))
+                else if (FormLogin.tentk.Equals(txtUsername.Text))
                 {
                     MessageBox.Show("Tài khoản này đang được đăng nhập không thể xóa");
                     cnn.Close();

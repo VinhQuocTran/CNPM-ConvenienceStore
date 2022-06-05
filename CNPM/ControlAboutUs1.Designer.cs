@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class DefaultUC
+    partial class ControlAboutUs1
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DefaultUC));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlAboutUs1));
             this.SuspendLayout();
             // 
             // DefaultUC

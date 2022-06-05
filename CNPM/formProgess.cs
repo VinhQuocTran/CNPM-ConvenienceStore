@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class formProgess : Form
+    public partial class FormProgess : Form
     {
-        public formProgess()
+        public FormProgess()
         {
             InitializeComponent();
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -46,14 +46,14 @@ namespace WindowsFormsApp1
                 circularProgressBar.Text = circularProgressBar.Value.ToString() + "%";
             }
             this.Hide();
-            formLogin formLogin = new formLogin();
+            FormLogin formLogin = new FormLogin();
             formLogin.Show();
         }
 
         private void customBtnAbout_Click(object sender, EventArgs e)
         {
             this.Hide();
-            formAboutUs formAboutUs = new formAboutUs();
+            FormAboutUs formAboutUs = new FormAboutUs();
             formAboutUs.Show();
         }
     }

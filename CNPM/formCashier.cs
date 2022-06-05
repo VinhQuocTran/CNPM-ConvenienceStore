@@ -10,43 +10,63 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class formCashier : Form
+    public partial class FormCashier : Form
     {
-        public formCashier()
+        public FormCashier()
         {
             InitializeComponent();
+            setActivePanel(controlCreateBill1);
+        }
+
+        private void buttonCreateBill_Click(object sender, EventArgs e)
+        {
+            SidePanel.Top = buttonCreateBill.Top;
+            setActivePanel(controlCreateBill1);
+        }
+
+        private void buttonSearchProduct_Click(object sender, EventArgs e)
+        {
+            SidePanel.Top = buttonSearchProduct.Top;
+            setActivePanel(controlSearchProduct1);
+            controlSearchProduct1.populateProduct();
+        }
+
+        private void buttonClearBill_Click(object sender, EventArgs e)
+        {
+            controlCreateBill1.orderDGV.Rows.Clear();
+            ControlCreateBill.totalCart = 0;
+            controlCreateBill1.labelCartTotal.Text = ControlCreateBill.totalCart.ToString();
+            ControlCreateBill.n = 1;
+            MessageBox.Show("Xoá hết sản phẩm trong giỏ hàng thành công");
+        }
+
+        private void buttonChangePassword_Click(object sender, EventArgs e)
+        {
+            SidePanel.Height = buttonChangePassword.Height;
+            SidePanel.Top = buttonChangePassword.Top;
+            setActivePanel(controlChangePassword1);
         }
 
         public void setActivePanel(UserControl control)
         {
             // Disable all user controls
-            createBillUserControl1.Visible = false;
-            searchProductUserControl1.Visible = false;
+            controlSearchProduct1.Visible = false;
+            controlCreateBill1.Visible = false;
+            controlChangePassword1.Visible = false;
 
             // Enable 1 user control
             control.Visible = true;
         }
-
-        private void buttonSearchProduct_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            setActivePanel(searchProductUserControl1);
-            searchProductUserControl1.populateProduct();
+            Application.Exit();
         }
 
-        private void formCashier_Load(object sender, EventArgs e)
+        private void buttonLogout_Click_1(object sender, EventArgs e)
         {
-            setActivePanel(createBillUserControl1);
-        }
-
-        private void buttonCreateBill_Click(object sender, EventArgs e)
-        {
-            setActivePanel(createBillUserControl1);
-        }
-
-        private void buttonClearBill_Click(object sender, EventArgs e)
-        {
-            ControlCreateBill control = createBillUserControl1;
-            control.orderDGV.Rows.Clear();
+            FormLogin login = new FormLogin();
+            this.Hide();
+            login.Show();
         }
     }
 }

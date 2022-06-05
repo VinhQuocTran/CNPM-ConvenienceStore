@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class SecondUC
+    partial class ControlAboutUs3
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SecondUC));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControlAboutUs3));
             this.iconPictureBoxFB = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBoxGithub = new FontAwesome.Sharp.IconPictureBox();
             this.label2 = new System.Windows.Forms.Label();

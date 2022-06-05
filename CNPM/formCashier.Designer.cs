@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class formCashier
+    partial class FormCashier
     {
         /// <summary>
         /// Required designer variable.
@@ -29,176 +29,265 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.searchProductUserControl1 = new WindowsFormsApp1.ControlSearchProduct();
-            this.createBillUserControl1 = new WindowsFormsApp1.ControlCreateBill();
-            this.buttonLogout = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SidePanel = new System.Windows.Forms.Panel();
+            this.NavigationPanel = new System.Windows.Forms.Panel();
+            this.MainPanel = new System.Windows.Forms.Panel();
+            this.controlChangePassword1 = new WindowsFormsApp1.ControlChangePassword();
+            this.controlSearchProduct1 = new WindowsFormsApp1.ControlSearchProduct();
+            this.controlCreateBill1 = new WindowsFormsApp1.ControlCreateBill();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonChangePassword = new System.Windows.Forms.Button();
             this.buttonClearBill = new System.Windows.Forms.Button();
             this.buttonSearchProduct = new System.Windows.Forms.Button();
+            this.buttonLogout = new System.Windows.Forms.Button();
             this.buttonCreateBill = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            this.MainPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Controls.Add(this.searchProductUserControl1);
-            this.panel1.Controls.Add(this.createBillUserControl1);
-            this.panel1.Location = new System.Drawing.Point(141, 29);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(48)))), ((int)(((byte)(50)))));
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.SidePanel);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.buttonChangePassword);
+            this.panel1.Controls.Add(this.NavigationPanel);
+            this.panel1.Controls.Add(this.buttonClearBill);
+            this.panel1.Controls.Add(this.buttonSearchProduct);
+            this.panel1.Controls.Add(this.buttonLogout);
+            this.panel1.Controls.Add(this.buttonCreateBill);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(598, 547);
-            this.panel1.TabIndex = 1;
+            this.panel1.Size = new System.Drawing.Size(227, 750);
+            this.panel1.TabIndex = 0;
             // 
-            // searchProductUserControl1
+            // label1
             // 
-            this.searchProductUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.searchProductUserControl1.Location = new System.Drawing.Point(0, 0);
-            this.searchProductUserControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.searchProductUserControl1.Name = "searchProductUserControl1";
-            this.searchProductUserControl1.Size = new System.Drawing.Size(598, 547);
-            this.searchProductUserControl1.TabIndex = 1;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(69, 83);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 27);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Thu ngân";
             // 
-            // createBillUserControl1
+            // SidePanel
             // 
-            this.createBillUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.createBillUserControl1.Location = new System.Drawing.Point(0, 0);
-            this.createBillUserControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.createBillUserControl1.Name = "createBillUserControl1";
-            this.createBillUserControl1.Size = new System.Drawing.Size(598, 547);
-            this.createBillUserControl1.TabIndex = 0;
+            this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(170)))), ((int)(((byte)(26)))));
+            this.SidePanel.Location = new System.Drawing.Point(213, 188);
+            this.SidePanel.Name = "SidePanel";
+            this.SidePanel.Size = new System.Drawing.Size(14, 61);
+            this.SidePanel.TabIndex = 3;
             // 
-            // buttonLogout
+            // NavigationPanel
             // 
-            this.buttonLogout.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonLogout.Location = new System.Drawing.Point(9, 527);
-            this.buttonLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.buttonLogout.Name = "buttonLogout";
-            this.buttonLogout.Size = new System.Drawing.Size(120, 49);
-            this.buttonLogout.TabIndex = 5;
-            this.buttonLogout.Text = "Đăng xuất";
-            this.buttonLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonLogout.UseVisualStyleBackColor = true;
+            this.NavigationPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(170)))), ((int)(((byte)(26)))));
+            this.NavigationPanel.Location = new System.Drawing.Point(232, 0);
+            this.NavigationPanel.Name = "NavigationPanel";
+            this.NavigationPanel.Size = new System.Drawing.Size(900, 34);
+            this.NavigationPanel.TabIndex = 1;
+            // 
+            // MainPanel
+            // 
+            this.MainPanel.Controls.Add(this.controlChangePassword1);
+            this.MainPanel.Controls.Add(this.controlSearchProduct1);
+            this.MainPanel.Controls.Add(this.controlCreateBill1);
+            this.MainPanel.Location = new System.Drawing.Point(220, 28);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(900, 700);
+            this.MainPanel.TabIndex = 2;
+            // 
+            // controlChangePassword1
+            // 
+            this.controlChangePassword1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.controlChangePassword1.Location = new System.Drawing.Point(0, 0);
+            this.controlChangePassword1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.controlChangePassword1.Name = "controlChangePassword1";
+            this.controlChangePassword1.Size = new System.Drawing.Size(900, 700);
+            this.controlChangePassword1.TabIndex = 2;
+            // 
+            // controlSearchProduct1
+            // 
+            this.controlSearchProduct1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.controlSearchProduct1.Location = new System.Drawing.Point(0, 0);
+            this.controlSearchProduct1.Name = "controlSearchProduct1";
+            this.controlSearchProduct1.Size = new System.Drawing.Size(900, 700);
+            this.controlSearchProduct1.TabIndex = 1;
+            // 
+            // controlCreateBill1
+            // 
+            this.controlCreateBill1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.controlCreateBill1.Location = new System.Drawing.Point(0, 0);
+            this.controlCreateBill1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.controlCreateBill1.Name = "controlCreateBill1";
+            this.controlCreateBill1.Size = new System.Drawing.Size(900, 700);
+            this.controlCreateBill1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(170)))), ((int)(((byte)(26)))));
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Location = new System.Drawing.Point(227, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(893, 58);
+            this.panel2.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(170)))), ((int)(((byte)(26)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::WindowsFormsApp1.Properties.Resources.switch1;
+            this.button1.Location = new System.Drawing.Point(834, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(56, 53);
+            this.button1.TabIndex = 3;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.cashier;
+            this.pictureBox1.Location = new System.Drawing.Point(74, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(82, 77);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // buttonChangePassword
             // 
-            this.buttonChangePassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonChangePassword.FlatAppearance.BorderSize = 0;
+            this.buttonChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonChangePassword.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonChangePassword.ForeColor = System.Drawing.Color.White;
+            this.buttonChangePassword.Image = global::WindowsFormsApp1.Properties.Resources.padlock;
             this.buttonChangePassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonChangePassword.Location = new System.Drawing.Point(9, 350);
-            this.buttonChangePassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonChangePassword.Location = new System.Drawing.Point(0, 419);
             this.buttonChangePassword.Name = "buttonChangePassword";
-            this.buttonChangePassword.Size = new System.Drawing.Size(120, 49);
-            this.buttonChangePassword.TabIndex = 4;
-            this.buttonChangePassword.Text = "Đổi mật khẩu";
+            this.buttonChangePassword.Size = new System.Drawing.Size(226, 61);
+            this.buttonChangePassword.TabIndex = 7;
+            this.buttonChangePassword.Text = "   Đổi mật khẩu";
             this.buttonChangePassword.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonChangePassword.UseVisualStyleBackColor = true;
+            this.buttonChangePassword.Click += new System.EventHandler(this.buttonChangePassword_Click);
             // 
             // buttonClearBill
             // 
-            this.buttonClearBill.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClearBill.FlatAppearance.BorderSize = 0;
+            this.buttonClearBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClearBill.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClearBill.ForeColor = System.Drawing.Color.White;
+            this.buttonClearBill.Image = global::WindowsFormsApp1.Properties.Resources.clearcart;
             this.buttonClearBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonClearBill.Location = new System.Drawing.Point(9, 269);
-            this.buttonClearBill.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonClearBill.Location = new System.Drawing.Point(0, 342);
             this.buttonClearBill.Name = "buttonClearBill";
-            this.buttonClearBill.Size = new System.Drawing.Size(120, 49);
-            this.buttonClearBill.TabIndex = 3;
-            this.buttonClearBill.Text = "Xoá giỏ hàng";
+            this.buttonClearBill.Size = new System.Drawing.Size(226, 61);
+            this.buttonClearBill.TabIndex = 6;
+            this.buttonClearBill.Text = "   Xoá giỏ hàng";
             this.buttonClearBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonClearBill.UseVisualStyleBackColor = true;
             this.buttonClearBill.Click += new System.EventHandler(this.buttonClearBill_Click);
             // 
             // buttonSearchProduct
             // 
-            this.buttonSearchProduct.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSearchProduct.FlatAppearance.BorderSize = 0;
+            this.buttonSearchProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSearchProduct.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSearchProduct.ForeColor = System.Drawing.Color.White;
+            this.buttonSearchProduct.Image = global::WindowsFormsApp1.Properties.Resources.search;
             this.buttonSearchProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSearchProduct.Location = new System.Drawing.Point(9, 193);
-            this.buttonSearchProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSearchProduct.Location = new System.Drawing.Point(0, 265);
             this.buttonSearchProduct.Name = "buttonSearchProduct";
-            this.buttonSearchProduct.Size = new System.Drawing.Size(120, 49);
-            this.buttonSearchProduct.TabIndex = 2;
-            this.buttonSearchProduct.Text = "Sản phẩm";
+            this.buttonSearchProduct.Size = new System.Drawing.Size(226, 61);
+            this.buttonSearchProduct.TabIndex = 3;
+            this.buttonSearchProduct.Text = "   Tìm sản phẩm";
             this.buttonSearchProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonSearchProduct.UseVisualStyleBackColor = true;
             this.buttonSearchProduct.Click += new System.EventHandler(this.buttonSearchProduct_Click);
             // 
+            // buttonLogout
+            // 
+            this.buttonLogout.FlatAppearance.BorderSize = 0;
+            this.buttonLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLogout.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLogout.ForeColor = System.Drawing.Color.White;
+            this.buttonLogout.Image = global::WindowsFormsApp1.Properties.Resources.logout;
+            this.buttonLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonLogout.Location = new System.Drawing.Point(0, 697);
+            this.buttonLogout.Name = "buttonLogout";
+            this.buttonLogout.Size = new System.Drawing.Size(223, 50);
+            this.buttonLogout.TabIndex = 5;
+            this.buttonLogout.Text = "   Đăng xuất";
+            this.buttonLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonLogout.UseVisualStyleBackColor = true;
+            this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click_1);
+            // 
             // buttonCreateBill
             // 
-            this.buttonCreateBill.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCreateBill.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonCreateBill.FlatAppearance.BorderSize = 0;
+            this.buttonCreateBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCreateBill.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCreateBill.ForeColor = System.Drawing.Color.White;
+            this.buttonCreateBill.Image = global::WindowsFormsApp1.Properties.Resources.bill;
             this.buttonCreateBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCreateBill.Location = new System.Drawing.Point(9, 114);
-            this.buttonCreateBill.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonCreateBill.Location = new System.Drawing.Point(0, 188);
             this.buttonCreateBill.Name = "buttonCreateBill";
-            this.buttonCreateBill.Size = new System.Drawing.Size(120, 49);
-            this.buttonCreateBill.TabIndex = 0;
-            this.buttonCreateBill.Text = "Giỏ hàng";
+            this.buttonCreateBill.Size = new System.Drawing.Size(225, 61);
+            this.buttonCreateBill.TabIndex = 2;
+            this.buttonCreateBill.Text = "   Giỏ hàng";
             this.buttonCreateBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonCreateBill.UseVisualStyleBackColor = true;
             this.buttonCreateBill.Click += new System.EventHandler(this.buttonCreateBill_Click);
             // 
-            // label1
+            // newFormMainCashier
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 53);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Thu ngân";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(48, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 41);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // formCashier
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGreen;
-            this.ClientSize = new System.Drawing.Size(754, 612);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.buttonLogout);
-            this.Controls.Add(this.buttonChangePassword);
-            this.Controls.Add(this.buttonClearBill);
-            this.Controls.Add(this.buttonSearchProduct);
+            this.ClientSize = new System.Drawing.Size(1119, 750);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.buttonCreateBill);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "formCashier";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.Controls.Add(this.MainPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "newFormMainCashier";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.formCashier_Load);
+            this.Text = "newFormMainCashier";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.MainPanel.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button buttonCreateBill;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button buttonSearchProduct;
-        private System.Windows.Forms.Button buttonClearBill;
-        private System.Windows.Forms.Button buttonChangePassword;
+        private System.Windows.Forms.Button buttonCreateBill;
+        private System.Windows.Forms.Panel NavigationPanel;
         private System.Windows.Forms.Button buttonLogout;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button buttonChangePassword;
+        private System.Windows.Forms.Button buttonClearBill;
+        private System.Windows.Forms.Button buttonSearchProduct;
+        private System.Windows.Forms.Panel MainPanel;
+        private ControlSearchProduct controlSearchProduct1;
+        private ControlCreateBill controlCreateBill1;
+        private ControlChangePassword controlChangePassword1;
+        private System.Windows.Forms.Panel SidePanel;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private ControlCreateBill createBillUserControl1;
-        //public searchProductUserControl searchProductUserControl1;
-        private ControlSearchProduct searchProductUserControl1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
-

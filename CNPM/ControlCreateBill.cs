@@ -213,7 +213,7 @@ namespace WindowsFormsApp1
             else
             {
                 string time = "\'" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "\'";
-                string query = "insert into hoadon values (" + time + "," + totalCart + "," + formLogin.matk+")";
+                string query = "insert into hoadon values (" + time + "," + totalCart + "," + FormLogin.matk+")";
                 //MessageBox.Show(query);
 
                 con.Open();

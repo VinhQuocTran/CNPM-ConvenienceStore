@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class SecondUC : UserControl
+    public partial class ControlAboutUs3 : UserControl
     {
-        public SecondUC()
+        public ControlAboutUs3()
         {
             InitializeComponent();
             this.Visible = false;

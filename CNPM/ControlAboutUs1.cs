@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class DefaultUC : UserControl
+    public partial class ControlAboutUs1 : UserControl
     {
-        public DefaultUC()
+        public ControlAboutUs1()
         {
             InitializeComponent();
         }

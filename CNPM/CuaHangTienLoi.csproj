@@ -221,29 +221,23 @@
     <Compile Include="CustomButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="DefaultUC.cs">
+    <Compile Include="ControlAboutUs1.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DefaultUC.Designer.cs">
-      <DependentUpon>DefaultUC.cs</DependentUpon>
+    <Compile Include="ControlAboutUs1.Designer.cs">
+      <DependentUpon>ControlAboutUs1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FirstUC.cs">
+    <Compile Include="ControlAboutUs2.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FirstUC.Designer.cs">
-      <DependentUpon>FirstUC.cs</DependentUpon>
+    <Compile Include="ControlAboutUs2.Designer.cs">
+      <DependentUpon>ControlAboutUs2.cs</DependentUpon>
     </Compile>
-    <Compile Include="formAboutUs.cs">
+    <Compile Include="FormAboutUs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formAboutUs.Designer.cs">
-      <DependentUpon>formAboutUs.cs</DependentUpon>
-    </Compile>
-    <Compile Include="formManager.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formManager.Designer.cs">
-      <DependentUpon>formManager.cs</DependentUpon>
+    <Compile Include="FormAboutUs.Designer.cs">
+      <DependentUpon>FormAboutUs.cs</DependentUpon>
     </Compile>
     <Compile Include="ControlManageCashier.cs">
       <SubType>UserControl</SubType>
@@ -263,41 +257,35 @@
     <Compile Include="ControlManageProduct.Designer.cs">
       <DependentUpon>ControlManageProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="formLogin.cs">
+    <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formLogin.Designer.cs">
-      <DependentUpon>formLogin.cs</DependentUpon>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="formProgess.cs">
+    <Compile Include="FormProgess.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formProgess.Designer.cs">
-      <DependentUpon>formProgess.cs</DependentUpon>
+    <Compile Include="FormProgess.Designer.cs">
+      <DependentUpon>FormProgess.cs</DependentUpon>
     </Compile>
-    <Compile Include="FourthUC.cs">
+    <Compile Include="ControlAboutUs5.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FourthUC.Designer.cs">
-      <DependentUpon>FourthUC.cs</DependentUpon>
+    <Compile Include="ControlAboutUs5.Designer.cs">
+      <DependentUpon>ControlAboutUs5.cs</DependentUpon>
     </Compile>
-    <Compile Include="newFormMainManager.cs">
+    <Compile Include="FormManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="newFormMainManager.Designer.cs">
-      <DependentUpon>newFormMainManager.cs</DependentUpon>
+    <Compile Include="FormManager.Designer.cs">
+      <DependentUpon>FormManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="newFormMainCashier.cs">
+    <Compile Include="FormCashier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="newFormMainCashier.Designer.cs">
-      <DependentUpon>newFormMainCashier.cs</DependentUpon>
-    </Compile>
-    <Compile Include="formCashier.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formCashier.Designer.cs">
-      <DependentUpon>formCashier.cs</DependentUpon>
+    <Compile Include="FormCashier.Designer.cs">
+      <DependentUpon>FormCashier.cs</DependentUpon>
     </Compile>
     <Compile Include="ControlCreateBill.cs">
       <SubType>UserControl</SubType>
@@ -313,38 +301,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SecondUC.cs">
+    <Compile Include="ControlAboutUs3.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SecondUC.Designer.cs">
-      <DependentUpon>SecondUC.cs</DependentUpon>
+    <Compile Include="ControlAboutUs3.Designer.cs">
+      <DependentUpon>ControlAboutUs3.cs</DependentUpon>
     </Compile>
-    <Compile Include="TestButton.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TestButton.Designer.cs">
-      <DependentUpon>TestButton.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ThirdUC.cs">
+    <Compile Include="ControlAboutUs4.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ThirdUC.Designer.cs">
-      <DependentUpon>ThirdUC.cs</DependentUpon>
+    <Compile Include="ControlAboutUs4.Designer.cs">
+      <DependentUpon>ControlAboutUs4.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ControlChangePassword.resx">
       <DependentUpon>ControlChangePassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DefaultUC.resx">
-      <DependentUpon>DefaultUC.cs</DependentUpon>
+    <EmbeddedResource Include="ControlAboutUs1.resx">
+      <DependentUpon>ControlAboutUs1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FirstUC.resx">
-      <DependentUpon>FirstUC.cs</DependentUpon>
+    <EmbeddedResource Include="ControlAboutUs2.resx">
+      <DependentUpon>ControlAboutUs2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formAboutUs.resx">
-      <DependentUpon>formAboutUs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formManager.resx">
-      <DependentUpon>formManager.cs</DependentUpon>
+    <EmbeddedResource Include="FormAboutUs.resx">
+      <DependentUpon>FormAboutUs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ControlManageCashier.resx">
       <DependentUpon>ControlManageCashier.cs</DependentUpon>
@@ -355,28 +334,25 @@
     <EmbeddedResource Include="ControlManageProduct.resx">
       <DependentUpon>ControlManageProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formLogin.resx">
-      <DependentUpon>formLogin.cs</DependentUpon>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formProgess.resx">
-      <DependentUpon>formProgess.cs</DependentUpon>
+    <EmbeddedResource Include="FormProgess.resx">
+      <DependentUpon>FormProgess.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FourthUC.resx">
-      <DependentUpon>FourthUC.cs</DependentUpon>
+    <EmbeddedResource Include="ControlAboutUs5.resx">
+      <DependentUpon>ControlAboutUs5.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="newFormMainManager.resx">
-      <DependentUpon>newFormMainManager.cs</DependentUpon>
+    <EmbeddedResource Include="FormManager.resx">
+      <DependentUpon>FormManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="newFormMainCashier.resx">
-      <DependentUpon>newFormMainCashier.cs</DependentUpon>
+    <EmbeddedResource Include="FormCashier.resx">
+      <DependentUpon>FormCashier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formCashier.resx">
-      <DependentUpon>formCashier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ControlCreateBill.resx">
       <DependentUpon>ControlCreateBill.cs</DependentUpon>
@@ -384,14 +360,11 @@
     <EmbeddedResource Include="ControlSearchProduct.resx">
       <DependentUpon>ControlSearchProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SecondUC.resx">
-      <DependentUpon>SecondUC.cs</DependentUpon>
+    <EmbeddedResource Include="ControlAboutUs3.resx">
+      <DependentUpon>ControlAboutUs3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestButton.resx">
-      <DependentUpon>TestButton.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ThirdUC.resx">
-      <DependentUpon>ThirdUC.cs</DependentUpon>
+    <EmbeddedResource Include="ControlAboutUs4.resx">
+      <DependentUpon>ControlAboutUs4.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
