@@ -14,6 +14,7 @@ namespace WindowsFormsApp1
     public partial class formLogin : Form
     {
         public static string matk = "";
+        public static string tentk = "";
         public formLogin()
         {
             InitializeComponent();
@@ -23,6 +24,7 @@ namespace WindowsFormsApp1
             SqlConnection cnn = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=QuanLyCuaHangTienLoi;Trusted_Connection=True");
 
             cnn.Open();
+                tentk = txtUsername.Text;
                 string user = txtUsername.Text;
                 string pass = txtPassword.Text;
                 string accountType = cbbAccountType.Text;
@@ -57,15 +59,6 @@ namespace WindowsFormsApp1
                 }
                 cnn.Close();
         }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            txtPassword.Text = "";
-            txtUsername.Text = "";
-            cbbAccountType.Text = "";
-        }
-
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();

@@ -96,15 +96,6 @@ namespace WindowsFormsApp1
 
             }
         }
-
-
-        //private void dataGridCategoy_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    txtID.Text = dataGridCategoy.SelectedRows[0].Cells[0].Value.ToString();
-        //    txtName.Text = dataGridCategoy.SelectedRows[0].Cells[1].Value.ToString();
-        //    txtDescription.Text = dataGridCategoy.SelectedRows[0].Cells[2].Value.ToString();
-        //}
-
         private void ControlManageCategory_Load(object sender, EventArgs e)
         {
             showDataGrid();
