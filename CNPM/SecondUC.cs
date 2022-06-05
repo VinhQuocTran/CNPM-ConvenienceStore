@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public SecondUC()
         {
             InitializeComponent();
+            this.Visible = false;
         }
 
         private void iconPictureBoxGithub_Click(object sender, EventArgs e)

@@ -22,6 +22,7 @@ namespace WindowsFormsApp1
         public formAboutUs()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
@@ -82,14 +83,27 @@ namespace WindowsFormsApp1
             }
         }
 
+
         private void iconButtonLeader_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
+            bunifuTransition2.HideSync(defaultUC1);
+            bunifuTransition2.HideSync(secondUC1);
+            bunifuTransition2.HideSync(thirdUC1);
+            bunifuTransition2.HideSync(fourthUC1);
+
+            bunifuTransition1.ShowSync(firstUC1);
         }
 
         private void iconButtonMember1_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
+            bunifuTransition2.HideSync(defaultUC1);
+            bunifuTransition2.HideSync(firstUC1);
+            bunifuTransition2.HideSync(thirdUC1);
+            bunifuTransition2.HideSync(fourthUC1);
+
+            bunifuTransition1.ShowSync(secondUC1);
 
         }
 
@@ -97,17 +111,36 @@ namespace WindowsFormsApp1
         {
             ActivateButton(sender, RGBColors.color3);
 
+            bunifuTransition2.HideSync(defaultUC1);
+            bunifuTransition2.HideSync(firstUC1);
+            bunifuTransition2.HideSync(secondUC1);
+            bunifuTransition2.HideSync(fourthUC1);
+
+            bunifuTransition1.ShowSync(thirdUC1);
+
         }
 
         private void iconButtonMember3_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
+            bunifuTransition2.HideSync(defaultUC1);
+            bunifuTransition2.HideSync(firstUC1);
+            bunifuTransition2.HideSync(secondUC1);
+            bunifuTransition2.HideSync(thirdUC1);
+
+            bunifuTransition1.ShowSync(fourthUC1);
 
         }
 
         private void pictureBoxLogo_Click(object sender, EventArgs e)
         {
             Reset();
+            bunifuTransition2.HideSync(firstUC1);
+            bunifuTransition2.HideSync(secondUC1);
+            bunifuTransition2.HideSync(thirdUC1);
+            bunifuTransition2.HideSync(fourthUC1);
+
+            bunifuTransition1.ShowSync(defaultUC1);
         }
 
         private void Reset()
@@ -121,7 +154,9 @@ namespace WindowsFormsApp1
 
         private void iconPictureBoxClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            formProgess formProgress = new formProgess();
+            formProgress.Show();
         }
 
         private void iconPictureBoxClose_MouseEnter(object sender, EventArgs e)

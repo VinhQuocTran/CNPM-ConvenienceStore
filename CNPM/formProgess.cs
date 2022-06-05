@@ -29,7 +29,7 @@ namespace WindowsFormsApp1
 
         private void customBtnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void customBtnEnter_Click(object sender, EventArgs e)
@@ -52,7 +52,9 @@ namespace WindowsFormsApp1
 
         private void customBtnAbout_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            formAboutUs formAboutUs = new formAboutUs();
+            formAboutUs.Show();
         }
     }
 }
