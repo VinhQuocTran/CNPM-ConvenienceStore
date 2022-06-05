@@ -120,6 +120,7 @@
             this.customBtnAbout.Text = "About us";
             this.customBtnAbout.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(29)))), ((int)(((byte)(131)))));
             this.customBtnAbout.UseVisualStyleBackColor = false;
+            this.customBtnAbout.Click += new System.EventHandler(this.customBtnAbout_Click);
             // 
             // customBtnExit
             // 
