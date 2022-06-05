@@ -32,7 +32,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.circularProgressBar = new CircularProgressBar.CircularProgressBar();
             this.label2 = new System.Windows.Forms.Label();
-            this.runLabel = new System.Windows.Forms.Label();
+            this.customBtnAbout = new WindowsFormsApp1.CustomButton();
+            this.customBtnExit = new WindowsFormsApp1.CustomButton();
+            this.customBtnEnter = new WindowsFormsApp1.CustomButton();
             this.SuspendLayout();
             // 
             // label1
@@ -100,25 +102,74 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "© CNPM nhóm 2";
             // 
-            // runLabel
+            // customBtnAbout
             // 
-            this.runLabel.AutoSize = true;
-            this.runLabel.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.runLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(84)))));
-            this.runLabel.Location = new System.Drawing.Point(181, 168);
-            this.runLabel.Name = "runLabel";
-            this.runLabel.Size = new System.Drawing.Size(70, 31);
-            this.runLabel.TabIndex = 8;
-            this.runLabel.Text = "RUN";
-            this.runLabel.Click += new System.EventHandler(this.runLabel_Click);
+            this.customBtnAbout.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.customBtnAbout.BackgroundColor = System.Drawing.Color.MediumSpringGreen;
+            this.customBtnAbout.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customBtnAbout.BorderRadius = 40;
+            this.customBtnAbout.BorderSize = 0;
+            this.customBtnAbout.FlatAppearance.BorderSize = 0;
+            this.customBtnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customBtnAbout.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customBtnAbout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(29)))), ((int)(((byte)(131)))));
+            this.customBtnAbout.Location = new System.Drawing.Point(168, 219);
+            this.customBtnAbout.Name = "customBtnAbout";
+            this.customBtnAbout.Size = new System.Drawing.Size(96, 40);
+            this.customBtnAbout.TabIndex = 10;
+            this.customBtnAbout.Text = "About us";
+            this.customBtnAbout.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(29)))), ((int)(((byte)(131)))));
+            this.customBtnAbout.UseVisualStyleBackColor = false;
+            // 
+            // customBtnExit
+            // 
+            this.customBtnExit.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.customBtnExit.BackgroundColor = System.Drawing.Color.MediumSpringGreen;
+            this.customBtnExit.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customBtnExit.BorderRadius = 40;
+            this.customBtnExit.BorderSize = 0;
+            this.customBtnExit.FlatAppearance.BorderSize = 0;
+            this.customBtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customBtnExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customBtnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(29)))), ((int)(((byte)(131)))));
+            this.customBtnExit.Location = new System.Drawing.Point(168, 164);
+            this.customBtnExit.Name = "customBtnExit";
+            this.customBtnExit.Size = new System.Drawing.Size(96, 39);
+            this.customBtnExit.TabIndex = 9;
+            this.customBtnExit.Text = "Thoát ra";
+            this.customBtnExit.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(29)))), ((int)(((byte)(131)))));
+            this.customBtnExit.UseVisualStyleBackColor = false;
+            this.customBtnExit.Click += new System.EventHandler(this.customBtnExit_Click);
+            // 
+            // customBtnEnter
+            // 
+            this.customBtnEnter.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.customBtnEnter.BackgroundColor = System.Drawing.Color.MediumSpringGreen;
+            this.customBtnEnter.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customBtnEnter.BorderRadius = 40;
+            this.customBtnEnter.BorderSize = 0;
+            this.customBtnEnter.FlatAppearance.BorderSize = 0;
+            this.customBtnEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customBtnEnter.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customBtnEnter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(29)))), ((int)(((byte)(131)))));
+            this.customBtnEnter.Location = new System.Drawing.Point(168, 105);
+            this.customBtnEnter.Name = "customBtnEnter";
+            this.customBtnEnter.Size = new System.Drawing.Size(96, 40);
+            this.customBtnEnter.TabIndex = 8;
+            this.customBtnEnter.Text = "Vào";
+            this.customBtnEnter.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(29)))), ((int)(((byte)(131)))));
+            this.customBtnEnter.UseVisualStyleBackColor = false;
+            this.customBtnEnter.Click += new System.EventHandler(this.customBtnEnter_Click);
             // 
             // formProgess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.ClientSize = new System.Drawing.Size(439, 297);
-            this.Controls.Add(this.runLabel);
+            this.ClientSize = new System.Drawing.Size(434, 297);
+            this.Controls.Add(this.customBtnAbout);
+            this.Controls.Add(this.customBtnExit);
+            this.Controls.Add(this.customBtnEnter);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.circularProgressBar);
             this.Controls.Add(this.label3);
@@ -137,6 +188,8 @@
         private System.Windows.Forms.Label label3;
         private CircularProgressBar.CircularProgressBar circularProgressBar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label runLabel;
+        private CustomButton customBtnEnter;
+        private CustomButton customBtnExit;
+        private CustomButton customBtnAbout;
     }
 }
