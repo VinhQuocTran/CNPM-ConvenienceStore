@@ -106,7 +106,7 @@ namespace WindowsFormsApp1
 
             if (textBoxSearchProduct.Text.Length == 0 && catName=="Tất cả")
                 query = "SELECT sp.masp,tensp as \"Tên Sản Phẩm\",tendanhmuc as \"Tên danh mục\",giaban as \"Giá bán\",donvitinh as \"Đơn vị tính\",round(hangtrongkho,2) as \"Hàng trong kho\" from sanpham sp inner join danhmuc dm on dm.madanhmuc=sp.madanhmuc";
-            else if(textBoxSearchProduct.Text.Length > 0 && catName == "Tat ca")
+            else if(textBoxSearchProduct.Text.Length > 0 && catName == "Tất cả")
                 query = "SELECT sp.masp,tensp as \"Tên Sản Phẩm\",tendanhmuc as \"Tên danh mục\",giaban as \"Giá bán\",donvitinh as \"Đơn vị tính\",round(hangtrongkho,2) as \"Hàng trong kho\" from sanpham sp inner join danhmuc dm on dm.madanhmuc=sp.madanhmuc where " + "tensp like N\'" + textBoxSearchProduct.Text + "%\'";
             else
                 query = "SELECT masp,tensp as \"Tên Sản Phẩm\",giaban as \"Giá bán\",donvitinh,hangtrongkho from sanpham sp inner join danhmuc dm on dm.madanhmuc=sp.madanhmuc where dm.tendanhmuc=N\'" + catName + "\'" + "and tensp like N\'" + textBoxSearchProduct.Text + "%\'";

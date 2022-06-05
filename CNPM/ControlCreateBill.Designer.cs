@@ -162,7 +162,9 @@
             // 
             // textBoxProQuantity
             // 
+            this.textBoxProQuantity.BackColor = System.Drawing.Color.Aquamarine;
             this.textBoxProQuantity.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxProQuantity.ForeColor = System.Drawing.Color.Black;
             this.textBoxProQuantity.Location = new System.Drawing.Point(128, 181);
             this.textBoxProQuantity.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxProQuantity.Name = "textBoxProQuantity";
