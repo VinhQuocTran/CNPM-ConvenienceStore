@@ -1,6 +1,5 @@
 # CNPM-ConvenienceStore
 Xây dựng app quản lý cửa hàng tiện lợi cuối kì của nhóm 2 môn Công Nghệ Phần Mềm
-https://github.com/VinhQuocTran/CNPM-ConvenienceStore
 
 
                        _oo0oo_
