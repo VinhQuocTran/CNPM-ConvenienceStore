@@ -16,12 +16,27 @@ namespace WindowsFormsApp1
         public formProgess()
         {
             InitializeComponent();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             circularProgressBar.Hide();
         }
 
-        private void runLabel_Click(object sender, EventArgs e)
+        private void formProgess_Load(object sender, EventArgs e)
         {
-            runLabel.Hide();
+            circularProgressBar.Value = 0;
+            circularProgressBar.Minimum = 0;
+            circularProgressBar.Maximum = 100;
+        }
+
+        private void customBtnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void customBtnEnter_Click(object sender, EventArgs e)
+        {
+            customBtnEnter.Hide();
+            customBtnExit.Hide();
+            customBtnAbout.Hide();
             circularProgressBar.Show();
             for (int i = 1; i <= circularProgressBar.Maximum; i++)
             {
@@ -34,13 +49,5 @@ namespace WindowsFormsApp1
             formLogin formLogin = new formLogin();
             formLogin.Show();
         }
-
-        private void formProgess_Load(object sender, EventArgs e)
-        {
-            circularProgressBar.Value = 0;
-            circularProgressBar.Minimum = 0;
-            circularProgressBar.Maximum = 100;
-        }
-
     }
 }
