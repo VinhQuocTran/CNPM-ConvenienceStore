@@ -49,5 +49,10 @@ namespace WindowsFormsApp1
             formLogin formLogin = new formLogin();
             formLogin.Show();
         }
+
+        private void customBtnAbout_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
