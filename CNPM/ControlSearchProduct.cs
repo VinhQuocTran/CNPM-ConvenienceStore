@@ -56,12 +56,12 @@ namespace WindowsFormsApp1
             SqlCommand cmd = new SqlCommand("SELECT * FROM danhmuc", con);
             con.Open();
             SqlDataReader sqlReader = cmd.ExecuteReader();
-            comboBoxSelectCategory.Items.Add("Tat ca");
+            comboBoxSelectCategory.Items.Add("Tất cả");
             while (sqlReader.Read())
             {
                 comboBoxSelectCategory.Items.Add(sqlReader["tendanhmuc"].ToString());
             }
-            comboBoxSelectCategory.SelectedItem = "Tat ca";
+            comboBoxSelectCategory.SelectedItem = "Tất cả";
 
             sqlReader.Close();
             con.Close();
@@ -84,10 +84,10 @@ namespace WindowsFormsApp1
             string catName = comboBoxSelectCategory.GetItemText(comboBoxSelectCategory.SelectedItem);
             //MessageBox.Show(comboBoxSelectCategory.GetItemText(comboBoxSelectCategory.SelectedItem));
             string query = "";
-            if (catName == "Tat ca")
+            if (catName == "Tất cả")
                 query = "SELECT sp.masp,tensp as \"Tên Sản Phẩm\",tendanhmuc as \"Tên danh mục\",giaban as \"Giá bán\",donvitinh as \"Đơn vị tính\",round(hangtrongkho,2) as \"Hàng trong kho\" from sanpham sp inner join danhmuc dm on dm.madanhmuc=sp.madanhmuc";
             else
-                query = "SELECT sp.masp,tensp as \"Tên Sản Phẩm\",tendanhmuc as \"Tên danh mục\",giaban as \"Giá bán\",donvitinh as \"Đơn vị tính\",round(hangtrongkho,2) as \"Hàng trong kho\" from sanpham sp inner join danhmuc dm on dm.madanhmuc=sp.madanhmuc where dm.tendanhmuc=\'" + catName + "\'";
+                query = "SELECT sp.masp,tensp as \"Tên Sản Phẩm\",tendanhmuc as \"Tên danh mục\",giaban as \"Giá bán\",donvitinh as \"Đơn vị tính\",round(hangtrongkho,2) as \"Hàng trong kho\" from sanpham sp inner join danhmuc dm on dm.madanhmuc=sp.madanhmuc where dm.tendanhmuc=N\'" + catName + "\'";
             var sda = new SqlDataAdapter(query, con);
             var builder = new SqlCommandBuilder(sda);
             var dataSet = new DataSet();
@@ -104,12 +104,12 @@ namespace WindowsFormsApp1
             string catName = comboBoxSelectCategory.GetItemText(comboBoxSelectCategory.SelectedItem);
 
 
-            if (textBoxSearchProduct.Text.Length == 0 && catName=="Tat ca")
+            if (textBoxSearchProduct.Text.Length == 0 && catName=="Tất cả")
                 query = "SELECT sp.masp,tensp as \"Tên Sản Phẩm\",tendanhmuc as \"Tên danh mục\",giaban as \"Giá bán\",donvitinh as \"Đơn vị tính\",round(hangtrongkho,2) as \"Hàng trong kho\" from sanpham sp inner join danhmuc dm on dm.madanhmuc=sp.madanhmuc";
             else if(textBoxSearchProduct.Text.Length > 0 && catName == "Tat ca")
-                query = "SELECT sp.masp,tensp as \"Tên Sản Phẩm\",tendanhmuc as \"Tên danh mục\",giaban as \"Giá bán\",donvitinh as \"Đơn vị tính\",round(hangtrongkho,2) as \"Hàng trong kho\" from sanpham sp inner join danhmuc dm on dm.madanhmuc=sp.madanhmuc where " + "tensp like \'" + textBoxSearchProduct.Text + "%\'";
+                query = "SELECT sp.masp,tensp as \"Tên Sản Phẩm\",tendanhmuc as \"Tên danh mục\",giaban as \"Giá bán\",donvitinh as \"Đơn vị tính\",round(hangtrongkho,2) as \"Hàng trong kho\" from sanpham sp inner join danhmuc dm on dm.madanhmuc=sp.madanhmuc where " + "tensp like N\'" + textBoxSearchProduct.Text + "%\'";
             else
-                query = "SELECT masp,tensp as \"Tên Sản Phẩm\",giaban as \"Giá bán\",donvitinh,hangtrongkho from sanpham sp inner join danhmuc dm on dm.madanhmuc=sp.madanhmuc where dm.tendanhmuc=\'" + catName + "\'" + "and tensp like \'" + textBoxSearchProduct.Text + "%\'";
+                query = "SELECT masp,tensp as \"Tên Sản Phẩm\",giaban as \"Giá bán\",donvitinh,hangtrongkho from sanpham sp inner join danhmuc dm on dm.madanhmuc=sp.madanhmuc where dm.tendanhmuc=N\'" + catName + "\'" + "and tensp like N\'" + textBoxSearchProduct.Text + "%\'";
             
             var sda = new SqlDataAdapter(query, con);
             var builder = new SqlCommandBuilder(sda);
