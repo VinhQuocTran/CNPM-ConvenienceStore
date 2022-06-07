@@ -173,7 +173,7 @@ namespace WindowsFormsApp1
             try
             {
                 cnn.Open();
-                string query = "select * from sanpham where  tensp  like N'%" + txtSampleProduct.Text + "%'";
+                string query = "select masp as \" Mã sản phẩm\",tensp as \"Tên Sản Phẩm\",giaban as \"Giá bán\",donvitinh as \"Đơn vị tính\",madanhmuc as \" Mã danh mục\",hangtrongkho as \" Hàng trong kho\" from sanpham where  tensp  like N'%" + txtSampleProduct.Text + "%'";
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, cnn);
                 SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(sqlDataAdapter);
                 var dataSet = new DataSet();

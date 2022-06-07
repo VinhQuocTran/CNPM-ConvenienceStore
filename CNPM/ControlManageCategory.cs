@@ -135,7 +135,7 @@ namespace WindowsFormsApp1
             try
             {
                 cnn.Open();
-                string query = "select * from danhmuc where  tendanhmuc  like N'%" + txtCateGory.Text + "%'";
+                string query = "select madanhmuc as \" Mã danh mục\",tendanhmuc as \"Tên danh mục\",mieuta as \"Miêu tả\" from danhmuc where  tendanhmuc  like N'%" + txtCateGory.Text + "%'";
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, cnn);
                 SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(sqlDataAdapter);
                 var dataSet = new DataSet();
