@@ -1,4 +1,4 @@
-﻿
+﻿drop database QuanLyCuaHangTienLoi
 use master
 go
 if exists(select*from sysdatabases where name='QuanLyCuaHangTienLoi')
@@ -69,6 +69,14 @@ create table chitiethoadon
 	constraint Fk_ChiTietHoaDon_SanPham foreign key (masp) references sanpham(masp)
 )
 
-insert into taikhoan
-values ('admin','admin','Administrator',500000,'2022-06-01','2022-06-01','Admin')
+insert into taikhoan values ('admin','admin','Administrator',500000,'2022-06-01','2022-06-01','Admin')
+insert into taikhoan values ('cashier','cashier','Cashier',500000,'2022-06-01','2022-06-01','Cashier')
 
+
+insert into danhmuc values ('DM001',N'Thịt',N'Thịt ngon')
+insert into danhmuc values ('DM002',N'Trái cây',N'Trái cây ngon')
+
+insert into sanpham values ('SP001',N'Thịt heo',100000,'Kg','DM001',100)
+insert into sanpham values ('SP002',N'Thịt bò',200000,'Kg','DM001',100)
+insert into sanpham values ('SP003',N'Chuối',50000,'Kg','DM002',100)
+insert into sanpham values ('SP004',N'Táo',30000,'Kg','DM002',100)
